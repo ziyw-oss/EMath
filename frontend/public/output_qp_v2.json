@@ -1,0 +1,397 @@
+{
+
+  "exam_metadata": {
+    "board": "Edexcel",
+    "qualification": "A Level",
+    "subject": "Mathematics",
+    "paper_name": "Pure Mathematics Paper 1",
+    "paper_code": "9MA0/01",
+    "exam_session": "June 2018"
+  },
+ "questions": [
+  {
+    "question_number": "1",
+    "level": "main",
+    "label": "1",
+    "marks": 3,
+    "question_text": "Given that \\( \\theta \\) is small and is measured in radians, use the small angle approximations to find an approximate value of\n",
+    "latex_blocks": [
+      "\\[\n\\frac{1 - \\cos 4\\theta}{2\\theta \\sin 3\\theta}\n\\]"
+    ]
+  },
+  {
+    "question_number": "2",
+    "level": "main",
+    "label": "2",
+    "marks": null,
+    "question_text": "A curve C has equation \\( y = x^2 - 2x - 24\\sqrt{x},\\ x > 0 \\)"
+  },
+  {
+    "question_number": "2",
+    "level": "sub",
+    "label": "(a)",
+    "marks": 3,
+    "question_text": "Find"
+  },
+  {
+    "question_number": "2",
+    "level": "subsub",
+    "label": "(i)",
+    "marks": null,
+    "question_text": "\\[ \\frac{dy}{dx} \\]",
+    "parent_label": "(a)"
+  },
+  {
+    "question_number": "2",
+    "level": "subsub",
+    "label": "(ii)",
+    "marks": null,
+    "question_text": "\\[ \\frac{d^2y}{dx^2} \\]",
+    "parent_label": "(a)"
+  },
+  {
+    "question_number": "2",
+    "level": "sub",
+    "label": "(b)",
+    "marks": 2,
+    "question_text": "Verify that C has a stationary point when x = 4"
+  },
+  {
+    "question_number": "2",
+    "level": "sub",
+    "label": "(c)",
+    "marks": 2,
+    "question_text": "Determine the nature of this stationary point, giving a reason for your answer."
+  },
+  {
+    "question_number": "3",
+    "level": "main",
+    "label": "3",
+    "marks": 4,
+    "question_text": "Figure 1 shows a sector \\( AOB \\) of a circle with centre \\( O \\) and radius \\( r \\text{ cm} \\).\n\nThe angle \\( AOB \\) is \\( \\theta \\) radians.\nThe area of the sector \\( AOB \\) is \\( 11 \\text{ cm}^2 \\)\n\nGiven that the perimeter of the sector is 4 times the length of the arc \\( AB \\), find the exact value of \\( r \\).",
+    "latex_blocks": []
+  },
+  {
+    "question_number": "4",
+    "level": "main",
+    "label": "4",
+    "marks": null,
+    "question_text": "The curve with equation \\( y = 2 \\ln(8 - x) \\) meets the line \\( y = x \\) at a single point, \\( x = a \\)."
+  },
+  {
+    "question_number": "4",
+    "level": "sub",
+    "label": "(a)",
+    "marks": 2,
+    "question_text": "Show that \\( 3 < a < 4 \\)."
+  },
+  {
+    "question_number": "4",
+    "level": "sub",
+    "label": "(b)",
+    "marks": 2,
+    "question_text": "Figure 2 shows the graph of \\( y = 2\\ln(8 - x) \\) and the graph of \\( y = x \\). A student uses the iteration formula \n\\[ x_{n+1} = 2\\ln(8 - x_n), \\quad n \\in \\mathbb{N} \\]\nin an attempt to find an approximation for \\( a \\). Using the graph and starting with \\( x_1 = 4 \\) determine whether or not this iteration formula can be used to find an approximation for \\( a \\), justifying your answer."
+  },
+  {
+  "question_number": "5",
+  "level": "main",
+  "label": "5",
+  "marks": 5,
+  "question_text": "Given that\n\n\\[ y = \\frac{3\\sin\\theta}{2\\sin\\theta + 2\\cos\\theta} \\quad -\\frac{\\pi}{4} < \\theta < \\frac{3\\pi}{4} \\]\n\nshow that\n\n\\[ \\frac{dy}{d\\theta} = \\frac{A}{1 + \\sin 2\\theta} \\quad -\\frac{\\pi}{4} < \\theta < \\frac{3\\pi}{4} \\]\n\nwhere \\( A \\) is a rational constant to be found.",
+  "latex_blocks": []
+},
+  {
+    "question_number": "6",
+    "level": "main",
+    "label": "6",
+    "marks": null,
+    "question_text": "The circle \\( C \\) has centre \\( A \\) with coordinates \\((7, 5)\\).\n\nThe line \\( l \\), with equation \\( y = 2x + 1 \\), is the tangent to \\( C \\) at the point \\( P \\), as shown in Figure 3.",
+    "latex_blocks": [
+      "y = 2x + 1"
+    ]
+  },
+  {
+    "question_number": "6",
+    "level": "sub",
+    "label": "(a)",
+    "marks": 3,
+    "question_text": "Show that an equation of the line \\( PA \\) is \\( 2y + x = 17 \\)",
+    "latex_blocks": [
+      "2y + x = 17"
+    ]
+  },
+  {
+    "question_number": "6",
+    "level": "sub",
+    "label": "(b)",
+    "marks": 4,
+    "question_text": "Find an equation for \\( C \\).",
+    "latex_blocks": []
+  },
+  {
+    "question_number": "6",
+    "level": "sub",
+    "label": "(c)",
+    "marks": 3,
+    "question_text": "Find the value of the constant \\( k \\).",
+    "latex_blocks": []
+  },
+  {
+    "question_number": "7",
+    "level": "main",
+    "label": "7",
+    "marks": null,
+    "question_text": "Given that \\( k \\in \\mathbb{Z}^+ \\)\n",
+    "latex_blocks": []
+  },
+  {
+    "question_number": "7",
+    "level": "sub",
+    "label": "(a)",
+    "marks": 4,
+    "question_text": "Show that the integral \\( \\int_{k}^{3k} \\frac{2}{3x - k} \\, dx \\) is independent of \\( k \\).",
+    "latex_blocks": []
+  },
+  {
+    "question_number": "7",
+    "level": "sub",
+    "label": "(b)",
+    "marks": 3,
+    "question_text": "Show that the integral \\( \\int_{k}^{2k} \\frac{2}{(2x - k)^2} \\, dx \\) is inversely proportional to \\( k \\).",
+    "latex_blocks": [
+      "\\int_{k}^{2k} \\frac{2}{(2x-k)^2} \\, dx"
+    ]
+  },
+  {
+    "question_number": "8",
+    "level": "main",
+    "label": "8",
+    "marks": null,
+    "question_text": "The depth of water, \\(D\\) metres, in a harbour on a particular day is modelled by the formula\n\n\\[ D = 5 + 2 \\sin(30t)^{\\circ} \\quad 0 \\leq t < 24 \\]\n\nwhere \\(t\\) is the number of hours after midnight.\n\nA boat enters the harbour at 6:30 am and it takes 2 hours to load its cargo.\nThe boat requires the depth of water to be at least 3.8 metres before it can leave the harbour.",
+    "latex_blocks": [
+      "D = 5 + 2 \\sin(30t)^{\\circ} \\quad 0 \\leq t < 24"
+    ]
+  },
+  {
+    "question_number": "8",
+    "level": "sub",
+    "label": "(a)",
+    "marks": 1,
+    "question_text": "Find the depth of the water in the harbour when the boat enters the harbour.",
+    "latex_blocks": []
+  },
+  {
+    "question_number": "8",
+    "level": "sub",
+    "label": "(b)",
+    "marks": 4,
+    "question_text": "Find, to the nearest minute, the earliest time the boat can leave the harbour.\n(Solutions based entirely on graphical or numerical methods are not acceptable.)",
+    "latex_blocks": []
+  },
+  {
+    "question_number": "9",
+    "level": "main",
+    "label": "9",
+    "marks": null,
+    "question_text": "Figure 4 shows a sketch of the curve with equation \\( x^2 - 2xy + 3y^2 = 50 \\)",
+    "latex_blocks": [
+      "\\[ x^2 - 2xy + 3y^2 = 50 \\]"
+    ]
+  },
+  {
+    "question_number": "9",
+    "level": "sub",
+    "label": "(a)",
+    "marks": 4,
+    "question_text": "Show that \\( \\frac{dy}{dx} = \\frac{y - x}{3y - x} \\)",
+    "latex_blocks": [
+      "\\[ \\frac{dy}{dx} = \\frac{y - x}{3y - x} \\]"
+    ]
+  },
+  {
+    "question_number": "9",
+    "level": "sub",
+    "label": "(b)",
+    "marks": 5,
+    "question_text": "The curve is used to model the shape of a cycle track with both \\( x \\) and \\( y \\) measured in km.\n The points \\( P \\) and \\( Q \\) represent points that are furthest west and furthest east of the origin \\( O \\), as shown in Figure 4.\n Using part (a),\n find the exact coordinates of the point \\( P \\)."
+  },
+  {
+    "question_number": "9",
+    "level": "sub",
+    "label": "(c)",
+    "marks": 1,
+    "question_text": "Explain briefly how to find the coordinates of the point that is furthest north of the origin \\( O \\). (You \\( \\text{do not} \\) need to carry out this calculation)."
+  },
+  {
+    "question_number": "10",
+    "level": "main",
+    "label": "10",
+    "marks": null,
+    "question_text": "The height above ground, \\( H \\) metres, of a passenger on a roller coaster can be modelled by the differential equation \n\\[ \\frac{dH}{dt} = \\frac{H \\cos(0.25t)}{40} \\] \nwhere \\( t \\) is the time, in seconds, from the start of the ride. \nGiven that the passenger is 5 m above the ground at the start of the ride,"
+  },
+  {
+    "question_number": "10",
+    "level": "sub",
+    "label": "(a)",
+    "marks": 5,
+    "question_text": "show that \\( H = 5e^{0.1 \\sin(0.25t)} \\)"
+  },
+  {
+    "question_number": "10",
+    "level": "sub",
+    "label": "(b)",
+    "marks": 1,
+    "question_text": "State the maximum height of the passenger above the ground."
+  },
+  {
+    "question_number": "10",
+    "level": "sub",
+    "label": "(c)",
+    "marks": 2,
+    "question_text": "The passenger reaches the maximum height, for the second time, \\( T \\) seconds after the start of the ride.\nFind the value of \\( T \\)."
+  },
+  {
+    "question_number": "11",
+    "level": "main",
+    "label": "11",
+    "marks": null,
+    "question_text": "",
+    "latex_blocks": []
+  },
+  {
+    "question_number": "11",
+    "level": "sub",
+    "label": "(a)",
+    "marks": 6,
+    "question_text": "Use binomial expansions to show that",
+    "latex_blocks": [
+      "\\[ \\sqrt{\\frac{1+4x}{1-x}} \\approx 1 + \\frac{5}{2}x - \\frac{5}{8}x^2 \\]"
+    ]
+  },
+  {
+    "question_number": "11",
+    "level": "sub",
+    "label": "(b)",
+    "marks": 1,
+    "question_text": "A student substitutes \\( x = \\frac{1}{2} \\) into both sides of the approximation shown in part (a) in an attempt to find an approximation to \\( \\sqrt{6} \\)\n\nGive a reason why the student \\textbf{should not} use \\( x = \\frac{1}{2} \\)",
+    "latex_blocks": []
+  },
+  {
+    "question_number": "11",
+    "level": "sub",
+    "label": "(c)",
+    "marks": 3,
+    "question_text": "Substitute \\( x = \\frac{1}{11} \\) into",
+    "latex_blocks": [
+      "\\[ \\sqrt{\\frac{1+4x}{1-x}} = 1 + \\frac{5}{2}x - \\frac{5}{8}x^2 \\]"
+    ]
+  },
+  {
+    "question_number": "11",
+    "level": "subsub",
+    "label": "",
+    "marks": null,
+    "question_text": "to obtain an approximation to \\( \\sqrt{6} \\). Give your answer as a fraction in its simplest form.",
+    "latex_blocks": [],
+    "parent_label": "(c)"
+  },
+  {
+    "question_number": "12",
+    "level": "main",
+    "label": "12",
+    "marks": null,
+    "question_text": "The value, \\( \\pounds V \\), of a vintage car \\( t \\) years after it was first valued on 1st January 2001, is modelled by the equation\n\n\\[ V = Ap^t \\]\n\nwhere \\( A \\) and \\( p \\) are constants\n\nGiven that the value of the car was \\( \\pounds 32000 \\) on 1st January 2005 and \\( \\pounds 50000 \\) on 1st January 2012"
+  },
+  {
+    "question_number": "12",
+    "level": "sub",
+    "label": "(a)",
+    "marks": null,
+    "question_text": ""
+  },
+  {
+    "question_number": "12",
+    "level": "subsub",
+    "label": "(i)",
+    "marks": null,
+    "question_text": "find \\( p \\) to 4 decimal places",
+    "parent_label": "(a)"
+  },
+  {
+    "question_number": "12",
+    "level": "subsub",
+    "label": "(ii)",
+    "marks": 4,
+    "question_text": "show that \\( A \\) is approximately 24800",
+    "parent_label": "(a)"
+  },
+  {
+    "question_number": "12",
+    "level": "sub",
+    "label": "(b)",
+    "marks": 2,
+    "question_text": "With reference to the model, interpret\n\n(i) the value of the constant \\( A \\),\n\n(ii) the value of the constant \\( p \\)."
+  },
+  {
+    "question_number": "12",
+    "level": "sub",
+    "label": "(c)",
+    "marks": 4,
+    "question_text": "Using the model,\n\nfind the year during which the value of the car first exceeds \\( \\pounds 100000 \\)"
+  },
+  {
+    "question_number": "13",
+    "level": "main",
+    "label": "13",
+    "marks": 7,
+    "question_text": "Show that",
+    "latex_blocks": [
+      "\\[ \\int_{0}^{2} 2\\sqrt{x} + 2 \\, dx = \\frac{32}{15} \\left(2 + \\sqrt{2}\\right) \\]"
+    ]
+  },
+  {
+    "question_number": "14",
+    "level": "main",
+    "label": "14",
+    "marks": null,
+    "question_text": "A curve C has parametric equations\n\n\\[ x = 3 + 2\\sin t, \\quad y = 4 + 2\\cos 2t, \\quad 0 \\leq t < 2\\pi \\]"
+  },
+  {
+    "question_number": "14",
+    "level": "sub",
+    "label": "(a)",
+    "marks": 2,
+    "question_text": "Show that all points on C satisfy \\( y = 6 - (x - 3)^2 \\)."
+  },
+  {
+    "question_number": "14",
+    "level": "sub",
+    "label": "(b)",
+    "marks": null,
+    "question_text": ""
+  },
+  {
+    "question_number": "14",
+    "level": "subsub",
+    "label": "(i)",
+    "marks": null,
+    "question_text": "Sketch the curve C.",
+    "parent_label": "(b)"
+  },
+  {
+    "question_number": "14",
+    "level": "subsub",
+    "label": "(ii)",
+    "marks": 3,
+    "question_text": "Explain briefly why C does not include all points of \\( y = 6 - (x - 3)^2 \\), \\( x \\in \\mathbb{R} \\).",
+    "parent_label": "(b)"
+  },
+  {
+    "question_number": "14",
+    "level": "main",
+    "label": "(c)",
+    "marks": 5,
+    "question_text": "The line with equation \\( x + y = k \\), where \\( k \\) is a constant, intersects C at two distinct points.\nState the range of values of \\( k \\), writing your answer in set notation."
+  }
+]
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "exam_paper_id": 1,
+    "question_number": "1",
+    "label": null,
+    "level": "main",
+    "mark_code": "M1",
+    "mark_type": "M",
+    "mark_content": "Attempts either sin3\u03b8 \u2248 3\u03b8 or cos4\u03b8 \u2248 1 - (4\u03b8)^2 / 2 in the given expression.",
+    "ao_code": "1.1b",
+    "explanation": "Condone missing bracket on the 4\u03b8. Expect to see it simplified to a single term. Look for an answer of k, condone k\u03b8 following a slip."
+  },
+  {
+    "exam_paper_id": 1,
+    "question_number": "1",
+    "label": null,
+    "level": "main",
+    "mark_code": "M1",
+    "mark_type": "M",
+    "mark_content": "Attempts both sin3\u03b8 \u2248 3\u03b8 and cos4\u03b8 \u2248 1 - (4\u03b8)^2 / 2 and attempts to simplify.",
+    "ao_code": "2.1",
+    "explanation": "Must attempt both identities and show an attempt to simplify. Allow alternative simplification using trig identity substitution."
+  },
+  {
+    "exam_paper_id": 1,
+    "question_number": "1",
+    "label": null,
+    "level": "main",
+    "mark_code": "A1",
+    "mark_type": "A",
+    "mark_content": "Simplifies to 4/3 or exact equivalent with no incorrect lines BUT allow recovery on missing bracket.",
+    "ao_code": "1.1b",
+    "explanation": "Eg: 1 - [1 - (4\u03b8)^2 / 2] / (2\u03b8 \u00d7 3\u03b8) = 8\u03b8^2 / 6\u03b8 = 4/3 is M1 M1 A0. Condone awrt 1.33."
+  }
+]

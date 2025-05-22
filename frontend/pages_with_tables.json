@@ -1,0 +1,144 @@
+{
+  "pages": [
+    {
+      "page": 1,
+      "has_table": false,
+      "has_header": false
+    },
+    {
+      "page": 2,
+      "has_table": false,
+      "has_header": false
+    },
+    {
+      "page": 3,
+      "has_table": false,
+      "has_header": false
+    },
+    {
+      "page": 4,
+      "has_table": false,
+      "has_header": false
+    },
+    {
+      "page": 5,
+      "has_table": false,
+      "has_header": false
+    },
+    {
+      "page": 6,
+      "has_table": false,
+      "has_header": false
+    },
+    {
+      "page": 7,
+      "has_table": true,
+      "has_header": false
+    },
+    {
+      "page": 8,
+      "has_table": true,
+      "has_header": true
+    },
+    {
+      "page": 9,
+      "has_table": true,
+      "has_header": true
+    },
+    {
+      "page": 10,
+      "has_table": true,
+      "has_header": true
+    },
+    {
+      "page": 11,
+      "has_table": true,
+      "has_header": true
+    },
+    {
+      "page": 12,
+      "has_table": true,
+      "has_header": true
+    },
+    {
+      "page": 13,
+      "has_table": false,
+      "has_header": false
+    },
+    {
+      "page": 14,
+      "has_table": true,
+      "has_header": true
+    },
+    {
+      "page": 15,
+      "has_table": true,
+      "has_header": true
+    },
+    {
+      "page": 16,
+      "has_table": true,
+      "has_header": true
+    },
+    {
+      "page": 17,
+      "has_table": false,
+      "has_header": false
+    },
+    {
+      "page": 18,
+      "has_table": true,
+      "has_header": true
+    },
+    {
+      "page": 19,
+      "has_table": false,
+      "has_header": false
+    },
+    {
+      "page": 20,
+      "has_table": true,
+      "has_header": true
+    },
+    {
+      "page": 21,
+      "has_table": false,
+      "has_header": false
+    },
+    {
+      "page": 22,
+      "has_table": true,
+      "has_header": true
+    },
+    {
+      "page": 23,
+      "has_table": true,
+      "has_header": false
+    },
+    {
+      "page": 24,
+      "has_table": true,
+      "has_header": true
+    },
+    {
+      "page": 25,
+      "has_table": true,
+      "has_header": true
+    },
+    {
+      "page": 26,
+      "has_table": true,
+      "has_header": true
+    },
+    {
+      "page": 27,
+      "has_table": true,
+      "has_header": false
+    },
+    {
+      "page": 28,
+      "has_table": false,
+      "has_header": false
+    }
+  ]
+}

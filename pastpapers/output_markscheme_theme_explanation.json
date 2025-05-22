@@ -1,0 +1,29 @@
+[
+  {
+    "exam_paper_id": 1,
+    "question_number": "4",
+    "label": "4",
+    "level": "main",
+    "explanation": "Note: Diagram must show at least 2 spirals. Condone awrt 1.33. Alternative: Use identity 1 - 2sin\u00b2\u03b8 = cos2\u03b8."
+  },
+  {
+    "exam_paper_id": 1,
+    "question_number": "4",
+    "label": "(b)",
+    "level": "sub",
+    "mark_code": "M1",
+    "mark_type": "M",
+    "mark_content": "Draws cobweb diagram starting at x = 4",
+    "ao_code": "2.1"
+  },
+  {
+    "exam_paper_id": 1,
+    "question_number": "4",
+    "label": "(b)",
+    "level": "sub",
+    "mark_code": "A1",
+    "mark_type": "A",
+    "mark_content": "Concludes convergence from cobweb pattern",
+    "ao_code": "1.1b"
+  }
+]
