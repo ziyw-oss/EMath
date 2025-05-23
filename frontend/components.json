@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "baseColor": "zinc",
+  "style": "default",
+  "componentPath": "./src/components/ui",
+  "rsc": false,
+  "tailwind": {
+    "config": "tailwind.config.js",
+    "css": "src/styles/globals.css"
+  },
+  "aliases": {
+    "components": "@/components",
+    "utils": "@/lib/utils"
+  },
+  "components": [
+    {
+      "name": "card",
+      "importPath": "@/components/ui/card"
+    },
+    {
+      "name": "button",
+      "importPath": "@/components/ui/button"
+    }
+  ]
+}

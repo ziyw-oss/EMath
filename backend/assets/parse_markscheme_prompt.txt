@@ -21,6 +21,7 @@ Label and Level rules:
   - "main" if no label (i.e. whole question)
   - "sub" if label is like "(a)", "(b)"
   - "subsub" if label is like "(a)(i)", "(b)(ii)"
+  - If "level": "main", then the corresponding "label" value is the same as the "question_number" value
 
 Additional rules:
 - Do not merge label into question_number. Always keep "question_number": "2", and "label": "(a)(i)".
@@ -28,4 +29,4 @@ Additional rules:
 - Match notes to marks by mark_code or label. Do not attach unmatched notes.
 - Return only a JSON array. Do not include any markdown or explanation.
 - Include all relevant note lines in the "explanation" field, even if they span multiple lines or continue without repeating the mark_code. Group them as a block belonging to the same mark point.
-- Notes are supplemental explanations for each mark point. Match them precisely to each item using mark_code or label + mark_code. Include all matched notes in the explanation field of the corresponding mark.
+- Notes are supplemental explanations for each mark point. Match them precisely to each item using mark_code or label + mark_code. Include all matched notes in the explanation field of the corresponding mark.</file>

@@ -3,7 +3,7 @@
     {
       "exam_paper_id": null,
       "question_number": "1",
-      "label": "",
+      "label": "1",
       "level": "main",
       "mark_code": "M1",
       "mark_content": "Attempts either sin3θ ≈ 3θ or cos4θ ≈ 1 - (4θ)^2 / 2 in 1 - cos4θ / 2θsin3θ",
@@ -13,7 +13,7 @@
     {
       "exam_paper_id": null,
       "question_number": "1",
-      "label": "",
+      "label": "1",
       "level": "main",
       "mark_code": "M1",
       "mark_content": "Attempts both sin3θ ≈ 3θ and cos4θ ≈ 1 - (4θ)^2 / 2 and attempts to simplify",
@@ -23,7 +23,7 @@
     {
       "exam_paper_id": null,
       "question_number": "1",
-      "label": "",
+      "label": "1",
       "level": "main",
       "mark_code": "A1",
       "mark_content": "= 4/3 oe",
@@ -103,7 +103,7 @@
     {
       "exam_paper_id": null,
       "question_number": "3",
-      "label": "",
+      "label": "3",
       "level": "main",
       "mark_code": "B1",
       "mark_content": "States or uses \\(\\frac{1}{2}r^2\\theta=11\\)",
@@ -113,7 +113,7 @@
     {
       "exam_paper_id": null,
       "question_number": "3",
-      "label": "",
+      "label": "3",
       "level": "main",
       "mark_code": "B1",
       "mark_content": "States or uses \\(2r + r\\theta = 4r\\theta\\)",
@@ -123,7 +123,7 @@
     {
       "exam_paper_id": null,
       "question_number": "3",
-      "label": "",
+      "label": "3",
       "level": "main",
       "mark_code": "M1",
       "mark_content": "Attempts to solve, full method \\(r=...\\)",
@@ -133,7 +133,7 @@
     {
       "exam_paper_id": null,
       "question_number": "3",
-      "label": "",
+      "label": "3",
       "level": "main",
       "mark_code": "A1",
       "mark_content": "\\(r = \\sqrt{33}\\)",
@@ -183,7 +183,7 @@
     {
       "exam_paper_id": null,
       "question_number": "5",
-      "label": "",
+      "label": "5",
       "level": "main",
       "mark_code": "M1",
       "mark_content": "Expands and uses \\( \\sin^2 \\theta + \\cos^2 \\theta = 1 \\) at least once in the numerator or the denominator or uses \\( 2 \\sin \\theta \\cos \\theta = \\sin 2\\theta \\) in \\( \\frac{dy}{d\\theta} = \\frac{...}{.........C\\sin \\theta \\cos \\theta} \\)",
@@ -193,7 +193,7 @@
     {
       "exam_paper_id": null,
       "question_number": "5",
-      "label": "",
+      "label": "5",
       "level": "main",
       "mark_code": "A1",
       "mark_content": "A correct expression involving \\( \\frac{dy}{d\\theta} \\) condoning it appearing as \\( \\frac{dy}{dx} \\)",
@@ -203,17 +203,27 @@
     {
       "exam_paper_id": null,
       "question_number": "5",
-      "label": "",
+      "label": "5",
       "level": "main",
       "mark_code": "M1",
       "mark_content": "Expands and uses \\( \\sin^2 \\theta + \\cos^2 \\theta = 1 \\) in the numerator and the denominator AND uses \\( 2 \\sin \\theta \\cos \\theta = \\sin 2\\theta \\) in \\( \\frac{dy}{d\\theta} = \\frac{P}{Q + R\\sin 2\\theta} \\)",
       "ao_code": "3.1a",
       "explanation": "M1: Expands and uses \\( \\sin^2 \\theta + \\cos^2 \\theta = 1 \\) at least once in the numerator or the denominator OR uses \\( 2 \\sin \\theta \\cos \\theta = \\sin 2\\theta \\) in \\( \\frac{dy}{d\\theta} = \\frac{...}{.........C\\sin \\theta \\cos \\theta} \\)"
+    }, 
+    {
+    "exam_paper_id": null,
+    "question_number": "5",
+    "label": "5",
+    "level": "main",
+    "mark_code": "M1",
+    "mark_content": "Expands and uses sin²θ + cos²θ = 1 in the numerator and the denominator AND uses 2sinθcosθ = sin 2θ in the denominator to reach an expression of the form dy/dθ = P / (Q + Rsin 2θ)",
+    "ao_code": "2.1",
+    "explanation": ""
     },
     {
       "exam_paper_id": null,
       "question_number": "5",
-      "label": "",
+      "label": "5",
       "level": "main",
       "mark_code": "A1",
       "mark_content": "\\( \\frac{dy}{d\\theta} = \\frac{3}{2 + 2\\sin 2\\theta} = \\frac{\\frac{3}{2}}{1 + \\sin 2\\theta} \\)",
@@ -853,7 +863,7 @@
     {
       "exam_paper_id": null,
       "question_number": "13",
-      "label": "",
+      "label": "13",
       "level": "main",
       "mark_code": "M1",
       "mark_content": "Chooses a suitable method for \\( \\int_{0}^{2} 2x\\sqrt{x+2} \\, dx \\)",
@@ -863,7 +873,7 @@
     {
       "exam_paper_id": null,
       "question_number": "13",
-      "label": "",
+      "label": "13",
       "level": "main",
       "mark_code": "B1",
       "mark_content": "u = x+2 \\Rightarrow \\frac{dx}{du} = 1 \\quad oe",
@@ -873,7 +883,7 @@
     {
       "exam_paper_id": null,
       "question_number": "13",
-      "label": "",
+      "label": "13",
       "level": "main",
       "mark_code": "M1",
       "mark_content": "\\( \\int A(u \\pm 2)\\sqrt{u}du \\)",
@@ -883,7 +893,7 @@
     {
       "exam_paper_id": null,
       "question_number": "13",
-      "label": "",
+      "label": "13",
       "level": "main",
       "mark_code": "dM1",
       "mark_content": "= \\( Su^{\\frac{5}{2}} \\pm Tu^{\\frac{3}{2}} \\)",
@@ -893,7 +903,7 @@
     {
       "exam_paper_id": null,
       "question_number": "13",
-      "label": "",
+      "label": "13",
       "level": "main",
       "mark_code": "A1",
       "mark_content": "= \\( \\frac{4}{3} u^{\\frac{5}{2}} - \\frac{8}{3} u^{\\frac{3}{2}} \\)",
@@ -903,7 +913,7 @@
     {
       "exam_paper_id": null,
       "question_number": "13",
-      "label": "",
+      "label": "13",
       "level": "main",
       "mark_code": "ddM1",
       "mark_content": "Uses limits 4 and 2 the correct way around",
@@ -913,7 +923,7 @@
     {
       "exam_paper_id": null,
       "question_number": "13",
-      "label": "",
+      "label": "13",
       "level": "main",
       "mark_code": "A1*",
       "mark_content": "= \\( \\frac{32}{15}(2 + \\sqrt{2}) * \\)",
@@ -923,7 +933,7 @@
     {
       "exam_paper_id": null,
       "question_number": "13",
-      "label": "",
+      "label": "13",
       "level": "main",
       "mark_code": "M1",
       "mark_content": "Chooses a suitable method for \\( \\int_0^2 2x\\sqrt{x+2} \\, dx \\)",
@@ -933,7 +943,7 @@
     {
       "exam_paper_id": null,
       "question_number": "13",
-      "label": "",
+      "label": "13",
       "level": "main",
       "mark_code": "B1",
       "mark_content": "\\( \\int (\\sqrt{x+2}) \\, dx = \\frac{2}{3} (x+2)^{ \\frac{3}{2} } \\)",
@@ -943,7 +953,7 @@
     {
       "exam_paper_id": null,
       "question_number": "13",
-      "label": "",
+      "label": "13",
       "level": "main",
       "mark_code": "M1",
       "mark_content": "Award for using by parts the correct way around and using limits",
@@ -953,7 +963,7 @@
     {
       "exam_paper_id": null,
       "question_number": "13",
-      "label": "",
+      "label": "13",
       "level": "main",
       "mark_code": "dM1",
       "mark_content": "\\( = A x (x+2)^{ \\frac{3}{2} } - C (x+2)^{ \\frac{5}{2} } \\)",
@@ -963,7 +973,7 @@
     {
       "exam_paper_id": null,
       "question_number": "13",
-      "label": "",
+      "label": "13",
       "level": "main",
       "mark_code": "A1",
       "mark_content": "\\( = \\frac{4}{3} x (x+2)^{ \\frac{3}{2} } - \\frac{8}{15} (x+2)^{ \\frac{5}{2} } \\)",
@@ -973,7 +983,7 @@
     {
       "exam_paper_id": null,
       "question_number": "13",
-      "label": "",
+      "label": "13",
       "level": "main",
       "mark_code": "ddM1",
       "mark_content": "Uses limits 2 and 0 the correct way around",
@@ -983,7 +993,7 @@
     {
       "exam_paper_id": null,
       "question_number": "13",
-      "label": "",
+      "label": "13",
       "level": "main",
       "mark_code": "A1*",
       "mark_content": "\\( = \\frac{32}{15} \\left( 2 + \\sqrt{2} \\right) \\)",
@@ -1091,7 +1101,12 @@
       "explanation": ""
     }
   ],
-  "exam_metadata": {
-    "page1_text": "Pearson\nEdexcel\n\nMark Scheme (Results)\n\nSummer 2018\n\nPearson Edexcel GCE A Level Mathematics\n\nPure Mathematics Paper 1 (QMA0O1 01)"
-  }
+ "exam_metadata": {
+  "board": "Edexcel",
+  "qualification": "A Level",
+  "subject": "Mathematics",
+  "paper_code": "9MA0/01",
+  "paper_name": "Pure Mathematics Paper 1",
+  "exam_session": "2018"
+}
 }
