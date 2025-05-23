@@ -1,0 +1,1097 @@
+{
+  "marks": [
+    {
+      "exam_paper_id": null,
+      "question_number": "1",
+      "label": "",
+      "level": "main",
+      "mark_code": "M1",
+      "mark_content": "Attempts either sin3θ ≈ 3θ or cos4θ ≈ 1 - (4θ)^2 / 2 in 1 - cos4θ / 2θsin3θ",
+      "ao_code": "1.1b",
+      "explanation": "M1: Attempts either sin3θ ≈ 3θ or cos4θ ≈ 1 - (4θ)^2 / 2 in the given expression.\n\nSee below for description of marking of cos4θ"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "1",
+      "label": "",
+      "level": "main",
+      "mark_code": "M1",
+      "mark_content": "Attempts both sin3θ ≈ 3θ and cos4θ ≈ 1 - (4θ)^2 / 2 and attempts to simplify",
+      "ao_code": "2.1",
+      "explanation": "M1: Attempts to substitute both sin3θ ≈ 3θ and cos4θ ≈ 1 - (4θ)^2 / 2\n\n→ 1 - [1 - (4θ)^2 / 2] / 2θ × 3θ and attempts to simplify.\n\nCondone missing bracket on the 4θ so cos4θ ≈ 1 - 4θ^2 / 2 would score the method\n\nExpect to see it simplified to a single term which could be in terms of θ\n\nLook for an answer of k but condone kθ following a slip"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "1",
+      "label": "",
+      "level": "main",
+      "mark_code": "A1",
+      "mark_content": "= 4/3 oe",
+      "ao_code": "1.1b",
+      "explanation": "A1: Uses both identities and simplifies to 4/3 or exact equivalent with no incorrect lines BUT allow recovery on missing bracket for cos4θ ≈ 1 - 4θ^2 / 2 .\n\nEg. 1 - [1 - (4θ)^2 / 2] / 2θ × 3θ = 8θ^2 / 6θ = 4/3 is M1 M1 A0\n\nCondone awrt 1.33.\n\n- M1 For an attempt at sin3θ ≈ 3θ or the identity cos4θ = 1 - 2sin^2θ with sin2θ ≈ 2θ\n- M1 For both of the above and attempts to simplify to a single term.\n- A1 4/3 oe"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "2",
+      "label": "(a)(i)",
+      "level": "subsub",
+      "mark_code": "M1",
+      "mark_content": "Differentiates to \\( \\frac{dy}{dx} = Ax + B + Cx^{-\\frac{1}{2}} \\)",
+      "ao_code": "1.1b",
+      "explanation": "Differentiates to dy/dx = Ax + B + Cx^(-1/2)"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "2",
+      "label": "(a)(i)",
+      "level": "subsub",
+      "mark_code": "A1",
+      "mark_content": "\\( \\frac{dy}{dx} = 2x - 2 - 12x^{-\\frac{1}{2}} \\) (Coefficients may be unsimplified)",
+      "ao_code": "1.1b",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "2",
+      "label": "(a)(ii)",
+      "level": "subsub",
+      "mark_code": "B1ft",
+      "mark_content": "Achieves a correct \\( \\frac{d^2y}{dx^2} \\) for their \\( \\frac{dy}{dx} \\) (Their \\( \\frac{dy}{dx} \\) must have a negative or fractional index)",
+      "ao_code": "1.1b",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "2",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "Substitutes \\( x = 4 \\) into their \\( \\frac{dy}{dx} \\) and attempts to evaluate. There must be evidence \\( \\frac{dy}{dx} \\Big|_{x=4} = \\ldots \\)",
+      "ao_code": "1.1b",
+      "explanation": "Alternatively substitutes \\( x = 4 \\) into an equation resulting from \\( \\frac{dy}{dx} = 0 \\) Eg. \\( \\frac{36}{x} = (x - 1)^2 \\) and equates"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "2",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "There must be a reason and a minimal conclusion. Allow \\( \\checkmark \\), QED for a minimal conclusion. Shows \\( \\frac{dy}{dx} = 0 \\) and states \"hence there is a stationary point\" oe",
+      "ao_code": "2.1",
+      "explanation": "Alt Shows that \\( x = 4 \\) is a root of the resulting equation and states \"hence there is a stationary point\" All aspects of the proof must be correct including a conclusion"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "2",
+      "label": "(c)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "Substitutes \\( x = 4 \\) into their \\( \\frac{d^2y}{dx^2} \\) and calculates its value, or implies its sign by a statement such as when \\( x = 4 \\Rightarrow \\frac{d^2y}{dx^2} > 0 \\). This must be seen in (c) and not labelled (b).",
+      "ao_code": "1.1b",
+      "explanation": "Alternatively calculates the gradient of C either side of \\( x = 4 \\) or calculates the value of y either side of \\( x = 4 \\)."
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "2",
+      "label": "(c)",
+      "level": "sub",
+      "mark_code": "A1ft",
+      "mark_content": "For a correct calculation, a valid reason and a correct conclusion. Ignore additional work where candidate finds \\( \\frac{d^2y}{dx^2} \\) left and right of \\( x = 4 \\).",
+      "ao_code": "2.2a",
+      "explanation": "Follow through on an incorrect \\( \\frac{d^2y}{dx^2} \\) but it is dependent upon having a negative or fractional index. Ignore any references to the word convex. The nature of the turning point is \"minimum\". Using the gradient look for correct calculations, a valid reason…. goes from negative to positive, and a correct conclusion …minimum."
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "3",
+      "label": "",
+      "level": "main",
+      "mark_code": "B1",
+      "mark_content": "States or uses \\(\\frac{1}{2}r^2\\theta=11\\)",
+      "ao_code": "1.1b",
+      "explanation": "B1: States or uses \\(\\frac{1}{2}r^2\\theta=11\\) This may be implied with an embedded found value for \\(\\theta\\)"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "3",
+      "label": "",
+      "level": "main",
+      "mark_code": "B1",
+      "mark_content": "States or uses \\(2r + r\\theta = 4r\\theta\\)",
+      "ao_code": "1.1b",
+      "explanation": "B1: States or uses \\(2r + r\\theta = 4r\\theta\\) or equivalent"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "3",
+      "label": "",
+      "level": "main",
+      "mark_code": "M1",
+      "mark_content": "Attempts to solve, full method \\(r=...\\)",
+      "ao_code": "3.1a",
+      "explanation": "M1: Full method to find \\(r=...\\) This involves combining the equations to eliminate \\(\\theta\\) or find \\(\\theta\\) The initial equations must be of the same \"form\" (see **) but condone slips when attempting to solve. It cannot be scored from impossible values for \\(\\theta\\) Hence only score if \\(0<\\theta<2\\pi\\) FYI \\(\\theta=\\frac{2}{3}\\) radians Allow this to be scored from equations such as ...\\(r^2\\theta=11\\) and ones that simplify to ...\\(r=...r\\theta\\) ** Allow their \\(2r+r\\theta = 4r\\theta\\Rightarrow\\theta=...\\) then substitute this into their \\(\\frac{1}{2}r^2\\theta=11\\) Allow their \\(2r+r\\theta = 4r\\theta\\Rightarrow r\\theta=...\\) then substitute this into their \\(\\frac{1}{2}r^2\\theta=11\\) Allow their \\(\\frac{1}{2}r^2\\theta=11\\Rightarrow\\theta=\\frac{...}{r^2}\\) then substitute into their \\(2r+r\\theta=4r\\theta\\Rightarrow r=...\\)"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "3",
+      "label": "",
+      "level": "main",
+      "mark_code": "A1",
+      "mark_content": "\\(r = \\sqrt{33}\\)",
+      "ao_code": "1.1b",
+      "explanation": "A1: \\(r = \\sqrt{33}\\) only but isw after a correct answer."
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "4",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "Attempts f(3)= and f(4)= where f(x)=±(2ln(8−x)−x)",
+      "ao_code": "2.1",
+      "explanation": "Attempts f(3)= and f(4)= where f(x)=±(2ln(8−x)−x) or alternatively compares 2ln5 to 3 and 2ln4 to 4. This is not routine and cannot be scored by substituting 3 and 4 in both functions"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "4",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "A1*",
+      "mark_content": "f(3)=(2ln(5)−x)=(+)0.22 and f(4)=(2ln(4)−4)=−1.23",
+      "ao_code": "2.4",
+      "explanation": "Both values (calculations) correct to at least 1 sf with correct explanation and conclusion. Allow reasons to be 2ln8=3.21>3, 2ln4=2.77<4 or similar"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "4",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "For annotating the graph by drawing a cobweb diagram starting at x1=4. It should have at least two spirals",
+      "ao_code": "2.4",
+      "explanation": "For an attempt at using a cobweb diagram. Look for 5 or more correct straight lines. It may not start at 4 but it must show an understanding of the method. If there is no graph then it is M0 A0"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "4",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "Deduces that the iteration formula can be used to find an approximation for α because the cobweb spirals inwards for the cobweb diagram",
+      "ao_code": "2.2a",
+      "explanation": "For a correct attempt starting at 4 and deducing that the iteration can be used as the iterations converge to the root. You must state that it can be used with a suitable reason. Suitable reasons could be \" it spirals inwards\", it gets closer to the root\", it converges \""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "5",
+      "label": "",
+      "level": "main",
+      "mark_code": "M1",
+      "mark_content": "Expands and uses \\( \\sin^2 \\theta + \\cos^2 \\theta = 1 \\) at least once in the numerator or the denominator or uses \\( 2 \\sin \\theta \\cos \\theta = \\sin 2\\theta \\) in \\( \\frac{dy}{d\\theta} = \\frac{...}{.........C\\sin \\theta \\cos \\theta} \\)",
+      "ao_code": "1.1b",
+      "explanation": "M1: For choosing either the quotient, product rule or implicit differentiation and applying it to the given function. Look for the correct form of \\( \\frac{dy}{d\\theta} \\) (condone it being stated as \\( \\frac{dy}{dx} \\) but tolerate slips on the coefficients and also condone \\( \\frac{d(\\sin \\theta)}{d\\theta} = \\pm \\cos \\theta \\) and \\( \\frac{d(\\cos \\theta)}{d\\theta} = \\pm \\sin \\theta \\)"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "5",
+      "label": "",
+      "level": "main",
+      "mark_code": "A1",
+      "mark_content": "A correct expression involving \\( \\frac{dy}{d\\theta} \\) condoning it appearing as \\( \\frac{dy}{dx} \\)",
+      "ao_code": "1.1b",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "5",
+      "label": "",
+      "level": "main",
+      "mark_code": "M1",
+      "mark_content": "Expands and uses \\( \\sin^2 \\theta + \\cos^2 \\theta = 1 \\) in the numerator and the denominator AND uses \\( 2 \\sin \\theta \\cos \\theta = \\sin 2\\theta \\) in \\( \\frac{dy}{d\\theta} = \\frac{P}{Q + R\\sin 2\\theta} \\)",
+      "ao_code": "3.1a",
+      "explanation": "M1: Expands and uses \\( \\sin^2 \\theta + \\cos^2 \\theta = 1 \\) at least once in the numerator or the denominator OR uses \\( 2 \\sin \\theta \\cos \\theta = \\sin 2\\theta \\) in \\( \\frac{dy}{d\\theta} = \\frac{...}{.........C\\sin \\theta \\cos \\theta} \\)"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "5",
+      "label": "",
+      "level": "main",
+      "mark_code": "A1",
+      "mark_content": "\\( \\frac{dy}{d\\theta} = \\frac{3}{2 + 2\\sin 2\\theta} = \\frac{\\frac{3}{2}}{1 + \\sin 2\\theta} \\)",
+      "ao_code": "1.1b",
+      "explanation": "A1: Fully correct proof with \\( A = \\frac{3}{2} \\) stated but allow for example \\( \\frac{\\frac{3}{2}}{1 + \\sin 2\\theta} \\) Allow recovery from missing brackets. Condone notation slips. This is not a given answer."
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "6",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "Deduces that gradient of PA is \\frac{1}{2}",
+      "ao_code": "2.2a",
+      "explanation": "Uses the idea of perpendicular gradients to deduce that gradient of PA is \\frac{1}{2}. Condone −\\frac{1}{2}x if followed by correct work. You may well see the perpendicular line set up as y = −\\frac{1}{2}x + c which scored this mark"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "6",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "Finding the equation of a line with gradient \"-\\frac{1}{2}\" and point (7,5)",
+      "ao_code": "1.1b",
+      "explanation": "Award for the method of finding the equation of a line with a changed gradient and the point (7,5). So sight of y−5 = \\frac{1}{2}(x−7) would score this mark. If the form y = mx + c is used expect the candidates to proceed as far as c = ... to score this mark."
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "6",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "A1*",
+      "mark_content": "Completes proof 2y + x = 17 *",
+      "ao_code": "1.1b",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "6",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "Solves 2y + x = 17 and y = 2x + 1 simultaneously",
+      "ao_code": "2.1",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "6",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "P = (3,7)",
+      "ao_code": "1.1b",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "6",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "Length PA = \\sqrt{(3−7)^2 + (7−5)^2} = (\\sqrt{20})",
+      "ao_code": "1.1b",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "6",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "Equation of C is (x−7)^2 + (y−5)^2 = 20",
+      "ao_code": "1.1b",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "6",
+      "label": "(c)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "Attempts to find where y = 2x + k meets C using \\overrightarrow{OA} + \\overrightarrow{PA}",
+      "ao_code": "3.1a",
+      "explanation": "M1: Attempts to find where y=2x+k meets C. Awarded for using OA+PA, (1 1,3) or one correct coordinate of (1 1,3) is evidence of this award."
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "6",
+      "label": "(c)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "Substitutes their (11,3) in y = 2x + k to find k",
+      "ao_code": "2.1",
+      "explanation": "M1: For a full method leading to & . Scored for either substituting their (1 1,3) in p=2x+k or, in the alternative, for solving their (4k 34)\" 4x 5x(K? 10k + 54) 0>k =... Allow use of a calculator here to find roots. Award if you see use of correct formula but it would be implied by + correct roots Al: k =—19 only Alternative I"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "6",
+      "label": "(c)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "k = −19",
+      "ao_code": "1.1b",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "6",
+      "label": "(c)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "Attempts to find where y = 2x + k meets C via simultaneous equations proceeding to a 3TQ in x (or y)",
+      "ao_code": "3.1a",
+      "explanation": "FYI 5x^2 + (4k−34)x + k^2 −10k + 54 = 0\nM1: For solving y = 2x +4 with their (x -7)/ +(y —5) = 20 and creating a quadratic eqn of the form 2 ax +bx+c=0 where both b and c are dependent upon k. The terms in x” and x must be collected together or implied to have been collected by their correct use in \"b” —4ac\" FYI the correct quadratic is 5x’ 4 (4k 34)x +k? -10k+54=0"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "6",
+      "label": "(c)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "Uses b^2−4ac = 0 oe and proceeds to k=...",
+      "ao_code": "2.1",
+      "explanation": "M1: For using the discriminant condition 5” —4ac = 0 to find k. It is not dependent upon the previous M and may be awarded from only one term in k. (4k 34) 4x5x(k? 10k 4 54) 0=>k =... Allow use of a calculator here to find roots. Award if you see use of correct formula but it would be implied by + correct roots Al: k =—19 only Alternative II"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "6",
+      "label": "(c)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "k = −19",
+      "ao_code": "1.1b",
+      "explanation": "[Note continuation]\nA1*: Completes proof with no errors or omissions 2y+x=17 b Mt: Awarded for an attempt at the key step of finding the coordinates of point P. ie for an attempt at solving 2y+x=17and y=2x+1 simultaneously. Allow any methods (including use of a calculator) but it must be a valid attempt to find both coordinates. Do not allow where they start 17 —x =2x+1as they have set 2y =y but condone bracketing errors, eg 2x2x+1+x=17 Al: P=(3,7)\nM1: Uses Pythagoras' Theorem to find the radius or radius ? using their P = (3,7) and (7,5). There must be an attempt to find the difference between the coordinates in the use of Pythagoras Al: (x-7)° +(y—5) =20. Do not accept (x-7) +(y-5)° =(/20)\nM1: For solving 2y +x =17 with their (x - Ty +(y-5) = 20, creating a 3TQ and solving.\nM1: For substituting their (1 1,3) into y=2x+k and finding k Al: k =—19 only Other method are possible using trigonometry. PMT"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "7",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "∫ 2/(3x−k) dx = 2/3 ln(3x−k)",
+      "ao_code": "1.1a",
+      "explanation": "Condone a missing bracket\nAllow recovery from a missing bracket if in subsequent work A ln 9k−k → A ln 8k"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "7",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "∫ 2/(3x−k) dx = 2/3 ln(3x−k)",
+      "ao_code": "1.1b",
+      "explanation": "Allow recovery from a missing bracket if in subsequent work A ln 9k−k → A ln 8k"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "7",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "dM1",
+      "mark_content": "∫ₖ³ᵏ 2/(3x−k) dx = 2/3 ln(9k−k)−2/3 ln(3k−k)",
+      "ao_code": "1.1b",
+      "explanation": "For substituting k and 3k into their A ln(3x−k) and subtracting either way around"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "7",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "2/3 ln (8/2) = 2/3 ln 4 oe",
+      "ao_code": "2.1",
+      "explanation": "Uses correct ln work and notation to show that I = 2/3 ln (8/2) or 2/3 ln 4 oe (ie independent of k)"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "7",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "∫ 2/(2x−k)² dx = −1/(2x−k)",
+      "ao_code": "1.1b",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "7",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "dM1",
+      "mark_content": "∫ₖ²ᵏ 2/(2x−k)² dx = −1/(4k−k) + 1/(2k−k)",
+      "ao_code": "1.1b",
+      "explanation": "For substituting k and 2k into their C/(2x−k) and subtracting"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "7",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "2/3k (∝ 1/k)",
+      "ao_code": "2.1",
+      "explanation": "Shows that it is inversely proportional to k. Eg proceeds to the answer is of the form A/k with A = 2/3\nThere is no need to perform the whole calculation. Accept from −1/(3k) + 1/(k) = (−1/3 + 1) × 1/k = 1/k − 1/k\nIf the calculation is performed it must be correct.\nDo not isw here. They should know when they have an expression that is inversely proportional to k."
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "8",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "B1",
+      "mark_content": "D = 5 + 2 \\sin (30 \\times 6.5)^\\circ = \\text{awrt } 4.48 \\text{m with units}",
+      "ao_code": "3.4",
+      "explanation": "B1: Scored for using the model ie. substituting t = 6.5 into D = 5 + 2sin(30t)^\\circ and stating D = awrt 4.48m. The units must be seen somewhere in (a) . So allow when D = 4.482... = 4.5 m Allow the mark for a correct answer without any working."
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "8",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "3.8 = 5 + 2 \\sin(30t)^\\circ \\Rightarrow \\sin(30t)^\\circ = -0.6",
+      "ao_code": "1.1b",
+      "explanation": "M1: For using D = 3.8 and proceeding to \\sin(30t)^\\circ = k, \\|k\\| \\le 1"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "8",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "",
+      "ao_code": "1.1b",
+      "explanation": "A1: \\sin(30t)^\\circ = -0.6 This may be implied by any correct answer for t such as t = 7.2 If the A1 implied, the calculation must be performed in degrees."
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "8",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "dM1",
+      "mark_content": "t = 10.77",
+      "ao_code": "3.1a",
+      "explanation": "dM1: For finding the first value of t for their \\sin(30t)^\\circ = k after t = 8.5. You may well see other values as well which is not an issue for this dM mark (Note that \\sin(30t)^\\circ = -0.6 \\Rightarrow 30t = 216.9^\\circ as well but this gives t = 7.2 ) For the correct \\sin(30t)^\\circ = -0.6 \\Rightarrow 30t = 323.1 \\Rightarrow t = \\text{awrt } 10.8 For the incorrect \\sin(30t)^\\circ = +0.6 \\Rightarrow 30t = 396.9 \\Rightarrow t = \\text{awrt } 13.2 So award this mark if you see 30t = \\text{invsin } \\text{their} -0.6 to give the first value of t where 30 t \\gt 255"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "8",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "10:46 a.m. or 10:47 a.m.",
+      "ao_code": "3.2a",
+      "explanation": "A1: Allow 10:46 a.m. (12 hour clock notation) or 10:46 (24 hour clock notation ) oe Allow 10:47 a.m. (12 hour clock notation) or 10:47 (24 hour clock notation ) oe DO NOT allow 646 minutes or 10 hours 46 minutes."
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "9",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "Either 3y^2 → 4y dy/dx or 2xy → 2x dy/dx + 2y",
+      "ao_code": "2.1",
+      "explanation": "M1: For selecting the appropriate method of differentiating either 3y^2 → 4y dy/dx or 2xy → 2x dy/dx + 2y\n\nIt may be quite difficult awarding it for the product rule but condone –2xy → –2x dy/dx + 2y unless you see evidence that they have used the incorrect law 'vu'–'uv'"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "9",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "2x – 2x dy/dx – 2y + 6y dy/dx = 0",
+      "ao_code": "1.1b",
+      "explanation": "A1: Fully correct derivative 2x – 2x dy/dx – 2y + 6y dy/dx = 0\n\nAllow attempts where candidates write 2xdx – 2xdy – 2ydx + 6ydy = 0 but watch for students who write dy/dx = 2x – 2x dy/dx – 2y + 6y dy/dx = 0 This, on its own, is A0 unless you are convinced that this is just their notation. Eg dy/dx = 2x – 2x dy/dx – 2y + 6y dy/dx = 0"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "9",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "(6y – 2x) dy/dx = 2y – 2x",
+      "ao_code": "2.1",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "9",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "A1*",
+      "mark_content": "dy/dx = (2y – 2x) / (6y – 2x) = (y – x)/(3y – x)",
+      "ao_code": "1.1b",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "9",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "(At P and Q dy/dx → ∞ ⇒) Deduces that 3y – x = 0",
+      "ao_code": "2.2a",
+      "explanation": "M1: Attempts to find either the x or y coordinates of P and Q by solving their y = 3 x with x° —2xy+3y° =50 simultaneously. Allow for finding a quadratic equation in x or y and solving to find at least one value for x or y. This may be awarded when candidates make the numerator = 0 ie using y=x Al: => x=(+)5V3 OR >y=(4)38"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "9",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "Solves y = 1/3 x and x^2 – 2xy + 3y^2 = 50 simultaneously",
+      "ao_code": "3.1a",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "9",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "⇒ x = (±) 5√3 OR ⇒ y = (±) 5/3√3",
+      "ao_code": "1.1b",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "9",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "dM1",
+      "mark_content": "Using y = 1/3 x ⇒ x = .. AND y = ..",
+      "ao_code": "1.1b",
+      "explanation": "dM1: Dependent upon the previous M, it is for finding the y coordinate from their x (or vice versa) This may also be scored following the numerator being set to 0 ie using y =x Al: Deduces that p=(-8.-33] OE. Allow to be x=... y=... d Blft: Explains that this is where ~ =0 and so you need to solve y=x and x —2xy+3y\" =50 simultaneously and choose the positive solution (or larger solution). Allow a follow through for candidates who mix up parts (b) and (c) Alternatively candidates could complete the square (x- yy +2y° =50 and state that y would reach a maximum value when x= y and choose the positive solution from2y* = 50 PMT"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "9",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "P = (−5√3, −5/3√3)",
+      "ao_code": "2.2a",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "9",
+      "label": "(c)",
+      "level": "sub",
+      "mark_code": "B1ft",
+      "mark_content": "Explains that you need to solve y = x and x^2 – 2xy + 3y^2 = 50 simultaneously and choose the positive solution",
+      "ao_code": "2.4",
+      "explanation": "[Note continuation]\nd\nM1: For a valid attempt at making x the subject. with two terms in 2 coming from 3y* and 2xy Look for (.t..)% = teens It is implied by ve dx d d This cannot be scored from attempts such as =2x-2x 2y + 6y which only has one correct term. d _ Al*: vy with no errors or omissions. dx 3y-x dy 2y-2 The previous line ~ = by — = or equivalent must be seen. MI: Deduces that 3y—x=0 oe 1"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "10",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "Seperates the variables to reach \\( \\int \\frac{1}{H} \\, dH = \\int \\frac{\\cos 0.25t}{40} \\, dt \\) or equivalent.",
+      "ao_code": "3.1a",
+      "explanation": "The integral signs need to be present on both sides and the \\( dH \\) AND \\( dt \\) need to be in the correct positions."
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "10",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "Integrates both sides to reach \\( \\ln H = A \\sin 0.25t \\) or equivalent with or without the \\(+c\\).",
+      "ao_code": "1.1b",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "10",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "\\( \\ln H = \\frac{1}{10} \\sin 0.25t + c \\) or equivalent with or without the \\(+c\\). Allow two constants, one either side.",
+      "ao_code": "1.1b",
+      "explanation": "If the 40 was on the lhs look for \\( 40 \\ln H = 4 \\sin 0.25t + c \\) or equivalent. Allow two constants, one either side."
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "10",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "dM1",
+      "mark_content": "Substitutes \\( t=0, H=5 \\Rightarrow c=\\ln(5) \\).",
+      "ao_code": "3.4",
+      "explanation": "It is dependent upon the previous M mark. You may allow even if you don’t explicitely see 't = 0, H = 5' as it may be implied from their previous line. If the candidate has attempted to change the subject and made an error/ slip then condone it for this M but not the final A. Also many students will be attempting to get to the given answer so condone the method of finding c =...."
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "10",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "A1*",
+      "mark_content": "Proceeds via \\( \\ln H = \\frac{1}{10} \\sin 0.25t + \\ln 5 \\) or equivalent to the given answer \\( H = 5e^{0.1\\sin 0.25t} \\) with at least one correct intermediate line and no incorrect work.",
+      "ao_code": "2.1",
+      "explanation": "This is an independent mark. DO NOT condone c's going to c's when they should be e^c or A."
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "10",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "B1",
+      "mark_content": "Max height = \\( 5e^{0.1} = 5.53 \\) m",
+      "ao_code": "3.4",
+      "explanation": "(Condone lack of units)\nB1: States that the maximum height is 5.53 m Accept 5e\"! Condone a lack of units here, but penalise if incorrect units are used. (©) Sa"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "10",
+      "label": "(c)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "Sets \\( 0.25t = \\frac{5\\pi}{2} \\)",
+      "ao_code": "3.1b",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "10",
+      "label": "(c)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "31.4",
+      "ao_code": "1.1b",
+      "explanation": "[Note continuation]\ne 1. a sin0.25¢+1n5 Accept as a minimum In H = —sin0.25t+In5 => H =e!° fe) i0 rH = 1 —sin0.25t Ins eld xe*\" before sight of the given answer If the only error was to omit the integration signs on line 1, thus losing the first M1, allow the candidate to have access to this mark following a correct intermediate line (see above). If they attempt to change the subject first then the constant of integration must have been adapted if the A1l* A sino.25t4¢ A sino.251 1. s is to be awarded. Inf =7psin0.25¢+c> H =e! => H = Ae! The dM1 and A1* under this method are awarded at virtually the same time. H t 40 Also, for the final two marks, you may see a proof from IF dH = Jcos0.25¢ dt 0 5\nM1: For identifying that it would reach the maximum height for the 2nd time when 0.25¢ = zo 450 Al: Accept awrt 31.4 or 107 — Allow if units are seen PMT"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "11",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "B1",
+      "mark_content": "Scored for key step in setting up the process so that it can be attempted using binomial expansions",
+      "ao_code": "3.1a",
+      "explanation": "This could be achieved by \\( \\sqrt{\\frac{1+4x}{1-x}} = (1+4x)^{0.5} \\times (1-x)^{-0.5} \\) See end for other alternatives\nIt may be implied by later work."
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "11",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "Award for an attempt at the binomial expansion \\((1+4x)^{0.5} = 1 + 0.5 \\times (4x) + \\frac{(0.5) \\times (-0.5)}{2} \\times (4x)^2\\)",
+      "ao_code": "1.1b",
+      "explanation": "There must be three (or more terms). Allow a missing bracket on the \\((4x)^2\\) and a sign slip so the correct application may be implied by \\(1 \\pm 2x \\pm 0.5x^2\\)"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "11",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "Award for an attempt at the binomial expansion \\((1-x)^{-0.5} = 1 + (-0.5)(-x) + \\frac{(-0.5) \\times (-1.5)}{2} \\times (-x)^2\\)",
+      "ao_code": "1.1b",
+      "explanation": "There must be three (or more terms). Allow a missing bracket on the \\((-x)^2\\) and a sign slips so the method may be awarded on \\(1 \\pm 0.5x \\pm 0.375x^2\\)"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "11",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "Both correct and simplified. This may be awarded for a correct final answer if a candidate does all their simplification at the end",
+      "ao_code": "1.1b",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "11",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "dM1",
+      "mark_content": "In the main scheme it is for multiplying their two expansions to reach a quadratic. It is for the key step in adding 'six' terms to produce the quadratic expression. Higher power terms may be seen. Condone slips on",
+      "ao_code": "2.1",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "11",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "A1*",
+      "mark_content": "1 + \\frac{5}{2}x - \\frac{5}{8}x^2 .... *",
+      "ao_code": "1.1b",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "11",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "B1",
+      "mark_content": "Expression is valid |x| < \\frac{1}{4} Should not use x = \\frac{1}{2} as \\frac{1}{2} > \\frac{1}{4}",
+      "ao_code": "2.3",
+      "explanation": "B1: States that the expansion may not / is not valid when |x| > Z This may be implied by a statement such as or stating that the expansion is only valid when |x| < ; — > — 2° 4 Condone, for this mark a candidate who substitutes x = > into the 4x and states it is not valid as 2> 1 oe Don't award for candidates who state that FY is too big without any reference to the validity of the expansion. As atrule you should see some reference to + or 4x 1 1+4 5 5 :"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "11",
+      "label": "(c)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "Substitutes x = \\frac{1}{11} into \\( \\sqrt{\\frac{1+4x}{1-x}} \\approx 1 + \\frac{5}{2} - \\frac{5}{8}x^2 \\)",
+      "ao_code": "1.1b",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "11",
+      "label": "(c)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "\\(\\frac{\\sqrt{3}}{2} = \\frac{1183}{968}\\)",
+      "ao_code": "1.1b",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "11",
+      "label": "(c)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "(so \\( \\sqrt{6} \\) is) \\( \\frac{1183}{484} \\text{ or } \\frac{2904}{1183} \\)",
+      "ao_code": "2.1",
+      "explanation": "[Note continuation]\nthe multiplication on one term only. It is dependent upon having scored the first B and one of the other two M's Lon. a 5. 5, 0.5 Lo. 0.5 In the alternative it is for multiplying | 1+ 5 x- 8 x (1 - x) and comparing it to (1 + 4x) It is for the key step in adding 'six' terms to produce the quadratic expression.\nA1*: Completes proof with no errors or omissions. In the alternative there must be some reference to the fact that both sides are equal. 1\nM1: Substitutes x = Tl into BOTH sides 7 Xe lt 5° — =x’ and attempts to find at least one side. —x As the left hand side is ws they may multiply by 2 first which is acceptable Al: Finds both sides leading to a correct equation/statement BS _ 183 oe ./6 =2x 1183 10 968 968 1183 2904 1183 1183 Al: [6 = or f/6= 6 =2x——=-—— would imply all 3 marks 484 vé 1183 v6 968 484 Ply Watch for other equally valid alternatives for 11(a) including 0.5 Bl: (1+4x)\" z [15a F Jina)\" then the M's are for (1+4x)\" and (1-x) 1 5 a\\= Bl: | 7 * IH + i x (1+5x(1 x) } then the first M1 for one application of binomial and —x —x the second would be for both (1- x)! and (1 -x)° T+4x JI-x 4 ; 4 BI: ox TS 43x 4x\") x(1 x) (1+ (3x 4x*))? x(I-x) PMT"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "12",
+      "label": "(a)(i)",
+      "level": "subsub",
+      "mark_code": "M1",
+      "mark_content": "Method to find p Eg. Divides 32000 = Ap⁴ by 50000 = Ap¹¹",
+      "ao_code": "3.1a",
+      "explanation": "M1: Attempts to use both pieces of information within V = Ap⁴, eliminates A correctly and solves an equation of the form p⁷ = k to reach a value for p. Allow for slips on the 32 000 and 50 000 and the values of t."
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "12",
+      "label": "(a)(i)",
+      "level": "subsub",
+      "mark_code": "A1",
+      "mark_content": "p = 1.0658",
+      "ao_code": "1.1b",
+      "explanation": "A1: p = awrt 1.0658"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "12",
+      "label": "(a)(ii)",
+      "level": "subsub",
+      "mark_code": "M1",
+      "mark_content": "Substitutes their p = 1.0658 into either equation and finds A",
+      "ao_code": "1.1b",
+      "explanation": "M1: Substitutes their p = 1.0658 into either of their equations and finds A. Eg A = 32000/1.0658⁴ or A = 50000/1.0658¹¹ but you may follow through on incorrect equations from part (i)"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "12",
+      "label": "(a)(ii)",
+      "level": "subsub",
+      "mark_code": "A1*",
+      "mark_content": "A = 24795 → 24805 ≈ 24800",
+      "ao_code": "1.1b",
+      "explanation": "A1*: Shows that A is between 24 795 and 24 805 before you see ‘≈24 800’ or ‘≈ 24800’. Accept with or without units."
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "12",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "B1",
+      "mark_content": "A / (£)24 800 is the value of the car on 1st January 2001",
+      "ao_code": "3.4",
+      "explanation": "B1: States that A is the value of the car on Ist January 2001. The statement must reference the ear, its cost/value, and \"0\" time Allow ‘it is the initial value of the car\" \"it is the cost of the car at ¢= 0\" \"it is the cars starting value\""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "12",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "B1",
+      "mark_content": "p /1.0658 is the factor by which the value rises each year. Accept that the value rises by 6.6 % a year (ft on their p)",
+      "ao_code": "3.4",
+      "explanation": "B1: States that p is the rate at which the value of the car rises each year. The statement must reference a yearly rate and They could reference the 1.0658 Eg \"The cars value rises by 6.5 % each year.\" Allow \"p is the rate the cars value is rising each year\" \"it is the proportional increase in value of the car each year\" \"the factor by which the value of the car is rising each year\" ‘its value appreciates by 6.5% per year’ Allow ‘ the value of the car multiplies by p each year’ Do not allow \"by how much the value of the car rises each year\" or \"it is the rate of inflation\" (©)"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "12",
+      "label": "(c)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "Attempts 100000 = '24800'×'1.0658ⁿ'",
+      "ao_code": "3.4",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "12",
+      "label": "(c)",
+      "level": "sub",
+      "mark_code": "dM1",
+      "mark_content": "t = log₁.₀₆₅₈(100000 / 24800)",
+      "ao_code": "1.1b",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "12",
+      "label": "(c)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "t = 21.8 or 21.9",
+      "ao_code": "1.1b",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "12",
+      "label": "(c)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "cso 2022",
+      "ao_code": "3.2a",
+      "explanation": "[Note continuation]\nAl: 24800x1.0658\", achieves a value between 31095 and 32005 followed by ~ 32 000 hence 4 must be = 24 800\nM1: Uses the model 100000 ='24800'x'1.0658\" and proceeds to their '1.0658\" =k Allow use of any inequality here.\ndM1: For the complete method of (i) using the information given with their equation of the model and (ii) translating the situation into a correct method to find '¢ 100000 24800 “e\nA1: States in the year 2022. A candidate using a GP formula can be awarded full marks Allow different methods in part (c). Eg Via GP a formula\nM1: 24800x'1.0658\"! = 100000 =>'1.0658\"\"' = K\ndM1: Uses a correct method to find n. A2: 2022 Via (trial and improvement) Al: (¢) =awrt 21.8 or 21.9 or lf, ss\nM1: Uses the model by substituting integer values of ¢ into their V = Ap‘ so that for t=n, V <100000 or t=n+1,V >100000 (So for the correct A and p this would be scored for t = 21,V ~ £95000 or t=21,V ~ £101 000\ndM1: For a complete method showing that this is the least value. So both of the above values\nA1: Allow for 22 following correct and accurate results (awrt nearest £1000 is sufficient accuracy) Al: As before PMT"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "13",
+      "label": "",
+      "level": "main",
+      "mark_code": "M1",
+      "mark_content": "Chooses a suitable method for \\( \\int_{0}^{2} 2x\\sqrt{x+2} \\, dx \\)",
+      "ao_code": "3.1a",
+      "explanation": "For attempting to integrate using substitution. Look for terms and limits changed to u's. Condone slips and errors/omissions on changing \\( dx \\rightarrow du \\). Attempted multiplication of terms and raising of at least one power of u by one. Condone slips. Use of at least the top correct limit. For instance if they go back to x's the limit is 2."
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "13",
+      "label": "",
+      "level": "main",
+      "mark_code": "B1",
+      "mark_content": "u = x+2 \\Rightarrow \\frac{dx}{du} = 1 \\quad oe",
+      "ao_code": "1.1b",
+      "explanation": "For substitution it is for giving the substitution and stating a correct \\( \\frac{dx}{du} \\). Eg, \\( u = \\sqrt{x+2} \\Rightarrow \\frac{dx}{du} = 2u \\) or equivalent such as \\( \\frac{du}{dx} = \\frac{1}{2\\sqrt{x+2}} \\)"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "13",
+      "label": "",
+      "level": "main",
+      "mark_code": "M1",
+      "mark_content": "\\( \\int A(u \\pm 2)\\sqrt{u}du \\)",
+      "ao_code": "1.1b",
+      "explanation": "It is for attempting to get all aspects of the integral in terms of 'u'. All terms must be attempted including the dx. You are only condoning slips on signs and coefficients."
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "13",
+      "label": "",
+      "level": "main",
+      "mark_code": "dM1",
+      "mark_content": "= \\( Su^{\\frac{5}{2}} \\pm Tu^{\\frac{3}{2}} \\)",
+      "ao_code": "2.1",
+      "explanation": "It is for using a correct method of expanding and integrating each term (seen at least once). It is dependent upon the previous M."
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "13",
+      "label": "",
+      "level": "main",
+      "mark_code": "A1",
+      "mark_content": "= \\( \\frac{4}{3} u^{\\frac{5}{2}} - \\frac{8}{3} u^{\\frac{3}{2}} \\)",
+      "ao_code": "1.1b",
+      "explanation": "Correct answer in x or u. See scheme."
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "13",
+      "label": "",
+      "level": "main",
+      "mark_code": "ddM1",
+      "mark_content": "Uses limits 4 and 2 the correct way around",
+      "ao_code": "1.1b",
+      "explanation": "Dependent upon the previous M, it is for using the correct limits for their integral, the correct way around."
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "13",
+      "label": "",
+      "level": "main",
+      "mark_code": "A1*",
+      "mark_content": "= \\( \\frac{32}{15}(2 + \\sqrt{2}) * \\)",
+      "ao_code": "2.1",
+      "explanation": "Proceeds correctly to \\( \\frac{32}{15} (2 + \\sqrt{2}) \\). Note that this is a given answer. There must be at one least correct intermediate line between \\( \\left[ \\frac{4}{3} u^{\\frac{5}{2}} - \\frac{8}{3} u^{\\frac{3}{2}} \\right]_{\\sqrt{2}}^{2} \\) and \\( \\frac{32}{15} (2 + \\sqrt{2}) \\)."
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "13",
+      "label": "",
+      "level": "main",
+      "mark_code": "M1",
+      "mark_content": "Chooses a suitable method for \\( \\int_0^2 2x\\sqrt{x+2} \\, dx \\)",
+      "ao_code": "3.1a",
+      "explanation": "M1: For attempting using by parts to solve It is a problem- solving mark and all elements do not have to be correct.\n\n- the formula applied the correct way around. You may condone incorrect attempts at integrating \\( \\sqrt{x+2} \\) for this problem solving mark\n\n- further integration, again, this may not be correct, and the use of at least the top limit of 2"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "13",
+      "label": "",
+      "level": "main",
+      "mark_code": "B1",
+      "mark_content": "\\( \\int (\\sqrt{x+2}) \\, dx = \\frac{2}{3} (x+2)^{ \\frac{3}{2} } \\)",
+      "ao_code": "1.1b",
+      "explanation": "B1: For \\( \\int (\\sqrt{x+2}) \\, dx = \\frac{2}{3} (x+2)^{ \\frac{3}{2} } \\) ∞  May be awarded"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "13",
+      "label": "",
+      "level": "main",
+      "mark_code": "M1",
+      "mark_content": "Award for using by parts the correct way around and using limits",
+      "ao_code": "1.1b",
+      "explanation": "M1: For integration by parts the right way around. Award for \\( A x (x+2)^{ \\frac{3}{2} } - \\int B (x+2)^{ \\frac{3}{2} } \\, (dx) \\)"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "13",
+      "label": "",
+      "level": "main",
+      "mark_code": "dM1",
+      "mark_content": "\\( = A x (x+2)^{ \\frac{3}{2} } - C (x+2)^{ \\frac{5}{2} } \\)",
+      "ao_code": "2.1",
+      "explanation": "dM1: For integrating a second time. Award for \\( A x (x+2)^{ \\frac{3}{2} } - C (x+2)^{ \\frac{5}{2} } \\)"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "13",
+      "label": "",
+      "level": "main",
+      "mark_code": "A1",
+      "mark_content": "\\( = \\frac{4}{3} x (x+2)^{ \\frac{3}{2} } - \\frac{8}{15} (x+2)^{ \\frac{5}{2} } \\)",
+      "ao_code": "1.1b",
+      "explanation": "A1: \\( \\frac{4}{3} x (x+2)^{ \\frac{3}{2} } - \\frac{8}{15} (x+2)^{ \\frac{5}{2} } \\) which may be un simplified"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "13",
+      "label": "",
+      "level": "main",
+      "mark_code": "ddM1",
+      "mark_content": "Uses limits 2 and 0 the correct way around",
+      "ao_code": "1.1b",
+      "explanation": "ddM1: Dependent upon the previous M, it is for using the limits 2 and 0 the correct way around"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "13",
+      "label": "",
+      "level": "main",
+      "mark_code": "A1*",
+      "mark_content": "\\( = \\frac{32}{15} \\left( 2 + \\sqrt{2} \\right) \\)",
+      "ao_code": "2.1",
+      "explanation": "A1*: Proceeds to \\( \\frac{32}{15} \\left( 2 + \\sqrt{2} \\right) \\). Note that this is a given answer.\n\nAt least one correct intermediate line must be seen. (See substitution). You would condone missing dx’s"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "14",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "Attempts to use \\( \\cos 2t = 1 - 2\\sin^2 t \\Rightarrow \\frac{y-4}{2} = 1 - 2 \\left( \\frac{x-3}{2} \\right)^2 \\)",
+      "ao_code": "2.1",
+      "explanation": "M1: Uses \\( \\cos 2t = 1-2\\sin^2 t \\) in an attempt to eliminate \\( t \\)"
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "14",
+      "label": "(a)",
+      "level": "sub",
+      "mark_code": "A1*",
+      "mark_content": "\\( \\Rightarrow y - 4 = 2 - 4 \\times \\frac{(x-3)^2}{4} \\Rightarrow y = 6 - (x-3)^2 \\)",
+      "ao_code": "1.1b",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "14",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "⩌ shaped parabola",
+      "ao_code": "1.1b",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "14",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "Fully correct with 'ends' at (1,2) & (5,2)",
+      "ao_code": "1.1b",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "14",
+      "label": "(b)",
+      "level": "sub",
+      "mark_code": "B1",
+      "mark_content": "Suitable reason : Eg states as \\( x = 3 + 2\\sin t , 1 \\leq x \\leq 5 \\)",
+      "ao_code": "2.4",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "14",
+      "label": "(c)",
+      "level": "sub",
+      "mark_code": "B1",
+      "mark_content": "Either finds the lower value for \\( k = 7 \\) or deduces that \\( k < \\frac{37}{4} \\)",
+      "ao_code": "2.2a",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "14",
+      "label": "(c)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "Finds where \\( x + y = k \\) meets \\( y = 6 - (x-3)^2 \\) \\( \\Rightarrow k - x = 6 - (x-3)^2 \\) and proceeds to 3TQ in \\( x \\) or \\( y \\)",
+      "ao_code": "3.1a",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "14",
+      "label": "(c)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "Correct 3TQ in \\( x \\) \\( x^2 - 7x + (k+3) = 0 \\) Or \\( y \\) \\( y^2 + (7-2k)y + (k^2 - 6k + 3) = 0 \\)",
+      "ao_code": "1.1b",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "14",
+      "label": "(c)",
+      "level": "sub",
+      "mark_code": "M1",
+      "mark_content": "Uses \\( b^2 - 4ac = 0 \\Rightarrow 49 - 4 \\times 1 \\times (k+3) = 0 \\Rightarrow k = \\left( \\frac{37}{4} \\right) \\) or \\( (7 - 2k)^2 - 4 \\times 1 \\times (k^2 - 6k + 3) = 0 \\Rightarrow k = \\left( \\frac{37}{4} \\right) \\)",
+      "ao_code": "2.1",
+      "explanation": ""
+    },
+    {
+      "exam_paper_id": null,
+      "question_number": "14",
+      "label": "(c)",
+      "level": "sub",
+      "mark_code": "A1",
+      "mark_content": "Range of values for \\( k : 7 \\leq k < \\frac{37}{4} \\)",
+      "ao_code": "2.5",
+      "explanation": ""
+    }
+  ],
+  "exam_metadata": {
+    "page1_text": "Pearson\nEdexcel\n\nMark Scheme (Results)\n\nSummer 2018\n\nPearson Edexcel GCE A Level Mathematics\n\nPure Mathematics Paper 1 (QMA0O1 01)"
+  }
+}

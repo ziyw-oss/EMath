@@ -28,6 +28,7 @@ with pdfplumber.open(pdf_path) as pdf:
                 raw_header_line = "".join(header_row).replace(" ", "")
                 if all(k in raw_header_line for k in ["question", "scheme", "mark", "ao"]):
                     page_status["has_header"] = True
+        print(f"📄 Page {i+1}: has_table={page_status['has_table']}, has_header={page_status['has_header']}")
         pages_status.append(page_status)
 
 output_path = os.path.join(os.getcwd(), "tmp/pages_with_tables.json")

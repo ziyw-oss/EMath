@@ -110,12 +110,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       let lastResult: any = null;
       let seenFirstHeader = false;
 
+      let page1Text = "";
+
       try {
         for (let i = 0; i < imageFiles.length; ++i) {
           const pageIndex = i + 1;
           const pageStatus = pagesStatus.find(p => p.page === pageIndex);
-          if (!pageStatus || !pageStatus.has_table) {
-            console.log(`⛔ Skipping Page ${pageIndex} (no table)`);
+          // Debug output for table/header status
+          console.log(`🔍 Page ${pageIndex} status: has_table=${pageStatus?.has_table}, has_header=${pageStatus?.has_header}`);
+          if (!pageStatus) {
+            console.log(`⛔ Skipping Page ${pageIndex} (no status info)`);
             lastResult = null;
             continue;
           }
@@ -129,6 +133,15 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
           console.log(`📄 Page ${pageIndex}: hash = ${imgHash}`);
 
+          if (pageIndex === 1 && !MOCK_MODE) {
+            const titleText = await tesseract.recognize(imgPath);
+            page1Text = titleText;
+            // Removed extraction of paperCode, paperName, examSession and board
+            // 调试输出: 识别出的试卷信息
+            console.log("📘 Extracted Exam Info:");
+            console.log("📄 page1_text:", page1Text.trim());
+          }
+
           let jsonOutput: any = null;
           if (seenHashes.has(imgHash)) {
             // Reuse last result if hash seen before
@@ -138,19 +151,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             seenHashes.add(imgHash);
 
             if (!pageStatus.has_header && seenFirstHeader) {
-              console.log(`📝 Page ${pageIndex}: treated as Notes (table w/o header, after scoring begins)`);
+              console.log(`📝 Page ${pageIndex} appended to noteBuffer (no header, after scoring begins)`);
+              console.log(`📝 Page ${pageIndex}: treated as Notes (no header, after scoring begins)`);
               const ocrText = await tesseract.recognize(imgPath);
               noteBuffer += (noteBuffer ? "\n" : "") + ocrText;
               lastResult = null;
               continue;
             }
-
             if (!pageStatus.has_header && !seenFirstHeader) {
-              console.log(`📄 Page ${pageIndex}: skipped (table w/o header, before scoring)`);
+              console.log(`📄 Page ${pageIndex}: skipped (no header, before scoring)`);
               lastResult = null;
               continue;
             }
-
             seenFirstHeader = true;
 
             // ✅ 此时仅当 hasHeader === true 才会调用 GPT
@@ -190,7 +202,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
                     reject(new Error(`parse_page.py failed on ${imgFile}: ${stderrData}`));
                   } else {
                     try {
-                      console.log(`📤 Raw JSON from Python for page ${pageIndex}: ${stdoutData.slice(0, 200)}...`);
+                      // Debug output: show first 2000 chars of GPT raw content
+                      //console.log(`📥 GPT raw_content for page ${pageIndex}:\n${stdoutData.slice(0, 2000)}\n---`);
+                      //console.log(`📤 Raw JSON from Python for page ${pageIndex}: ${stdoutData.slice(0, 200)}...`);
                       jsonOutput = JSON.parse(stdoutData);
                       resolve();
                     } catch (err: unknown) {
@@ -206,54 +220,74 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           }
 
           // Now process jsonOutput as before
-          if (!jsonOutput || !jsonOutput.header) {
-            // No header means this page is explanation content
+          const hasMarks = Array.isArray(jsonOutput?.marks) && jsonOutput.marks.length > 0;
+          if (!hasMarks) {
+            console.log(`⚠️ No marks on page ${pageIndex}. JSON output was:`, JSON.stringify(jsonOutput, null, 2));
             if (jsonOutput?.explanation) {
               noteBuffer += (noteBuffer ? "\n" : "") + jsonOutput.explanation;
             }
-            // Skip adding marks from this page
             continue;
           }
+          // Log before integrating marks
+          console.log(`📌 Proceeding to integrate marks from page ${pageIndex}...`);
           if (Array.isArray(jsonOutput.marks) && jsonOutput.marks.length > 0) {
-            // 拆分 notes 按评分点标识，合并到 marks
+            // 拆分 notes 按评分点标识，合并到 marks（方法 A）
             if (noteBuffer) {
               const noteLines = noteBuffer.split(/\n/).map(line => line.trim()).filter(Boolean);
-              const noteChunks: string[] = [];
-
-              // 组装每个评分点段落（支持多行合并）
+              // noteChunks: [chunkText, label]
+              const noteChunks: [string, string][] = [];
+              let currentLabel = "";
               for (const line of noteLines) {
+                // 检查是否为 label 行 (如 (a), (b), ...)
+                const labelMatch = line.match(/^\(([a-z])\)/i);
+                if (labelMatch) {
+                  currentLabel = labelMatch[0]; // e.g., "(b)"
+                  continue;
+                }
                 const markStart = /^(\(?[a-z]+\)?\(?[a-z]+\)?\s*)?(m1|a1\*?|b1(ft)?|d?m\d?)[:：]/i;
                 if (noteChunks.length === 0 || markStart.test(line)) {
-                  noteChunks.push(line);
+                  noteChunks.push([line, currentLabel]);
                 } else {
-                  noteChunks[noteChunks.length - 1] += " " + line;
+                  const last = noteChunks.length - 1;
+                  noteChunks[last][0] += " " + line;
                 }
               }
 
-              // 建立评分点查找索引
-              const markIndex = new Map<string, any>();
-              for (const mark of jsonOutput.marks) {
+              // 方法A：逐个评分点分配chunk，且每个chunk最多只分配给一个评分点
+              const usedChunks = new Set<number>();
+              for (const mark of lastMarks) {
                 const markKey = (mark.label + (mark.mark_code || "")).toLowerCase().replace(/[\s()]/g, "");
-                markIndex.set(markKey, mark);
-              }
-
-              // 按标识查找并赋值
-              for (const chunk of noteChunks) {
-                const match = chunk.match(/^(\(?[a-z]+\)?\(?[a-z]+\)?\s*)?(m1|a1\*?|b1(ft)?|d?m\d?)[:：]/i);
-                if (!match) continue;
-                const labelRaw = (match[1] || "").trim();
-                const markCodeRaw = (match[2] || "").toUpperCase();
-                const label = labelRaw.replace(/\s+/g, "");
-                const markKey = (label + markCodeRaw).toLowerCase().replace(/[\s()]/g, "");
-                const mark = markIndex.get(markKey);
-                if (mark) {
-                  if (!mark.explanation) mark.explanation = "";
-                  mark.explanation += (mark.explanation ? "\n" : "") + chunk;
+                for (let i = 0; i < noteChunks.length; i++) {
+                  if (usedChunks.has(i)) continue;
+                  const [chunk, chunkLabel] = noteChunks[i];
+                  const match = chunk.match(/^(\(?[a-z]+\)?\(?[a-z]+\)?\s*)?(m1|a1\*?|b1(ft)?|d?m\d?)[:：]/i);
+                  if (!match) continue;
+                  const markCodeRaw = (match[2] || "").toUpperCase();
+                  const candidateKey = ((chunkLabel || "") + markCodeRaw).toLowerCase().replace(/[\s()]/g, "");
+                  if (candidateKey === markKey) {
+                    if (!mark.explanation) mark.explanation = "";
+                    mark.explanation += (mark.explanation ? "\n" : "") + chunk;
+                    usedChunks.add(i);
+                    console.log(`🧩 Explanation matched for mark: label=${mark.label}, code=${mark.mark_code}`);
+                    console.log(`⬇️ Explanation content:\n${chunk}`);
+                    break;
+                  }
                 }
               }
+              // 将未分配的 chunk 追加到最后评分点
+              const extraChunks = noteChunks.filter((_, i) => !usedChunks.has(i)).map(([text]) => text);
+              if (extraChunks.length > 0 && lastMarks.length > 0) {
+                const lastMark = lastMarks[lastMarks.length - 1];
+                const extraText = extraChunks.join("\n");
+                if (!lastMark.explanation) lastMark.explanation = "";
+                // Add a comment indicating this explanation is from notes continuation
+                lastMark.explanation += (lastMark.explanation ? "\n" : "") + "[Note continuation]\n" + extraText;
+              }
+              console.log(`🪄 Final marks for page ${pageIndex}:\n`, JSON.stringify(lastMarks, null, 2));
               noteBuffer = "";
             }
             marks.push(...jsonOutput.marks);
+            console.log("📋 Merged marks so far:", marks.length);
             console.log(`✅ Page ${pageIndex}: ${jsonOutput.marks.length} marks added`);
             console.log(`📬 Received ${jsonOutput.marks.length} marks from GPT for page ${pageIndex}`);
             lastMarks = jsonOutput.marks;
@@ -268,10 +302,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         }
         // Write marks to tmp/output_marks.json before returning
         const outputPath = path.resolve(process.cwd(), "tmp/output_marks.json");
-        fs.writeFileSync(outputPath, JSON.stringify({ marks }, null, 2), "utf8");
+        const outputData = JSON.stringify({ marks, exam_metadata: { page1_text: page1Text.trim() } }, null, 2);
+        console.log("📦 Final JSON content preview:\n" + outputData.slice(0, 1000) + "\n---");
+        fs.writeFileSync(outputPath, outputData, "utf8");
         console.log(`💾 Final output written to ${outputPath}`);
         responded = true;
-        return res.status(200).json({ marks });
+        return res.status(200).json({ marks, exam_metadata: { page1_text: page1Text.trim() } });
       } catch (err: unknown) {
         const error = err as Error;
         responded = true;
