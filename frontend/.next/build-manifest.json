@@ -22,15 +22,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/math/import-mark-scheme": [
+    "/math/doing": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/math/import-mark-scheme.js"
-    ],
-    "/math/view-mark-scheme": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/math/view-mark-scheme.js"
+      "static/chunks/pages/math/doing.js"
     ]
   },
   "ampFirstPages": []

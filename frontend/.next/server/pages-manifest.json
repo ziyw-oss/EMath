@@ -2,8 +2,6 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/math/import-mark-scheme": "pages/math/import-mark-scheme.js",
-  "/api/upload-mark-scheme": "pages/api/upload-mark-scheme.js",
-  "/math/view-mark-scheme": "pages/math/view-mark-scheme.js",
-  "/api/get-mark-scheme": "pages/api/get-mark-scheme.js"
+  "/math/doing": "pages/math/doing.js",
+  "/api/doing": "pages/api/doing.js"
 }
