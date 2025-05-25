@@ -51,6 +51,8 @@ export default function ExamDoingPage() {
   // 新增：判分反馈显示状态和内容
   const [showFeedback, setShowFeedback] = useState(false);
   const [currentFeedback, setCurrentFeedback] = useState<{ score: number; reason: string; matched?: string[] } | null>(null);
+  // 新增：判分中状态
+  const [isScoring, setIsScoring] = useState(false);
 
   type AnswerItem = {
     text: string;
@@ -426,6 +428,7 @@ export default function ExamDoingPage() {
             <button
               className="px-5 py-2 bg-blue-600 text-white rounded-lg disabled:opacity-50 font-semibold hover:bg-blue-700 transition"
               onClick={async () => {
+                setIsScoring(true);
                 // 构造当前页答案 payload
                 const currentGroup = groupedEntries[currentPage]?.[1] || [];
                 type AnswerPayload = Record<
@@ -440,7 +443,7 @@ export default function ExamDoingPage() {
                       question_number: string;
                       parent_label: string | null;
                       label: string;
-                      questionImagePath: string | null;
+                      image_path: string | null;
                     };
                   }
                 >;
@@ -457,7 +460,7 @@ export default function ExamDoingPage() {
                         question_number: q.question_number,
                         parent_label: q.parent_label,
                         label: q.label,
-                        questionImagePath: q.image_path || null,
+                        image_path: q.image_path || null,
                       },
                     };
                   }
@@ -466,18 +469,24 @@ export default function ExamDoingPage() {
 
                 // 打印所有题目的题干图片路径
                 Object.entries(answerPayload).forEach(([qid, ans]) => {
-                  console.log(`题目ID ${qid} 传给 API 的题干图片路径:`, ans.meta.questionImagePath);
+                  console.log(`题目ID ${qid} 传给 API 的题干图片路径:`, ans.meta.image_path);
+                });
+                // 新增：打印所有题目的图片答案路径
+                Object.entries(answerPayload).forEach(([qid, ans]) => {
+                  console.log(`题目 ${qid} 的图片路径:`, ans.images);
                 });
 
                 if (Object.keys(answerPayload).length === 0) {
                   // 直接跳下一题
                   setCurrentPage((p) => Math.min(p + 1, groupedEntries.length - 1));
+                  setIsScoring(false);
                   return;
                 }
 
                 const token = localStorage.getItem("token");
                 if (!token) {
                   console.error("未登录，无 token");
+                  setIsScoring(false);
                   return;
                 }
 
@@ -506,10 +515,11 @@ export default function ExamDoingPage() {
                 } catch (err) {
                   console.error("❌ 保存或判分失败:", err);
                 }
+                setIsScoring(false);
               }}
-              disabled={currentPage === groupedEntries.length - 1}
+              disabled={currentPage === groupedEntries.length - 1 || isScoring}
             >
-              下一题 ➡️
+              {isScoring ? "判分中..." : "下一题 ➡️"}
             </button>
           </div>
         </div>

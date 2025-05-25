@@ -128,15 +128,19 @@ export default async function handler(
         ...imagesArray.map(x => path.basename(x))
       ]);
 
-      const imagePathValue = (meta?.image_path || "/static/question_images/q1.png").replace(/^\/+/, "");
-      // 修复路径拼接: 让图片路径指向 frontend/public/static/question_images/q1.png
-      const questionImagePath = path.join(
-        process.cwd(),
-        "public",
-        imagePathValue.replace(/^public\//, "")
-      );
+      let questionImagePath = "";
+      if (!meta?.image_path) {
+        console.warn(`⚠️ meta.image_path 缺失，跳过题干图像`);
+      } else {
+        const imagePathValue = meta.image_path.replace(/^\/+/, "");
+        questionImagePath = path.join(
+          process.cwd(),
+          "public",
+          imagePathValue
+        );
+      }
 
-      console.log("🐛 meta.image_path (original):", meta?.image_path || "(default fallback: /static/question_images/q1.png)");
+      console.log("🐛 meta.image_path (original):", meta?.image_path);
       console.log("👉 Final questionImagePath:", questionImagePath);
       console.log("📂 Exists:", fs.existsSync(questionImagePath));
 
@@ -164,7 +168,7 @@ export default async function handler(
           const text = data.toString().trim();
           if (text) {
             const firstLine = text.split("\n")[0];
-            console.error(`🐍 PY STDERR: ${firstLine} ...`);
+            //console.error(`🐍 PY STDERR: ..`);
           }
         }
       } as ScoreAnswerInput) as { score: number; reason: string; matched?: string[] };

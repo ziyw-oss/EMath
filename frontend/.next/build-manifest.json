@@ -26,11 +26,6 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/math/doing.js"
-    ],
-    "/math/preview": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/math/preview.js"
     ]
   },
   "ampFirstPages": []
