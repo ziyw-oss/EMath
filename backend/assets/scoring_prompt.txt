@@ -13,11 +13,6 @@ Instructions:
 - Respect principles like ft (follow-through), bod (benefit of doubt), isw (ignore subsequent working), awrt, cso, etc.
 - Do not invent rules or assume grade boundaries.
 - Reward correct mathematical methods even with small errors, where appropriate.
-- Additionally, use the provided images to extract mathematical content:
-  - If no question image is provided, say so explicitly.
-  - If a question image is provided, describe its content in LaTeX or readable math.
-  - If no student answer image is provided, say so explicitly.
-  - If student answer images are provided, describe each of them in detail (e.g., any math working or boxed answers shown).
 
 Output format:
 Return only valid JSON like:
@@ -25,12 +20,6 @@ Return only valid JSON like:
 {
   "score": number,
   "matched": string[],
-  "reason": string,
-  "questionImageAnalysis": string,
-  "studentImageAnalysis": string[]
+  "reason": string
 }
 ```
-
-Additionally, for clarity, include image interpretation fields:
-- "questionImageAnalysis": string — description of question image (or state "No image provided").
-- "studentImageAnalysis": string[] — list of descriptions for each student answer image (or state ["No image provided"]).

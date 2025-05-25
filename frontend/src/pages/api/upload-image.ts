@@ -27,7 +27,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     },
   });
 
-  form.parse(req, (err, fields, files) => {
+  return form.parse(req, (err, fields, files) => {
     if (err) {
       console.error("Upload error:", err);
       return res.status(500).json({ error: "File upload failed" });
@@ -37,7 +37,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const fileArray = Array.isArray(uploadedFiles) ? uploadedFiles : [uploadedFiles];
     const validFiles = fileArray.filter((f): f is formidable.File => !!f && !!f.filepath);
 
-    res.status(200).json({
+    return res.status(200).json({
       files: validFiles.map((f) => ({
         url: `/uploads/${path.basename(f.filepath)}`,
         name: f.originalFilename,

@@ -26,6 +26,11 @@
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/math/doing.js"
+    ],
+    "/math/setup": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/math/setup.js"
     ]
   },
   "ampFirstPages": []

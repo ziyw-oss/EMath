@@ -178,14 +178,10 @@ def main():
         score = result.get("score")
         matched = result.get("matched", [])
         reason = result.get("reason", "No reason provided")
-        question_image_analysis = result.get("questionImageAnalysis", "N/A")
-        student_image_analysis = result.get("studentImageAnalysis", [])
         print(json.dumps({
             "score": score,
             "matched": matched,
-            "reason": reason,
-            "questionImageAnalysis": question_image_analysis,
-            "studentImageAnalysis": student_image_analysis
+            "reason": reason
         }))
     except Exception as e:
         print("❌ Error parsing GPT output:", raw_content, file=sys.stderr)
@@ -193,9 +189,7 @@ def main():
         print(json.dumps({
             "score": None,
             "matched": [],
-            "reason": str(e),
-            "questionImageAnalysis": "N/A",
-            "studentImageAnalysis": []
+            "reason": str(e)
         }))
 
 if __name__ == "__main__":

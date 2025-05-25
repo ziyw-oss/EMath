@@ -17,8 +17,17 @@ export default function ExamSetupPage() {
       });
   }, []);
 
-  function startExam() {
-    router.push(`/math/doing?examId=${selectedExamId}`);
+  async function startExam() {
+    const res = await fetch("/api/start-exam", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ examId: selectedExamId }),
+    });
+
+    const data = await res.json();
+    if (data.sessionId) {
+      router.push(`/math/doing?sessionId=${data.sessionId}`);
+    }
   }
 
   return (
