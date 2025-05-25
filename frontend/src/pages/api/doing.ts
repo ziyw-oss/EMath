@@ -2,14 +2,21 @@ import { NextApiRequest, NextApiResponse } from "next";
 import db from "@/lib/db";
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { examId } = req.query;
-  if (!examId) return res.status(400).json({ error: "Missing examId" });
+  const { sessionId } = req.query;
+  if (!sessionId) return res.status(400).json({ error: "Missing sessionId" });
 
   try {
+    const [[sessionRow]]: any[] = await db.query(
+      "SELECT exam_paper_id FROM exam_sessions WHERE id = ?",
+      [sessionId]
+    );
+    if (!sessionRow) return res.status(404).json({ error: "Session not found" });
+    const examId = sessionRow.exam_paper_id;
+
     const [rows]: any[] = await db.query(
       `SELECT 
         q.id, q.question_number, q.label, q.parent_label, q.level, q.marks, q.question_text,
-        q.image_path,
+        q.image_path, q.exam_paper_id,
         e.exam_session AS exam_year, e.paper_name AS exam_type
        FROM question_bank q
        JOIN exam_papers e ON q.exam_paper_id = e.id

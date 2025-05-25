@@ -4,5 +4,10 @@
   "/_document": "pages/_document.js",
   "/math/doing": "pages/math/doing.js",
   "/math/setup": "pages/math/setup.js",
-  "/math/dashboard": "pages/math/dashboard.js"
+  "/math/dashboard": "pages/math/dashboard.js",
+  "/api/save-and-score": "pages/api/save-and-score.js",
+  "/api/submit-exam": "pages/api/submit-exam.js",
+  "/api/dashboard": "pages/api/dashboard.js",
+  "/api/rewards-history": "pages/api/rewards-history.js",
+  "/api/rewards-confirm": "pages/api/rewards-confirm.js"
 }

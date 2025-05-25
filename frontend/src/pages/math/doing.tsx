@@ -39,7 +39,7 @@ function renderMath(text?: string): JSX.Element[] {
 
 export default function ExamDoingPage() {
   const router = useRouter();
-  const { examId } = router.query;
+  const { sessionId } = router.query;
   const [questions, setQuestions] = useState<any[]>([]);
   const [currentPage, setCurrentPage] = useState(0);
   const [answers, setAnswers] = useState<{ [id: number]: string }>({});
@@ -76,9 +76,9 @@ export default function ExamDoingPage() {
   };
 
   useEffect(() => {
-    if (!examId) return;
+    if (!sessionId) return;
 
-    fetch(`/api/doing?examId=${examId}`)
+    fetch(`/api/doing?sessionId=${sessionId}`)
       .then((res) => {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();
@@ -110,7 +110,7 @@ export default function ExamDoingPage() {
       .catch((err) => {
         console.error("Fetch failed:", err);
       });
-  }, [examId]);
+  }, [sessionId]);
 
   useEffect(() => {
     if (remainingTime === null) return;
@@ -119,8 +119,11 @@ export default function ExamDoingPage() {
     return () => clearTimeout(timer);
   }, [remainingTime]);
 
-  if (!examId) return <div className="p-4">Missing exam ID</div>;
+  if (!sessionId) return <div className="p-4">Missing session ID</div>;
   if (!questions.length) return <div className="p-4">Loading questions...</div>;
+
+  // 提取试卷ID
+  const examPaperId = questions[0]?.exam_paper_id;
 
   const grouped = questions.reduce((acc: Record<string, any[]>, q) => {
     if (!acc[q.question_number]) acc[q.question_number] = [];
@@ -510,7 +513,7 @@ export default function ExamDoingPage() {
                         images: uploadedFiles[q.id] || [],
                         questionText: q.question_text,
                         meta: {
-                          exam_paper_id: examId,
+                          exam_paper_id: examPaperId,
                           level: q.level,
                           question_number: q.question_number,
                           parent_label: q.parent_label,
@@ -552,7 +555,7 @@ export default function ExamDoingPage() {
                         "Content-Type": "application/json",
                         Authorization: `Bearer ${token}`,
                       },
-                      body: JSON.stringify({ sessionId: examId, answers: answerPayload }),
+                      body: JSON.stringify({ sessionId, answers: answerPayload }),
                     });
                     const data = await res.json();
                     if (data.feedback) {
@@ -629,6 +632,33 @@ export default function ExamDoingPage() {
                   </div>
                 );
               })}
+            </div>
+            <div className="mt-6 text-center">
+              <button
+                className="inline-block mt-2 px-6 py-2 bg-yellow-400 text-black font-semibold rounded hover:bg-yellow-300 transition"
+                onClick={async () => {
+                  const res = await fetch("/api/submit-exam", {
+                    method: "POST",
+                    headers: {
+                      "Content-Type": "application/json",
+                    },
+                    body: JSON.stringify({
+                      sessionId,
+                      score: finalScoreSummary?.total,
+                      fullScore: finalScoreSummary?.full,
+                    }),
+                  });
+                  const result = await res.json();
+                  if (result.rewardGranted) {
+                    alert(`🎉 You earned a reward of ${result.rewardAmount}元!`);
+                  } else {
+                    alert("No reward granted (must score above 50% within 2.5 hours).");
+                  }
+                  router.push("/math/dashboard");
+                }}
+              >
+                🎁 Check & Claim Reward
+              </button>
             </div>
           </div>
         )}

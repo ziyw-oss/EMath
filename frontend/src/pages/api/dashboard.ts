@@ -7,8 +7,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!user) return res.status(401).json({ error: "Unauthorized" });
 
   try {
-    const [rows]: any[] = await db.query("SELECT id, name, email FROM users WHERE id = ?", [user.id]);
-    const profile = rows[0];
+    const [[profile]]: any[] = await db.query("SELECT id, name, email FROM users WHERE id = ?", [user.id]);
+
+    const [unfinished]: any[] = await db.query(
+      `SELECT s.id as session_id, p.paper_name, s.started_at
+       FROM exam_sessions s
+       JOIN exam_papers p ON s.exam_paper_id = p.id
+       WHERE s.user_id = ? AND s.completed_at IS NULL
+       ORDER BY s.started_at DESC`,
+      [user.id]
+    );
+
+    profile.unfinished_exams = unfinished;
 
     res.status(200).json(profile);
   } catch (err: any) {

@@ -30,7 +30,7 @@ export default async function handler(
   }
 
   try {
-    const feedback: Record<string, { score: number; reason: string }> = {};
+    const feedback: Record<string, { score: number; reason: string; matched?: string[] }> = {};
     for (const [question_id, ans] of Object.entries(answers)) {
       const { text, images } = ans as { text?: string; images?: string[] };
 
@@ -41,7 +41,8 @@ export default async function handler(
       if (existingScoreRows.length > 0) {
         feedback[question_id] = {
           score: existingScoreRows[0].score,
-          reason: "已评分，跳过重复判分"
+          reason: "已评分，跳过重复判分",
+          matched: []
         };
         continue;
       }
@@ -52,6 +53,7 @@ export default async function handler(
         feedback[question_id] = {
           score: 0,
           reason: "未作答",
+          matched: []
         };
         continue;
       }

@@ -67,7 +67,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             console.log("📘 Exam metadata:", parsed.exam_metadata);
             console.log(`✅ Parsed ${parsed.questions.length} questions`);
 
-            parsed.questions.forEach((q, i) => {
+            parsed.questions.forEach((q: any, i: number) => {
               if (q.latex_blocks) console.log(`📐 Q${i + 1} has latex_blocks`);
               if (q.parent_label) console.log(`🔗 Q${i + 1} parent_label: ${q.parent_label}`);
             });
