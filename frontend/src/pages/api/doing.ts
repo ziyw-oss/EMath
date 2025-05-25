@@ -7,9 +7,14 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   try {
     const [rows]: any[] = await db.query(
-      `SELECT id, question_number, label, parent_label, level, marks, question_text FROM question_bank
-       WHERE exam_paper_id = ?
-       ORDER BY question_number, FIELD(level, 'main', 'sub', 'subsub'), label`,
+      `SELECT 
+        q.id, q.question_number, q.label, q.parent_label, q.level, q.marks, q.question_text,
+        q.image_path,
+        e.exam_session AS exam_year, e.paper_name AS exam_type
+       FROM question_bank q
+       JOIN exam_papers e ON q.exam_paper_id = e.id
+       WHERE q.exam_paper_id = ?
+       ORDER BY q.question_number, FIELD(q.level, 'main', 'sub', 'subsub'), q.label`,
       [examId]
     );
 
