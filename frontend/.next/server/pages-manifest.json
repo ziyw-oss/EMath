@@ -3,9 +3,8 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/math/doing": "pages/math/doing.js",
+  "/math/setup": "pages/math/setup.js",
   "/math/dashboard": "pages/math/dashboard.js",
   "/api/upload-image": "pages/api/upload-image.js",
-  "/api/save-and-score": "pages/api/save-and-score.js",
-  "/math/preview": "pages/math/preview.js",
-  "/math/setup": "pages/math/setup.js"
+  "/api/save-and-score": "pages/api/save-and-score.js"
 }

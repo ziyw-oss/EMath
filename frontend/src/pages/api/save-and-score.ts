@@ -62,7 +62,7 @@ export default async function handler(
 
       const fixedImagesArray = imagesArray.map(p => {
         const filename = path.basename(p); // 提取文件名
-        return path.join(process.cwd(), "uploads/doing", filename);
+        return path.join(process.cwd(), "public", "uploads", "doing", filename);
       });
 
       // 插入或更新文本答案

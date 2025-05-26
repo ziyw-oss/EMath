@@ -13,8 +13,8 @@ export const config = {
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== "POST") return res.status(405).end();
 
-  //在根目录froentend下面生成上传学生答案图片目录uploads/doing
-  const uploadDir = path.join(process.cwd(), "uploads", "doing");
+  //在根目录frontend下面生成上传学生答案图片目录public/uploads/doing
+  const uploadDir = path.join(process.cwd(), "public", "uploads", "doing");
   fs.mkdirSync(uploadDir, { recursive: true });
 
   const form = formidable({
@@ -43,7 +43,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     const responseJson = {
       files: validFiles.map((f) => ({
-        url: `/uploads/${path.basename(f.filepath)}`,
+        url: `/uploads/doing/${path.basename(f.filepath)}`,
         name: f.originalFilename,
         type: f.mimetype || "image/png",
       })),

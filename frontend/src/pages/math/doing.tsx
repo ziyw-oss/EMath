@@ -197,13 +197,13 @@ export default function ExamDoingPage() {
 
   return (
     <>
-      <Head>
+      {/* <Head>
         <script
           id="MathJax-script"
           async
           src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"
         ></script>
-      </Head>
+      </Head> */}
       <div className="flex flex-col min-h-screen bg-gray-100">
         {/* Top info bar */}
         <div className="bg-white shadow-md border-b border-gray-300 py-3 flex justify-center items-center text-gray-700 font-semibold text-sm select-none">
