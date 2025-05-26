@@ -241,8 +241,8 @@ export default function ExamDoingPage() {
                         <strong>Reason:</strong> {fb.reason}
                       </p>
                       {fb.matched && fb.matched.length > 0 && (
-                        <p className="text-gray-700 mt-1">
-                          <strong>Matched Points:</strong> {fb.matched.join(", ")}
+                        <p className="text-green-700 whitespace-pre-line">
+                          <strong>✅ Matched Points:</strong> {fb.matched.join(", ")}
                         </p>
                       )}
                     </div>
@@ -716,8 +716,8 @@ export default function ExamDoingPage() {
                       <strong>Reason:</strong> {fb.reason}
                     </p>
                     {fb.matched && fb.matched.length > 0 && (
-                      <p className="text-gray-700 mt-1">
-                        <strong>Matched Points:</strong> {fb.matched.join(", ")}
+                      <p className="text-green-700 whitespace-pre-line">
+                        <strong>✅ Matched Points:</strong> {fb.matched.join(", ")}
                       </p>
                     )}
                   </div>

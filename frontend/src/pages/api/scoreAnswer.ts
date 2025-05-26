@@ -182,6 +182,7 @@ export async function scoreAnswer({
           resolve({
             score: result.score ?? 0,
             reason: result.reason ?? "No reason provided",
+            matched: result.matched ?? [],
             studentImageAnalysis: result.studentImageAnalysis ?? []
           });
         } catch (err) {

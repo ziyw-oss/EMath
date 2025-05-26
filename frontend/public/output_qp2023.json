@@ -1,0 +1,458 @@
+{
+  "exam_metadata": {
+    "board": "Edexcel",
+    "qualification": "A Level",
+    "subject": "Mathematics",
+    "paper_code": "9MA0/01",
+    "exam_session": "June 2023"
+  },
+  "questions": [
+    {
+      "question_number": "1",
+      "level": "main",
+      "label": "1",
+      "marks": 4,
+      "question_text": "Find\n\nwriting each term in simplest form.",
+      "latex_blocks": [
+        "\\[ \\int \\frac{1}{x^2} (2x - 5) \\frac{3}{3} \\, dx \\]"
+      ]
+    },
+    {
+      "question_number": "2",
+      "level": "main",
+      "label": "2",
+      "marks": null,
+      "question_text": "In this question you must show all stages of your working.\nSolutions relying entirely on calculator technology are not acceptable. \nf(x) = 4x^3 + 5x^2 - 10x + 4a \\quad x \\in \\mathbb{R}\nwhere \\(a\\) is a positive constant.\nGiven \\((x-a)\\) is a factor of \\(f(x)\\),",
+      "latex_blocks": [
+        "f(x) = 4x^3 + 5x^2 - 10x + 4a \\quad x \\in \\mathbb{R}",
+        "(x-a)",
+        "f(x)"
+      ]
+    },
+    {
+      "question_number": "2",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 2,
+      "question_text": "show that \n\\[a(4a^2 + 5a - 6) = 0\\]",
+      "latex_blocks": [
+        "a(4a^2 + 5a - 6) = 0"
+      ]
+    },
+    {
+      "question_number": "2",
+      "level": "sub",
+      "label": "(b)",
+      "marks": null,
+      "question_text": "Hence",
+      "latex_blocks": []
+    },
+    {
+      "question_number": "2",
+      "level": "subsub",
+      "label": "(i)",
+      "marks": null,
+      "question_text": "find the value of \\(a\\)",
+      "latex_blocks": [
+        "a"
+      ],
+      "parent_label": "(b)"
+    },
+    {
+      "question_number": "2",
+      "level": "subsub",
+      "label": "(ii)",
+      "marks": 4,
+      "question_text": "use algebra to find the exact solutions of the equation\nf(x) = 3",
+      "latex_blocks": [
+        "f(x) = 3"
+      ],
+      "parent_label": "(b)"
+    },
+    {
+      "question_number": "3",
+      "level": "main",
+      "label": "3",
+      "marks": null,
+      "question_text": "Relative to a fixed origin O\n• the point A has position vector \\(5\\mathbf{i} + 3\\mathbf{j} + 2\\mathbf{k}\\)\n• the point B has position vector \\(2\\mathbf{i} + 4\\mathbf{j} + a\\mathbf{k}\\)\nwhere \\(a\\) is a positive integer."
+    },
+    {
+      "question_number": "3",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 1,
+      "question_text": "Show that \\(|\\overrightarrow{OA}| = \\sqrt{38}\\)"
+    },
+    {
+      "question_number": "3",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 2,
+      "question_text": "Find the smallest value of \\(a\\) for which\n\\[ |\\overrightarrow{OB}| > |\\overrightarrow{OA}| \\]"
+    },
+    {
+      "question_number": "4",
+      "level": "main",
+      "label": "4",
+      "marks": null,
+      "question_text": "In this question you must show all stages of your working.\n\nSolutions relying entirely on calculator technology are not acceptable.\n\nThe curve \\( C \\) has equation \\( y = f(x) \\) where \\( x \\in \\mathbb{R} \\)\n\nGiven that\n\n\\( \\bullet \\) \\( f'(x) = 2x + \\frac{1}{2} \\cos x \\)\n\\( \\bullet \\) the curve has a stationary point with \\( x \\) coordinate \\( a \\)\n\\( \\bullet \\) \\( a \\) is small\n"
+    },
+    {
+      "question_number": "4",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 3,
+      "question_text": "use the small angle approximation for \\( \\cos x \\) to estimate the value of \\( a \\) to 3 decimal places.",
+      "parent_label": null
+    },
+    {
+      "question_number": "4",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 2,
+      "question_text": "The point \\( P(0, 3) \\) lies on \\( C \\)\n\nFind the equation of the tangent to the curve at \\( P \\), giving your answer in the form \\( y = mx + c \\), where \\( m \\) and \\( c \\) are constants to be found.",
+      "parent_label": null
+    },
+    {
+      "question_number": "5",
+      "level": "main",
+      "label": "5",
+      "marks": null,
+      "question_text": "A continuous curve has equation \\(y = f(x)\\).\n\nThe table shows corresponding values of \\(x\\) and \\(y\\) for this curve, where \\(a\\) and \\(b\\) are constants.\nThe trapezium rule is used, with all the \\(y\\) values in the table, to find an approximate area under the curve between \\(x = 3\\) and \\(x = 4\\)\n\nGiven that this area is 17.59"
+    },
+    {
+      "question_number": "5",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 3,
+      "question_text": "show that \\(a + 2b = 51\\)"
+    },
+    {
+      "question_number": "5",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 3,
+      "question_text": "find the value of \\(a\\) and the value of \\(b\\)"
+    },
+    {
+      "question_number": "6",
+      "level": "main",
+      "label": "6",
+      "marks": null,
+      "question_text": "\\( a = \\log_2 x \\), \\( b = \\log_2(x + 8) \\).\n Express in terms of \\( a \\) and/or \\( b \\)",
+      "latex_blocks": []
+    },
+    {
+      "question_number": "6",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 1,
+      "question_text": "\\( \\log_2 \\sqrt{x} \\)",
+      "latex_blocks": []
+    },
+    {
+      "question_number": "6",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 2,
+       "question_text": "\\( \\log_2(x^2 + 8x) \\)",
+      "latex_blocks": []
+    },
+    {
+      "question_number": "6",
+      "level": "sub",
+      "label": "(c)",
+      "marks": 3,
+      "question_text": "\\( \\log_2 \\left(8 + \\frac{64}{x}\\right) \\)\n Give your answer in simplest form.",
+      "latex_blocks": []
+    },
+    {
+      "question_number": "7",
+      "level": "main",
+      "label": "7",
+      "marks": null,
+      "question_text": "The function \\( f \\) is defined by\n\\[ f(x) = 3 + \\sqrt{x - 2} \\quad x \\in \\mathbb{R},\\ x > 2 \\]",
+      "latex_blocks": [
+        "f(x) = 3 + \\sqrt{x - 2} \\quad x \\in \\mathbb{R} \\quad x > 2"
+      ]
+    },
+    {
+      "question_number": "7",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 1,
+      "question_text": "State the range of f",
+      "latex_blocks": []
+    },
+    {
+      "question_number": "7",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 3,
+      "question_text": "Find \\( f^{-1} \\)\nThe function \\( g \\) is defined by\n\\[ g(x) = \\frac{15}{x - 3} \\quad x \\in \\mathbb{R},\\ x \\ne 3 \\]\n",
+      "latex_blocks": [
+        "f^{-1}"
+      ]
+    },
+    {
+      "question_number": "7",
+      "level": "sub",
+      "label": "(c)",
+      "marks": 2,
+      "question_text": "Find ",
+      "latex_blocks": [
+        "gf(6)"
+      ]
+    },
+    {
+      "question_number": "7",
+      "level": "sub",
+      "label": "(d)",
+      "marks": 2,
+      "question_text": "Find the exact value of the constant a for which\n",
+      "latex_blocks": [
+        "f(a^{2} + 2) = g(a)"
+      ]
+    },
+    {
+      "question_number": "8",
+      "level": "main",
+      "label": "8",
+      "marks": null,
+      "question_text": "Figure 1 shows the plan view of a stage.\n\nThe plan view shows two congruent triangles \\( ABO \\) and \\( GFO \\) joined to a sector \\( OCDEO \\) of a circle, centre \\( O \\), where\n\n• angle \\( COE = 2.3 \\) radians\n\n• arc length \\( CDE = 27.6\\text{m} \\)\n\n• \\( AOG \\) is a straight line of length \\( 15\\text{m} \\)"
+    },
+    {
+      "question_number": "8",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 2,
+      "question_text": "Show that \\( OC = 12\\text{m} \\)."
+    },
+    {
+      "question_number": "8",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 2,
+      "question_text": "Show that the size of angle \\( AOB \\) is 0.421 radians correct to 3 decimal places."
+    },
+    {
+      "question_number": "8",
+      "level": "sub",
+      "label": "(c)",
+      "marks": 6,
+      "question_text": "Given that the total length of the front of the stage, \\( BCDEF \\), is 35m, find the total area of the stage, giving your answer to the nearest square metre."
+    },
+   {
+    "question_number": "9",
+    "level": "main",
+    "label": "9",
+    "marks": null,
+    "question_text": "The first three terms of a geometric sequence are\n\\[ 3k + 4, \\quad 12 - 3k, \\quad k + 16 \\]\nwhere \\( k \\) is a constant."
+  },
+  {
+    "question_number": "9",
+    "level": "sub",
+    "label": "(a)",
+    "marks": 2,
+    "question_text": "Show that \\( k \\) satisfies the equation\n\\[ 3k^2 - 62k + 40 = 0 \\]",
+    "latex_blocks": [
+      "k",
+      "3k^2 - 62k + 40 = 0"
+    ]
+  },
+  {
+    "question_number": "9",
+    "level": "sub",
+    "label": "(b)",
+    "marks": 5,
+    "question_text": "Given that the sequence converges,\n(i) find the value of \\( k \\), giving a reason for your answer,\n(ii) find the value of \\( S_\\infty \\)",
+    "latex_blocks": [
+      "k",
+      "S_\\infty"
+    ]
+  }
+    ,
+    {
+      "question_number": "10",
+      "level": "main",
+      "label": "10",
+      "marks": null,
+      "question_text": "A circle C has equation\n\\[ x^2 + y^2 + 6kx - 2ky + 7 = 0 \\]\nwhere k is a constant.",
+      "latex_blocks": [
+        "x^2 + y^2 + 6kx - 2ky + 7 = 0"
+      ]
+    },
+    {
+      "question_number": "10",
+      "level": "sub",
+      "label": "(a)",
+      "marks": null,
+      "question_text": "Find in terms of \\( k \\),"
+    },
+    {
+      "question_number": "10",
+      "level": "subsub",
+      "label": "(i)",
+      "marks": null,
+      "question_text": "the coordinates of the centre of \\( C \\)",
+      "parent_label": "(a)"
+    },
+    {
+      "question_number": "10",
+      "level": "subsub",
+      "label": "(ii)",
+      "marks": 3,
+      "question_text": "the radius of \\( C \\)",
+      "parent_label": "(a)"
+    },
+    {
+      "question_number": "10",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 6,
+      "question_text": "The line with equation \\( y = 2x - 1 \\) intersects \\( C \\) at 2 distinct points.\nFind the range of possible values of \\( k \\).",
+      "latex_blocks": [
+        "y = 2x - 1"
+      ]
+    },
+    {
+      "question_number": "11",
+      "level": "main",
+      "label": "11",
+      "marks": null,
+      "question_text": "The value, \\( V \\) pounds, of a mobile phone, \\( t \\) months after it was bought, is modelled by\n\\[ V = ab^t \\]\nwhere \\( a \\) and \\( b \\) are constants.\nFigure 2 shows the linear relationship between \\( \\log_{10} V \\) and \\( t \\).\nThe line passes through the points \\((0, 3)\\) and \\((10, 2.79)\\) as shown.\nUsing these points,"
+    },
+    {
+      "question_number": "11",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 2,
+      "question_text": "find the initial value of the phone,"
+    },
+    {
+      "question_number": "11",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 3,
+      "question_text": "find a complete equation for \\( V \\) in terms of \\( t \\), giving the exact value of \\( a \\) and giving the value of \\( b \\) to 3 significant figures."
+    },
+    {
+      "question_number": "11",
+      "level": "sub",
+      "label": "(c)",
+      "marks": 2,
+      "question_text": "Use this information to evaluate the reliability of the model.\nExactly 2 years after it was bought, the value of the phone was £320."
+    },
+    {
+      "question_number": "12",
+      "level": "main",
+      "label": "12",
+      "marks": 5,
+      "question_text": "where \\( x \\) is measured in radians.\n\nUse differentiation from first principles to show that\n\n\\[ \\frac{dy}{dx} = \\cos x \\]\n\nYou may\n\n• use without proof the formula for \\( \\sin(A \\pm B) \\)\n\n• assume that as \\( h \\to 0 \\), \\( \\frac{\\sin h}{h} \\to 1 \\) and \\( \\frac{\\cos h - 1}{h} \\to 0 \\)"
+    },
+    {
+      "question_number": "13",
+      "level": "main",
+      "label": "13",
+      "marks": null,
+      "question_text": "On a roller coaster ride, passengers travel in carriages around a track.\n\nOn the ride, carriages complete multiple circuits of the track such that\n\n• the maximum vertical height of a carriage above the ground is 60 m\n\n• a carriage starts a circuit at a vertical height of 2 m above the ground\n\n• the ground is horizontal\n\nThe vertical height, \\( H \\, \text{m} \\), of a carriage above the ground, \\( t \\) seconds after the carriage starts the first circuit, is modelled by the equation\n\n\\[ H = a - b(t - 20)^2 \\]\n\nwhere \\( a \\) and \\( b \\) are positive constants.",
+      "latex_blocks": [
+        "H = a - b(t - 20)^2"
+      ]
+    },
+    {
+      "question_number": "13",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 3,
+      "question_text": "Find a complete equation for the model.",
+      "latex_blocks": []
+    },
+    {
+      "question_number": "13",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 1,
+      "question_text": "Use the model to determine the height of the carriage above the ground when \\( t = 40 \\)",
+      "latex_blocks": []
+    },
+    {
+      "question_number": "13",
+      "level": "sub",
+      "label": "(c)",
+      "marks": 2,
+      "question_text": "Find a complete equation for the alternative model.\n\nIn an alternative model, the vertical height, \\( H \\, \text{m} \\), of a carriage above the ground, \\( t \\) seconds after the carriage starts the first circuit, is given by\n\n\\[ H = 29 \\cos(9t + a^\\circ) + \\beta \\quad \\quad 0 \\leq a < 360^\\circ \\]\n\nwhere \\( a \\) and \\( \\beta \\) are constants.",
+      "latex_blocks": [
+        "H = 29 \\cos(9t + a^\\circ) + \\beta \\quad \\quad 0 \\leq a < 360^\\circ"
+      ]
+    },
+    {
+      "question_number": "13",
+      "level": "sub",
+      "label": "(d)",
+      "marks": 1,
+      "question_text": "Given that the carriage moves continuously for 2 minutes,\n\ngive a reason why the alternative model would be more appropriate.",
+      "latex_blocks": []
+    },
+    {
+      "question_number": "14",
+      "level": "main",
+      "label": "14",
+      "marks": 4,
+      "question_text": "Prove, using algebra, that\n\n\\[ (n + 1)^3 - n^3 \\]\n\nis odd for all \\( n \\in \\mathbb{N} \\)"
+    },
+  {
+    "question_number": "15",
+    "level": "main",
+    "label": "15",
+    "marks": null,
+    "question_text": "A curve has equation \\( y = f(x) \\), where\n\\[ f(x) = \\frac{7xe^x}{\\sqrt{e^{3x} - 2}} \\quad x > \\ln \\sqrt[3]{2} \\]"
+  },
+  {
+    "question_number": "15",
+    "level": "sub",
+    "label": "(a)",
+    "marks": 5,
+    "question_text": "Show that\n\\[ f'(x) = \\frac{7e^x (e^{3x}(2 - x) + Ax + B)}{2(e^{3x} - 2)^{\\frac{3}{2}}} \\]\nwhere \\( A \\) and \\( B \\) are constants to be found."
+  },
+{
+"question_number": "15",
+  "level": "sub",
+"label": "(b)",
+  "marks": 2,
+  "question_text": "Hence show that the \\( x \\) coordinates of the turning points of the curve are solutions of the equation\n\\[ x = \\frac{2e^{3x} - 4}{e^{3x} + 4} \\]\n\nThe equation \\( x = \\frac{2e^{3x} - 4}{e^{3x} + 4} \\) has two positive roots \\( \\alpha \\) and \\( \\beta \\), where \\( \\beta > \\alpha \\).\n\nA student uses the iteration formula\n\\[ x_{n+1} = \\frac{2e^{3x_n} - 4}{e^{3x_n} + 4} \\]\nin an attempt to find approximations for \\( \\alpha \\) and \\( \\beta \\).\n\nDiagram 1 shows a plot of part of the curve with equation \\( y = \\frac{2e^{3x} - 4}{e^{3x} + 4} \\) and part of the line with equation \\( y = x \\).\n\nUsing Diagram 1 ",
+  "latex_blocks": [
+    "x = \\frac{2e^{3x} - 4}{e^{3x} + 4}",
+    "\\alpha",
+    "\\beta",
+    "\\beta > \\alpha",
+    "x_{n+1} = \\frac{2e^{3x_n} - 4}{e^{3x_n} + 4}",
+    "y = \\frac{2e^{3x} - 4}{e^{3x} + 4}",
+    "y = x"
+  ]
+},
+  {
+    "question_number": "15",
+    "level": "sub",
+    "label": "(c)",
+    "marks": 1,
+    "question_text": "draw a staircase diagram to show that the iteration formula starting with \\( x_1 = 1 \\) can be used to find an approximation for \\( \\beta \\)."
+  },
+  {
+    "question_number": "15",
+    "level": "sub",
+    "label": "(d)",
+    "marks": 3,
+    "question_text": "Use the iteration formula with \\( x_1 = 1 \\), to find, to 3 decimal places,\n(i) the value of \\( x_2 \\)\n(ii) the value of \\( \\beta \\)"
+  },
+  {
+    "question_number": "15",
+    "level": "sub",
+    "label": "(e)",
+    "marks": 2,
+    "question_text": "Using a suitable interval and a suitable function that should be stated, show that \\( \\alpha = 0.432 \\) to 3 decimal places."
+  }
+
+
+  ]
+}

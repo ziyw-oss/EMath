@@ -157,100 +157,57 @@ def main():
     print(f"  Student images: {len(student_images)}", file=sys.stderr)
     log_stderr(f"  Student images: {len(student_images)}")
 
-    response = client.chat.completions.create(
-        model="gpt-4o",
-        messages=messages,
-        max_tokens=2048
-    )
+    MAX_RETRIES = 3
+    attempt = 0
 
-    raw_content = response.choices[0].message.content
-    print("📥 GPT raw_content:", file=sys.stderr)
-    log_stderr("📥 GPT raw_content:")
-    print(raw_content, file=sys.stderr)
-    log_stderr(raw_content)
-    print("🧾 GPT response preview (first 300 chars):", raw_content[:300], file=sys.stderr)
-    log_stderr("🧾 GPT response preview (first 300 chars): " + raw_content[:300])
+    def is_invalid_result(content: str, result: dict) -> bool:
+        if not content.strip():
+            return True
+        reason = result.get("reason", "").lower()
+        analysis = result.get("studentImageAnalysis", [])
+        combined = " ".join(analysis).lower() + reason
+        return any(keyword in combined for keyword in ["blank", "no content", "empty", "unreadable", "missing", "unclear", "not provided", "invalid", "no answer"])
 
-    if "```json" in raw_content:
-        raw_content = re.sub(r"```json|```", "", raw_content).strip()
+    while attempt <= MAX_RETRIES:
+        response = client.chat.completions.create(
+            model="gpt-4o",
+            messages=messages,
+            max_tokens=2048
+        )
+        raw_content = response.choices[0].message.content
+        print("📥 GPT raw_content:", file=sys.stderr)
+        log_stderr("📥 GPT raw_content:")
+        print(raw_content, file=sys.stderr)
+        log_stderr(raw_content)
 
-    try:
-        result = json.loads(raw_content)
-        score = result.get("score")
-        matched = result.get("matched", [])
-        reason = result.get("reason", "No reason provided")
-        student_analysis = result.get("studentImageAnalysis", [])
+        if "```json" in raw_content:
+            raw_content = re.sub(r"```json|```", "", raw_content).strip()
 
-        # Helper function to decide if studentImageAnalysis is invalid
-        def is_analysis_invalid(analysis):
-            if not analysis:
-                return True
-            joined = " ".join(analysis).lower()
-            return any(keyword in joined for keyword in ["blank", "no content", "empty", "unreadable", "missing", "unclear"])
+        try:
+            result = json.loads(raw_content)
+        except Exception as e:
+            log_stderr(f"❌ Failed to parse GPT output (attempt {attempt}): {str(e)}")
+            result = {
+                "score": 0,
+                "matched": [],
+                "reason": f"❌ Invalid GPT response format: {str(e)}",
+                "studentImageAnalysis": ["⚠️ GPT response was not valid JSON."]
+            }
 
-        # Retry up to 3 times if studentImageAnalysis is missing, empty, or contains invalid keywords
-        MAX_RETRIES = 3
-        attempt = 0
+        if attempt == MAX_RETRIES or not is_invalid_result(raw_content, result):
+            break
 
-        while is_analysis_invalid(student_analysis):
-            if attempt >= MAX_RETRIES:
-                print(json.dumps({
-                    "score": 0,
-                    "matched": [],
-                    "reason": "❌ Image content is missing or invalid. No credit awarded.",
-                    "studentImageAnalysis": ["⚠️ GPT did not detect valid math content in the uploaded image."]
-                }))
-                exit(0)
+        attempt += 1
+        print(f"🔁 Retry attempt {attempt} due to invalid image analysis or response...", file=sys.stderr)
+        log_stderr(f"🔁 Retry attempt {attempt} due to invalid image analysis or response...")
 
-            attempt += 1
-            print(f"🔁 Retry attempt {attempt} due to invalid studentImageAnalysis...", file=sys.stderr)
-            log_stderr(f"🔁 Retry attempt {attempt} due to invalid studentImageAnalysis...")
-
-            retry_response = client.chat.completions.create(
-                model="gpt-4o",
-                messages=messages,
-                max_tokens=2048
-            )
-            raw_content = retry_response.choices[0].message.content
-            print("📥 [RETRY] GPT raw_content:", file=sys.stderr)
-            log_stderr("📥 [RETRY] GPT raw_content:")
-            print(raw_content, file=sys.stderr)
-            log_stderr(raw_content)
-
-            if "```json" in raw_content:
-                raw_content = re.sub(r"```json|```", "", raw_content).strip()
-
-            try:
-                result = json.loads(raw_content)
-                score = result.get("score", 0)
-                matched = result.get("matched", [])
-                reason = result.get("reason", "No reason provided")
-                student_analysis = result.get("studentImageAnalysis", [])
-            except Exception as e:
-                print(f"❌ [RETRY {attempt}] Error parsing GPT output:", raw_content, file=sys.stderr)
-                log_stderr(f"❌ [RETRY {attempt}] Error parsing GPT output: " + raw_content)
-                print(json.dumps({
-                    "score": None,
-                    "matched": [],
-                    "reason": str(e)
-                }))
-                exit(0)
-
-        print(json.dumps({
-            "score": score,
-            "matched": matched,
-            "reason": reason,
-            "studentImageAnalysis": student_analysis
-        }))
-    except Exception as e:
-        print("❌ Error parsing GPT output:", raw_content, file=sys.stderr)
-        log_stderr("❌ Error parsing GPT output: " + raw_content)
-        print(json.dumps({
-            "score": 0,
-            "matched": [],
-            "reason": f"❌ Invalid GPT response format: {str(e)}",
-            "studentImageAnalysis": ["⚠️ GPT response was not valid JSON."]
-        }))
+    # Final result output
+    print(json.dumps({
+        "score": result.get("score", 0),
+        "matched": result.get("matched", []),
+        "reason": result.get("reason", "No reason provided"),
+        "studentImageAnalysis": result.get("studentImageAnalysis", [])
+    }))
 
 if __name__ == "__main__":
     main()

@@ -22,30 +22,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/math/dashboard": [
+    "/math/upload": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/math/dashboard.js"
-    ],
-    "/math/doing": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/math/doing.js"
-    ],
-    "/math/login": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/math/login.js"
-    ],
-    "/math/preview": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/math/preview.js"
-    ],
-    "/math/setup": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/math/setup.js"
+      "static/chunks/pages/math/upload.js"
     ]
   },
   "ampFirstPages": []
