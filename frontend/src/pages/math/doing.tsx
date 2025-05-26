@@ -301,13 +301,14 @@ export default function ExamDoingPage() {
                                   for (const file of Array.from(files)) {
                                     const formData = new FormData();
                                     formData.append("file", file);
-                                    const res = await fetch("/api/upload-image", {
-                                      method: "POST",
-                                      body: formData,
-                                    });
-                                    const data = await res.json();
-                                    const url = data.files?.[0]?.url;
-                                    if (url) uploadedUrls.push(url);
+                                        const res = await fetch("/api/upload-image", {
+                                          method: "POST",
+                                          body: formData,
+                                        });
+                                        const data = await res.json();
+                                        console.log("📦 上传接口返回 JSON:", data);
+                                        const url = data.files?.[0]?.url;
+                                        if (url) uploadedUrls.push(url);
                                   }
 
                                   setUploadedFiles((prev) => ({ ...prev, [q.id]: uploadedUrls }));
@@ -475,7 +476,17 @@ export default function ExamDoingPage() {
         {/* 固定底部导航，仅在未显示评分反馈时展示 */}
         {!showFeedback && (
           <div className="fixed bottom-0 left-0 w-full bg-white border-t border-gray-300 shadow-md p-4 z-50">
-            <div className="max-w-4xl mx-auto flex justify-between">
+            <div className="max-w-4xl mx-auto flex justify-start gap-4">
+              <button
+                className="px-5 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition"
+                onClick={() => {
+                  if (confirm("Are you sure you want to abandon this exam?")) {
+                    router.push("/math/dashboard");
+                  }
+                }}
+              >
+                ❌ Abandon
+              </button>
               <button
                 className="px-5 py-2 bg-gray-300 rounded-lg disabled:opacity-50 font-semibold hover:bg-gray-400 transition"
                 onClick={() => setCurrentPage((p) => Math.max(p - 1, 0))}
@@ -543,8 +554,8 @@ export default function ExamDoingPage() {
 
                   const token = localStorage.getItem("token");
                   if (!token) {
-                    console.error("未登录，无 token");
-                    setIsScoring(false);
+                    alert("⚠️ Not logged in. Please login first.");
+                    router.push("/math/login");
                     return;
                   }
 

@@ -14,12 +14,21 @@ Instructions:
 - Do not invent rules or assume grade boundaries.
 - Reward correct mathematical methods even with small errors, where appropriate.
 
+- If an image-based student answer is provided, analyze the mathematical content of the image carefully.
+- Award marks only if the image clearly demonstrates correct methods or reasoning.
+- Do not award marks for unrelated, blank, or nonsensical images.
+- Prioritize image content over missing text answer if image is clear and correct.
+
+- Before scoring, describe briefly what the student wrote in the image.
+- If the image appears to contain no valid math or is unrelated, state so and do not award any marks.
+
 Output format:
 Return only valid JSON like:
 ```json
 {
   "score": number,
   "matched": string[],
-  "reason": string
+  "reason": string,
+  "studentImageAnalysis": string[]
 }
 ```

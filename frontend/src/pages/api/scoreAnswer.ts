@@ -101,6 +101,16 @@ export async function scoreAnswer({
   console.log("🔍 Scoring question:", question_id);
   console.log("🧩 Text:", text);
   console.log("🖼️ Images:", images);
+
+  // Convert images to absolute paths readable by backend
+  const resolvedImagePaths = (images || []).map((relativePath) => {
+    try {
+      return path.join(process.cwd(), "public", relativePath.replace(/^\/+/, ""));
+    } catch (err) {
+      console.error("⚠️ Failed to resolve image path:", relativePath, err);
+      return null;
+    }
+  }).filter(Boolean);
   console.log("📘 Question:", questionText);
   console.log("📚 Mark Points:", markPoints);
 
@@ -136,13 +146,13 @@ export async function scoreAnswer({
     questionText,
     markPoints,
     studentText: text,
-    studentImagePaths: images,
+    studentImagePaths: resolvedImagePaths,
     questionImagePath
   };
 
   console.log("📤 Sending image paths to Python:");
   console.log("  questionImagePath =", questionImagePath);
-  console.log("  studentImagePaths =", images);
+  console.log("  studentImagePaths =", resolvedImagePaths);
 
   return await new Promise((resolve, reject) => {
     const scriptPath = path.resolve(__dirname, "../../../../../backend/scripts/score_with_gpt.py");
@@ -169,16 +179,17 @@ export async function scoreAnswer({
           console.log("✅ GPT response:", result);
           resolve({
             score: result.score ?? 0,
-            reason: result.reason ?? "No reason provided"
+            reason: result.reason ?? "No reason provided",
+            studentImageAnalysis: result.studentImageAnalysis ?? []
           });
         } catch (err) {
           console.error("❌ Failed to parse GPT output:", err);
           console.error("🔴 Raw:", stdout);
-          resolve({ score: 0, reason: "Invalid GPT output" });
+          resolve({ score: 0, reason: "Invalid GPT output", studentImageAnalysis: [] });
         }
       } else {
         console.error("❌ GPT scoring error:", stderr);
-        resolve({ score: 0, reason: "Python script error" });
+        resolve({ score: 0, reason: "Python script error", studentImageAnalysis: [] });
       }
     });
 

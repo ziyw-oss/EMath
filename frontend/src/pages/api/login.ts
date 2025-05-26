@@ -26,7 +26,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     );
 
     res.setHeader("Set-Cookie", `token=${token}; Path=/; HttpOnly; SameSite=Strict; Max-Age=604800`);
-    res.status(200).json({ message: "Login successful", user: { id: user.id, role: user.role } });
+    res.status(200).json({
+      message: "Login successful",
+      token,
+      user: { id: user.id, role: user.role }
+    });
   } catch (err: any) {
     console.error("Login error:", err);
     res.status(500).json({ error: "Internal server error" });

@@ -28,7 +28,12 @@ export default function LoginPage() {
       });
       const data = await res.json();
       if (!res.ok) throw new Error(data.error || "Login failed");
-      router.push("/math/dashboard");
+      if (data.token) {
+        localStorage.setItem("token", data.token);
+        router.push("/math/dashboard");
+      } else {
+        throw new Error("No token received from server");
+      }
     } catch (err: any) {
       setError(err.message);
     } finally {
