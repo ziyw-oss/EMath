@@ -2,15 +2,10 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/math/preview": "pages/math/preview.js",
-  "/math/doing": "pages/math/doing.js",
-  "/api/doing": "pages/api/doing.js",
-  "/api/dashboard": "pages/api/dashboard.js",
-  "/math/setup": "pages/math/setup.js",
-  "/api/rewards-history": "pages/api/rewards-history.js",
   "/math/dashboard": "pages/math/dashboard.js",
-  "/api/start-exam": "pages/api/start-exam.js",
-  "/api/papers": "pages/api/papers.js",
-  "/api/save-and-score": "pages/api/save-and-score.js",
-  "/api/upload-image": "pages/api/upload-image.js"
+  "/math/doing": "pages/math/doing.js",
+  "/math/preview": "pages/math/preview.js",
+  "/api/delete-exam": "pages/api/delete-exam.js",
+  "/api/rewards-history": "pages/api/rewards-history.js",
+  "/api/dashboard": "pages/api/dashboard.js"
 }

@@ -65,6 +65,17 @@ export default function StudentDashboard() {
                     >
                       Resume
                     </button>
+                    <button
+                      onClick={async () => {
+                        if (confirm("Are you sure you want to delete this unfinished exam?")) {
+                          await fetch(`/api/delete-exam?sessionId=${exam.session_id}`, { method: "DELETE" });
+                          location.reload(); // refresh to reflect changes
+                        }
+                      }}
+                      className="ml-2 text-red-600 underline hover:text-red-800"
+                    >
+                      Delete
+                    </button>
                   </li>
                 ))}
               </ul>
