@@ -102,12 +102,14 @@ export async function scoreAnswer({
   console.log("🧩 Text:", text);
   console.log("🖼️ Images:", images);
 
-  // Convert images to absolute paths readable by backend
-  const resolvedImagePaths = (images || []).map((relativePath) => {
+  // Convert images to absolute paths readable by backend, avoid joining if already absolute
+  const resolvedImagePaths = (images || []).map((imgPath) => {
     try {
-      return path.join(process.cwd(), "public", relativePath.replace(/^\/+/, ""));
+      return path.isAbsolute(imgPath)
+        ? imgPath
+        : path.join(process.cwd(), "public", imgPath.replace(/^\/+/, ""));
     } catch (err) {
-      console.error("⚠️ Failed to resolve image path:", relativePath, err);
+      console.error("⚠️ Failed to resolve image path:", imgPath, err);
       return null;
     }
   }).filter(Boolean);

@@ -44,6 +44,39 @@ export default function ExamDoingPage() {
   const [currentPage, setCurrentPage] = useState(0);
   const [answers, setAnswers] = useState<{ [id: number]: string }>({});
   const [uploadedFiles, setUploadedFiles] = useState<{ [id: number]: string[] }>({});
+  // 追踪当前激活的题目ID（聚焦的textarea）
+  const [activeQuestionId, setActiveQuestionId] = useState<number | null>(null);
+  // 全局粘贴图片上传
+  useEffect(() => {
+    const handlePaste = async (e: ClipboardEvent) => {
+      if (!activeQuestionId) return;
+      const items = e.clipboardData?.items;
+      if (!items) return;
+      for (const item of items) {
+        if (item.type.startsWith("image")) {
+          const file = item.getAsFile();
+          if (!file) return;
+          const formData = new FormData();
+          formData.append("file", file);
+          const res = await fetch("/api/upload-image", {
+            method: "POST",
+            body: formData,
+          });
+          const data = await res.json();
+          const url = data.files?.[0]?.url;
+          if (url) {
+            setUploadedFiles((prev) => ({
+              ...prev,
+              [activeQuestionId]: [...(prev[activeQuestionId] || []), url],
+            }));
+          }
+          break;
+        }
+      }
+    };
+    window.addEventListener("paste", handlePaste as any);
+    return () => window.removeEventListener("paste", handlePaste as any);
+  }, [activeQuestionId]);
   const [examInfo, setExamInfo] = useState<{ year?: string; type?: string; question_time?: number | null }>({});
   const [remainingTime, setRemainingTime] = useState<number | null>(null);
   // 评分反馈
@@ -279,6 +312,7 @@ export default function ExamDoingPage() {
                               onChange={(e) =>
                                 setAnswers((prev) => ({ ...prev, [q.id]: e.target.value }))
                               }
+                              onFocus={() => setActiveQuestionId(q.id)}
                             />
                           {/* 评分反馈 */}
                           {scoreFeedback[q.id] && (
@@ -287,6 +321,7 @@ export default function ExamDoingPage() {
                               <p className="text-sm">{scoreFeedback[q.id].reason}</p>
                             </div>
                           )}
+                          {/* 上传图片文件 */}
                           <div className="mt-2">
                             <input
                               type="file"
@@ -297,25 +332,38 @@ export default function ExamDoingPage() {
                                 const files = e.target.files;
                                 if (files) {
                                   const uploadedUrls: string[] = [];
-
                                   for (const file of Array.from(files)) {
                                     const formData = new FormData();
                                     formData.append("file", file);
-                                        const res = await fetch("/api/upload-image", {
-                                          method: "POST",
-                                          body: formData,
-                                        });
-                                        const data = await res.json();
-                                        console.log("📦 上传接口返回 JSON:", data);
-                                        const url = data.files?.[0]?.url;
-                                        if (url) uploadedUrls.push(url);
+                                    const res = await fetch("/api/upload-image", {
+                                      method: "POST",
+                                      body: formData,
+                                    });
+                                    const data = await res.json();
+                                    const url = data.files?.[0]?.url;
+                                    if (url) uploadedUrls.push(url);
                                   }
-
-                                  setUploadedFiles((prev) => ({ ...prev, [q.id]: uploadedUrls }));
+                                  setUploadedFiles((prev) => ({
+                                    ...prev,
+                                    [q.id]: [...(prev[q.id] || []), ...uploadedUrls],
+                                  }));
                                 }
                               }}
                             />
                           </div>
+                          {/* 显示已上传图片缩略图 */}
+                          {uploadedFiles[q.id]?.length > 0 && (
+                            <div className="mt-2 flex flex-wrap gap-2">
+                              {uploadedFiles[q.id].map((url, idx) => (
+                                <img
+                                  key={idx}
+                                  src={url}
+                                  alt={`Answer ${idx + 1}`}
+                                  className="w-24 h-auto border border-gray-300 rounded"
+                                />
+                              ))}
+                            </div>
+                          )}
                         </>
                       )}
                     </div>
@@ -355,6 +403,7 @@ export default function ExamDoingPage() {
                               onChange={(e) =>
                                 setAnswers((prev) => ({ ...prev, [q.id]: e.target.value }))
                               }
+                              onFocus={() => setActiveQuestionId(q.id)}
                             />
                             {/* 评分反馈 */}
                             {scoreFeedback[q.id] && (
@@ -363,6 +412,7 @@ export default function ExamDoingPage() {
                                 <p className="text-sm">{scoreFeedback[q.id].reason}</p>
                               </div>
                             )}
+                            {/* 上传图片文件 */}
                             <div className="mt-2">
                               <input
                                 type="file"
@@ -373,7 +423,6 @@ export default function ExamDoingPage() {
                                   const files = e.target.files;
                                   if (files) {
                                     const uploadedUrls: string[] = [];
-
                                     for (const file of Array.from(files)) {
                                       const formData = new FormData();
                                       formData.append("file", file);
@@ -385,12 +434,27 @@ export default function ExamDoingPage() {
                                       const url = data.files?.[0]?.url;
                                       if (url) uploadedUrls.push(url);
                                     }
-
-                                    setUploadedFiles((prev) => ({ ...prev, [q.id]: uploadedUrls }));
+                                    setUploadedFiles((prev) => ({
+                                      ...prev,
+                                      [q.id]: [...(prev[q.id] || []), ...uploadedUrls],
+                                    }));
                                   }
                                 }}
                               />
                             </div>
+                            {/* 显示已上传图片缩略图 */}
+                            {uploadedFiles[q.id]?.length > 0 && (
+                              <div className="mt-2 flex flex-wrap gap-2">
+                                {uploadedFiles[q.id].map((url, idx) => (
+                                  <img
+                                    key={idx}
+                                    src={url}
+                                    alt={`Answer ${idx + 1}`}
+                                    className="w-24 h-auto border border-gray-300 rounded"
+                                  />
+                                ))}
+                              </div>
+                            )}
                           </>
                         )}
                         {children.map((c) => (
@@ -425,6 +489,7 @@ export default function ExamDoingPage() {
                                   onChange={(e) =>
                                     setAnswers((prev) => ({ ...prev, [c.id]: e.target.value }))
                                   }
+                                  onFocus={() => setActiveQuestionId(c.id)}
                                 />
                                 {/* 评分反馈 */}
                                 {scoreFeedback[c.id] && (
@@ -433,6 +498,7 @@ export default function ExamDoingPage() {
                                     <p className="text-sm">{scoreFeedback[c.id].reason}</p>
                                   </div>
                                 )}
+                                {/* 上传图片文件 */}
                                 <div className="mt-2">
                                   <input
                                     type="file"
@@ -443,7 +509,6 @@ export default function ExamDoingPage() {
                                       const files = e.target.files;
                                       if (files) {
                                         const uploadedUrls: string[] = [];
-
                                         for (const file of Array.from(files)) {
                                           const formData = new FormData();
                                           formData.append("file", file);
@@ -455,12 +520,27 @@ export default function ExamDoingPage() {
                                           const url = data.files?.[0]?.url;
                                           if (url) uploadedUrls.push(url);
                                         }
-
-                                        setUploadedFiles((prev) => ({ ...prev, [c.id]: uploadedUrls }));
+                                        setUploadedFiles((prev) => ({
+                                          ...prev,
+                                          [c.id]: [...(prev[c.id] || []), ...uploadedUrls],
+                                        }));
                                       }
                                     }}
                                   />
                                 </div>
+                                {/* 显示已上传图片缩略图 */}
+                                {uploadedFiles[c.id]?.length > 0 && (
+                                  <div className="mt-2 flex flex-wrap gap-2">
+                                    {uploadedFiles[c.id].map((url, idx) => (
+                                      <img
+                                        key={idx}
+                                        src={url}
+                                        alt={`Answer ${idx + 1}`}
+                                        className="w-24 h-auto border border-gray-300 rounded"
+                                      />
+                                    ))}
+                                  </div>
+                                )}
                               </>
                             )}
                           </div>

@@ -19,8 +19,14 @@ Instructions:
 - Do not award marks for unrelated, blank, or nonsensical images.
 - Prioritize image content over missing text answer if image is clear and correct.
 
-- Before scoring, describe briefly what the student wrote in the image.
-- If the image appears to contain no valid math or is unrelated, state so and do not award any marks.
+- If the student image is empty, blank, or unrelated to the question, assign zero marks.
+- You must describe the image contents in the `studentImageAnalysis` field.
+- Do not award any marks unless the student's reasoning is clearly visible in the image.
+- Do not guess, assume, or imagine answers — only award credit for what is visibly written.
+
+- If you cannot confidently describe any relevant math content, return score = 0.
+
+You must always include the studentImageAnalysis field in your JSON output.
 
 Output format:
 Return only valid JSON like:
