@@ -1,0 +1,388 @@
+{
+  "exam_metadata": {
+    "board": "Edexcel",
+    "qualification": "A Level",
+    "subject": "Mathematics",
+    "paper_name": "Pure Mathematics Paper 1",
+    "paper_code": "9MA0/01",
+    "exam_session": "June 2024"
+  },
+  "questions": [
+    {
+      "question_number": "1",
+      "level": "main",
+      "label": "1",
+      "marks": 3,
+      "question_text": " \\[ g(x) = 3x^3 - 20x^2 + (k + 17)x + k \\]\n\nwhere \\( k \\) is a constant.\n\nGiven that \\( (x - 3) \\) is a factor of \\( g(x) \\), find the value of \\( k \\)."
+    },
+    {
+      "question_number": "2",
+      "level": "main",
+      "label": "2",
+      "marks": null,
+      "question_text": ""
+    },
+    {
+      "question_number": "2",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 3,
+      "question_text": "Find, in ascending powers of \\( x \\), the first four terms of the binomial expansion of\n\n\\[ (1 - 9x)^{\\frac{1}{2}} \\]\n\ngiving each term in simplest form."
+    },
+    {
+      "question_number": "2",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 1,
+      "question_text": "Give a reason why \\( x = -\\frac{2}{9} \\) should not be used in the expansion to find an approximation to √3"
+    },
+    {
+      "question_number": "3",
+      "level": "main",
+      "label": "3",
+      "marks": null,
+      "question_text": "\\( f(x) = x + \\tan\\left(\\frac{1}{2}x\\right) \\), \\( \\pi < x < \\frac{3\\pi}{2} \\)\n\nGiven that the equation \\( f(x) = 0 \\) has a single root \\( \\alpha \\)"
+    },
+    {
+      "question_number": "3",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 2,
+      "question_text": "show that a lies in the interval [3.6, 3.7]"
+    },
+    {
+      "question_number": "3",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 2,
+      "question_text": "Find \\( f'(x) \\)"
+    },
+    {
+      "question_number": "3",
+      "level": "sub",
+      "label": "(c)",
+      "marks": 2,
+      "question_text": "Using 3.7 as a first approximation for a, apply the Newton–Raphson method once to obtain a second approximation for a. Give your answer to 3 decimal places."
+    },
+    {
+      "question_number": "4",
+      "level": "main",
+      "label": "4",
+      "marks": 3,
+      "question_text": "Given that \\( y = x^2 \\), use differentiation from first principles to show that \\( \\frac{dy}{dx} = 2x \\)"
+    },
+    {
+      "question_number": "5",
+      "level": "main",
+      "label": "5",
+      "marks": null,
+      "question_text": "The function f is defined by\n\n\\( f(x) = \\frac{2x - 3}{x^2 + 4} \\quad x \\in \\mathbb{R} \\)"
+    },
+    {
+      "question_number": "5",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 3,
+      "question_text": "Show that\n\n\\( f'(x) = \\frac{ax^2 + bx + c}{(x^2 + 4)^2} \\)\n\nwhere \\( a,\\ b \\ \\text{and} \\ c \\) are constants to be found."
+    },
+    {
+      "question_number": "5",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 3,
+      "question_text": "Hence, using algebra, find the values of \\( x \\) for which \\( f \\text{ is decreasing} \\).\nYou must show each step in your working."
+    },
+    {
+      "question_number": "6",
+      "level": "main",
+      "label": "6",
+      "marks": null,
+      "question_text": "Figure 1 shows a sketch of the graph with equation\n\n\\( y = 3|x - 2| + 5 \\)\n\nThe vertex of the graph is at the point P, shown in Figure 1."
+    },
+    {
+      "question_number": "6",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 2,
+      "question_text": "Find the coordinates of P."
+    },
+    {
+      "question_number": "6",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 2,
+      "question_text": "Solve the equation\n\n16 - 4x = 3|x - 2| + 5"
+    },
+    {
+      "question_number": "6",
+      "level": "sub",
+      "label": "(c)",
+      "marks": 2,
+      "question_text": "A line l has equation \\( y = kx + 4 \\) where k is a constant.\n\nGiven that l intersects \\( y = 3|x - 2| + 5 \\) at 2 distinct points,\n\nfind the range of values of k."
+    },
+    {
+      "question_number": "7",
+      "level": "main",
+      "label": "7",
+      "marks": null,
+      "question_text": "Figure 2 shows a cylindrical tank of height 1.5 m.\n\nInitially the tank is full of water.\n\nThe water starts to leak from a small hole, at a point \\( L \\), in the side of the tank.\n\nWhile the tank is leaking, the depth,\\( H \\) metres, of the water in the tank is modelled by\nthe differential equation\n\n\\( \\frac{dH}{dt} = -0.12e^{-0.2t} \\)\n\nwhere \\( t \\) hours is the time after the leak starts.\n\nUsing the model,"
+    },
+    {
+      "question_number": "7",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 3,
+      "question_text": "show that\n\n\\( H = Ae^{-0.2t} + B \\)\n\nwhere \\( A \\) and \\( B \\) are constants to be found,"
+    },
+    {
+      "question_number": "7",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 3,
+      "question_text": "find the time taken for the depth of the water to decrease to 1.2 m. Give your answer\nin hours and minutes, to the nearest minute."
+    },
+    {
+      "question_number": "7",
+      "level": "sub",
+      "label": "(c)",
+      "marks": 2,
+      "question_text": "Find, according to the model, the height of the hole from the bottom of the tank."
+    },
+    {
+      "question_number": "8",
+      "level": "main",
+      "label": "8",
+      "marks": null,
+      "question_text": "The functions \\( f \\) and \\( g \\) are defined by\n\n\\[ f(x) = 4 - 3x^2 \\quad x \\in \\mathbb{R} \\]\n\\[ g(x) = \\frac{5}{2x - 9} \\quad x \\in \\mathbb{R}, \\; x \\neq \\frac{9}{2} \\]"
+    },
+    {
+      "question_number": "8",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 2,
+      "question_text": "Find \\( fg(2) \\)"
+    },
+    {
+      "question_number": "8",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 3,
+      "question_text": "Find \\( g^{-1}\\)"
+    },
+    {
+      "question_number": "8",
+      "level": "sub",
+      "label": "(c)",
+      "marks": null,
+      "question_text": ""
+    },
+    {
+      "question_number": "8",
+      "level": "subsub",
+      "label": "(i)",
+      "marks": null,
+      "question_text": "Find gf(x), giving your answer as a simplified fraction.",
+      "parent_label": "(c)"
+    },
+    {
+      "question_number": "8",
+      "level": "subsub",
+      "label": "(ii)",
+      "marks": 3,
+      "question_text": "Deduce the range of gf(x).",
+      "parent_label": "(c)"
+    },
+    {
+      "question_number": "8",
+      "level": "sub",
+      "label": "(d)",
+      "marks": 3,
+      "question_text": "The function \\( h \\) is defined by\n\n\\[ h(x) = 2x^2 - 6x + k \\quad x \\in \\mathbb{R} \\]\n\nwhere \\( k \\) is a constant. \nFind the range of values of \\( k \\) for which the equation\n\nf(x) = h(x)\n\nhas no real solutions."
+    },
+    {
+      "question_number": "9",
+      "level": "main",
+      "label": "9",
+      "marks": null,
+      "question_text": "The first 3 terms of a geometric sequence are\n\n\\[ 3^{4k-5}, \\quad 9^{7-2k}, \\quad 3^{2(4k-1)} \\]\n\nwhere \\( k \\) is a constant."
+    },
+    {
+      "question_number": "9",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 3,
+      "question_text": "Using algebra and making your reasoning clear, prove that \\( k = \\frac{5}{2} \\)"
+    },
+    {
+      "question_number": "9",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 3,
+      "question_text": "Hence find the sum to infinity of the geometric sequence."
+    },
+    {
+      "question_number": "10",
+      "level": "main",
+      "label": "10",
+      "marks": null,
+      "question_text": "In this question you must show all stages of your working.\nSolutions relying entirely on calculator technology are not acceptable.\n\nFigure 3 shows a sketch of part of the curve with equation\n\n\\( y = 8x - x^2 \\),  \\( x \\geq 0 \\)\n\nThe curve crosses the x-axis at the point \\( A \\)."
+    },
+    {
+      "question_number": "10",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 1,
+      "question_text": "Verify that the \\( x \\) coordinate of \\( A \\) is 4"
+    },
+    {
+      "question_number": "10",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 3,
+      "question_text": "The line \\( l_1 \\) is the tangent to the curve at \\( A \\).\nUse calculus to show that an equation of line \\( l_1 \\) is\n\n\\( 12x + y = 48 \\)"
+    },
+    {
+      "question_number": "10",
+      "level": "sub",
+      "label": "(c)",
+      "marks": 5,
+      "question_text": "The line \\( l_2 \\) has equation \\( y = 8x \\)\n\nThe region \\( R \\), shown shaded in Figure 3, is bounded by the curve, the line \\( l_1 \\) and the line \\( l_2 \\)\nUse algebraic integration to find the exact area of \\( R \\)."
+    },
+    {
+      "question_number": "11",
+      "level": "main",
+      "label": "11",
+      "marks": 4,
+      "question_text": "Figure 4 shows the design of a badge.\n\nThe shape \\(ABCOA\\) is a semicircle with centre \\(O\\) and diameter 10 cm.\n\n\\(OB\\) is the arc of a circle with centre \\(A\\) and radius 5 cm.\n\nThe region \\(R\\), shown shaded in Figure 4, is bounded by the arc \\(OB\\), the arc \\(BC\\) and the line \\(OC\\).\n\nFind the exact area of \\(R\\).\n\nGive your answer in the form \\((a \\sqrt{3} + b\\pi)\\text{ cm}^2\\), where \\(a\\) and \\(b\\) are rational numbers."
+    },
+    {
+      "question_number": "12",
+      "level": "main",
+      "label": "12",
+      "marks": null,
+      "question_text": ""
+    },
+    {
+      "question_number": "12",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 3,
+      "question_text": "Express \\(140\\cos\\theta - 480\\sin\\theta\\) in the form \\(K\\cos(\\theta + \\alpha)\\) \nwhere \\(K > 0\\) and \\(0 < \\alpha < 90^\\circ\\)\n\nState the value of \\(K\\) and give the value of \\(\\alpha\\), in degrees, to 2 decimal places."
+    },
+    {
+      "question_number": "12",
+      "level": "sub",
+      "label": "(b)",
+      "marks": null,
+      "question_text": "A scientist studies the number of rabbits and the number of foxes in a wood for one year.\n\nThe number of rabbits, \\(R\\), is modelled by the equation\n\n\\[ R = A + 140\\cos(30t)^\\circ - 480\\sin(30t)^\\circ \\]\n\nwhere \\(t\\) months is the time after the start of the year and \\(A\\) is a constant.\n\nGiven that, during the year, the maximum number of rabbits in the wood is 1500"
+    },
+    {
+      "question_number": "12",
+      "level": "subsub",
+      "label": "(i)",
+      "marks": null,
+      "question_text": "find a complete equation for this model.",
+      "parent_label": "(b)"
+    },
+    {
+      "question_number": "12",
+      "level": "subsub",
+      "label": "(ii)",
+      "marks": 2,
+      "question_text": "Hence write down the minimum number of rabbits in the wood during the year according to the model.",
+      "parent_label": "(b)"
+    },
+    {
+      "question_number": "12",
+      "level": "sub",
+      "label": "(c)",
+      "marks": 2,
+      "question_text": "The actual number of rabbits in the wood is at its minimum value in the middle of April.\nUse this information to comment on the model for the number of rabbits."
+    },
+    {
+      "question_number": "12",
+      "level": "sub",
+      "label": "(d)",
+      "marks": 4,
+      "question_text": "The number of foxes, \\(F\\), in the wood during the same year is modelled by the equation\n\n\\[ F = 100 + 70\\sin(30t + 70)^\\circ \\]\n\nThe number of foxes is at its minimum value after \\(T\\) months.\n\nFind, according to the models, the number of \\(\\textit{rabbits}\\) in the wood at time \\(T\\) months."
+    },
+      {
+        "question_number": "13",
+        "level": "main",
+        "label": "13",
+        "marks": null,
+        "question_text": ""
+      },
+      {
+        "question_number": "13",
+        "level": "sub",
+        "label": "(a)",
+        "marks": 4,
+        "question_text": "Given that \\( a \\) is a positive constant, use the substitution \\( x = a\\sin^2\\theta \\) to show that\n\\[ \\int_0^a \\frac{1}{x^2\\sqrt{a - x}} \\, dx = \\frac{1}{2} a^2 \\int_0^{\\frac{\\pi}{2}} \\sin^2 2\\theta \\, d\\theta \\]"
+      },
+      {
+        "question_number": "13",
+        "level": "sub",
+        "label": "(b)",
+        "marks": 4,
+        "question_text": "Hence use algebraic integration to show that\n\\[ \\int_0^a \\frac{1}{x^2\\sqrt{a - x}} \\, dx = k\\pi a^2 \\]\nwhere \\( k \\) is a constant to be found."
+      },
+    {
+      "question_number": "14",
+      "level": "main",
+      "label": "14",
+      "marks": null,
+      "question_text": "A balloon is being inflated.\n\nIn a simple model,\n\n• the balloon is modelled as a sphere\n• the rate of increase of the radius of the balloon is inversely proportional to the\nsquare root of the radius of the balloon\n\nAt time t seconds, the radius of the balloon is r cm."
+    },
+    {
+      "question_number": "14",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 1,
+      "question_text": "Write down a differential equation to model this situation."
+    },
+    {
+      "question_number": "14",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 5,
+      "question_text": "At the instant when t = 10\n\n• the radius is 16 cm\n• the radius is increasing at a rate of 0.9 cm s\\(^{-1}\\)\n\nSolve the differential equation to show that\n\n\\( r^{\\frac{3}{2}} = 5.4t + 10 \\)"
+    },
+    {
+      "question_number": "14",
+      "level": "sub",
+      "label": "(c)",
+      "marks": 2,
+      "question_text": "Hence find the radius of the balloon when t = 20\n\nGive your answer to the nearest millimetre."
+    },
+    {
+      "question_number": "14",
+      "level": "sub",
+      "label": "(d)",
+      "marks": 1,
+      "question_text": "Suggest a limitation of the model."
+    },
+    {
+      "question_number": "15",
+      "level": "main",
+      "label": "15",
+      "marks": null,
+      "question_text": ""
+    },
+
+    {
+      "question_number": "15",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 2,
+      "question_text": "Show that \\( k^2 - 4k + 5 \\) is positive for all real values of \\( k \\)."
+    },
+    {
+      "question_number": "15",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 4,
+      "question_text": "A student was asked to prove by contradiction that\n\n“There are no positive integers \\( x \\) and \\( y \\) such that \\( (3x + 2y)(2x - 5y) = 28 \\)”\n\nThe start of the student’s proof is shown below.\n\nAssume that positive integers \\( x \\) and \\( y \\) exist such that\n\\[ (3x + 2y)(2x - 5y) = 28 \\]\n\nIf \\( 3x + 2y = 14 \\) and \\( 2x - 5y = 2 \\),\n\\[ \\begin{cases} 3x + 2y = 14 \\\\ 2x - 5y = 2 \\end{cases} \\Rightarrow x = \\frac{74}{19},\\ y = \\frac{22}{19} \\quad \\text{Not integers} \\]\n\nShow the calculations and statements needed to complete the proof."
+    }
+  ]
+}

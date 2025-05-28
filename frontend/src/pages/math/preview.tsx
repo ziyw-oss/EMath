@@ -95,7 +95,7 @@ export default function PreviewQuestion() {
         })
         .catch((err) => console.error("❌ Failed to load questions:", err));
     } else {
-      fetch("/output_qp2023.json", { cache: "no-store" })
+      fetch("/output_qp202401.json", { cache: "no-store" })
         .then((res) => res.json())
         .then((data) => {
           setExamInfo(data.exam_metadata);

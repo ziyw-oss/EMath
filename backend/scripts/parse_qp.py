@@ -50,18 +50,10 @@ def ask_gpt_vision(image_path: str) -> dict:
                         "  \"label\": \"(i)\",\n"
                         "  \"marks\": 3,\n"
                         "  \"question_text\": \"Given that \\(\\theta\\) is small...\",\n"
-                        "  \"latex_blocks\": [\"\\\\[ \\frac{dy}{dx} \\\\]\"],\n"
                         "  \"parent_label\": \"(a)\"\n"
                         "}\n\n"
-                        "Use LaTeX to represent all math expressions, including fractions, powers, square roots, trigonometric functions, integrals, and logarithms.\n"
-                        "Wrap inline math expressions with \\( ... \\), even when they appear as part of a sentence (e.g., 'y = x^2 - 2x - 24\\sqrt{x}, \\quad x > 0').\n"
-                        "Wrap block math expressions with \\[ ... \\].\n"
-                        "Do not repeat any raw LaTeX expressions outside of their math block.\n"
-                        "Only include each expression once, inside the proper delimiters.\n"
                         "Do not skip any question, even if it includes diagrams or graphs. Extract all mathematical instructions, assumptions, and formulas. Treat diagrams as part of the question and extract all visible associated question text.\n"
-                        "Only return a raw JSON array of question objects. Do not include explanations or markdown formatting.\n"
-                        "Only wrap pure mathematical expressions in \\[ ... \\] or \\( ... \\). Do not wrap full sentences or natural language instructions inside math delimiters.\n"
-                        "Escape all LaTeX backslashes as \\\\ to ensure valid JSON output. For example, write \\\\theta instead of \\theta."
+                        "Only return a raw JSON array of question objects. Do not include explanations or markdown formatting."
                     )},
                     {
                         "type": "image_url",

@@ -597,12 +597,30 @@ export default function ExamDoingPage() {
                     }
                   >;
 
+                  // 构造 mainMap：question_number => main题题干
+                  const mainMap = new Map(
+                    questions
+                      .filter((q) => q.level === "main")
+                      .map((q) => [q.question_number, q.question_text])
+                  );
+
                   const answerPayload: AnswerPayload = currentGroup.reduce((acc: AnswerPayload, q: any) => {
                     if (q.marks !== null) {
+                      const mainText = mainMap.get(q.question_number) || "";
+                      let fullQuestionText = "";
+                      if (q.level === "main") {
+                        fullQuestionText = q.question_text;
+                      } else {
+                        console.log("🧾 非主题题目 - mainText:", mainText);
+                        console.log("🧾 非主题题目 - q.question_text:", q.question_text);
+                        // 改为单行拼接方式，避免换行导致内容截断
+                        fullQuestionText = `Context: ${mainText} Question: ${q.question_text}`;
+                        console.log("🧾 构造后的 fullQuestionText:", fullQuestionText);
+                      }
                       acc[q.id] = {
                         text: answers[q.id] || "",
                         images: uploadedFiles[q.id] || [],
-                        questionText: q.question_text,
+                        questionText: fullQuestionText,
                         meta: {
                           exam_paper_id: examPaperId,
                           level: q.level,
@@ -640,6 +658,10 @@ export default function ExamDoingPage() {
                   }
 
                   try {
+                    console.log("📤 发送给 /api/save-and-score 的完整 JSON：", {
+                      sessionId,
+                      answers: answerPayload
+                    });
                     const res = await fetch("/api/save-and-score", {
                       method: "POST",
                       headers: {

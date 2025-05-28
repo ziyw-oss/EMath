@@ -60,6 +60,10 @@ def main():
         sys.exit(1)
 
     question_text = data.get("questionText", "")
+    print("📝 Received question_text:", file=sys.stderr)
+    log_stderr("📝 Received question_text:")
+    print(question_text, file=sys.stderr)
+    log_stderr(question_text)
     reference = data.get("referenceAnswer", "")
     guidance = data.get("guidance", "")
     student_text = data.get("studentText", "")
@@ -93,10 +97,6 @@ def main():
     log_stderr("🖼️ Raw image paths received:")
     print(f"  questionImagePath = {question_image_path}", file=sys.stderr)
     log_stderr(f"  questionImagePath = {question_image_path}")
-    print(f"  studentImages (original) = {original_student_images}", file=sys.stderr)
-    log_stderr(f"  studentImages (original) = {original_student_images}")
-    print(f"  studentImages (resolved paths) = {student_images}", file=sys.stderr)
-    log_stderr(f"  studentImages (resolved paths) = {student_images}")
     log_stderr("==== End Image Path Logging ====")
 
     question_image = ""
@@ -149,6 +149,11 @@ def main():
             ]
         }
     ]
+
+    print("📤 Full GPT messages to send:", file=sys.stderr)
+    log_stderr("📤 Full GPT messages to send:")
+    print(json.dumps(messages, indent=2, ensure_ascii=False), file=sys.stderr)
+    log_stderr(json.dumps(messages, indent=2, ensure_ascii=False))
 
     print("🖼️ Debug - Images to GPT:", file=sys.stderr)
     log_stderr("🖼️ Debug - Images to GPT:")

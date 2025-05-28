@@ -3,6 +3,7 @@
     "board": "Edexcel",
     "qualification": "A Level",
     "subject": "Mathematics",
+    "paper_name": "Pure Mathematics Paper 1",
     "paper_code": "9MA0/01",
     "exam_session": "June 2023"
   },
@@ -12,40 +13,28 @@
       "level": "main",
       "label": "1",
       "marks": 4,
-      "question_text": "Find\n\nwriting each term in simplest form.",
-      "latex_blocks": [
-        "\\[ \\int \\frac{1}{x^2} (2x - 5) \\frac{3}{3} \\, dx \\]"
-      ]
+      "question_text": "Find\n\nwriting each term in simplest form.\\[ \\int \\frac{1}{x^2} (2x - 5) \\frac{3}{3} \\, dx \\]"
     },
     {
       "question_number": "2",
       "level": "main",
       "label": "2",
       "marks": null,
-      "question_text": "In this question you must show all stages of your working.\nSolutions relying entirely on calculator technology are not acceptable. \nf(x) = 4x^3 + 5x^2 - 10x + 4a \\quad x \\in \\mathbb{R}\nwhere \\(a\\) is a positive constant.\nGiven \\((x-a)\\) is a factor of \\(f(x)\\),",
-      "latex_blocks": [
-        "f(x) = 4x^3 + 5x^2 - 10x + 4a \\quad x \\in \\mathbb{R}",
-        "(x-a)",
-        "f(x)"
-      ]
+      "question_text": "In this question you must show all stages of your working.\n\nSolutions relying entirely on calculator technology are not acceptable.\n\n\\[ f(x) = 4x^3 + 5x^2 - 10x + 4a \\quad x \\in \\mathbb{R} \\]\n\nwhere \\( a \\) is a positive constant.\nGiven \\( (x - a) \\) is a factor of \\( f(x) \\),"
     },
     {
       "question_number": "2",
       "level": "sub",
       "label": "(a)",
       "marks": 2,
-      "question_text": "show that \n\\[a(4a^2 + 5a - 6) = 0\\]",
-      "latex_blocks": [
-        "a(4a^2 + 5a - 6) = 0"
-      ]
+      "question_text": "show that \n\\[a(4a^2 + 5a - 6) = 0\\]"
     },
     {
       "question_number": "2",
       "level": "sub",
       "label": "(b)",
       "marks": null,
-      "question_text": "Hence",
-      "latex_blocks": []
+      "question_text": "Hence"
     },
     {
       "question_number": "2",
@@ -54,7 +43,7 @@
       "marks": null,
       "question_text": "find the value of \\(a\\)",
       "latex_blocks": [
-        "a"
+        
       ],
       "parent_label": "(b)"
     },
@@ -63,10 +52,7 @@
       "level": "subsub",
       "label": "(ii)",
       "marks": 4,
-      "question_text": "use algebra to find the exact solutions of the equation\nf(x) = 3",
-      "latex_blocks": [
-        "f(x) = 3"
-      ],
+      "question_text": "use algebra to find the exact solutions of the equation \\[ f(x) = 3 \\]",
       "parent_label": "(b)"
     },
     {
@@ -139,80 +125,63 @@
       "level": "main",
       "label": "6",
       "marks": null,
-      "question_text": "\\( a = \\log_2 x \\), \\( b = \\log_2(x + 8) \\).\n Express in terms of \\( a \\) and/or \\( b \\)",
-      "latex_blocks": []
+      "question_text": "\\( a = \\log_2 x \\), \\( b = \\log_2(x + 8) \\).\n Express in terms of \\( a \\) and/or \\( b \\)"
     },
     {
       "question_number": "6",
       "level": "sub",
       "label": "(a)",
       "marks": 1,
-      "question_text": "\\( \\log_2 \\sqrt{x} \\)",
-      "latex_blocks": []
+      "question_text": "\\( \\log_2 \\sqrt{x} \\)"
     },
     {
       "question_number": "6",
       "level": "sub",
       "label": "(b)",
       "marks": 2,
-       "question_text": "\\( \\log_2(x^2 + 8x) \\)",
-      "latex_blocks": []
+       "question_text": "\\( \\log_2(x^2 + 8x) \\)"
     },
     {
       "question_number": "6",
       "level": "sub",
       "label": "(c)",
       "marks": 3,
-      "question_text": "\\( \\log_2 \\left(8 + \\frac{64}{x}\\right) \\)\n Give your answer in simplest form.",
-      "latex_blocks": []
+      "question_text": "\\( \\log_2 \\left(8 + \\frac{64}{x}\\right) \\)\n Give your answer in simplest form."
     },
     {
       "question_number": "7",
       "level": "main",
       "label": "7",
       "marks": null,
-      "question_text": "The function \\( f \\) is defined by\n\\[ f(x) = 3 + \\sqrt{x - 2} \\quad x \\in \\mathbb{R},\\ x > 2 \\]",
-      "latex_blocks": [
-        "f(x) = 3 + \\sqrt{x - 2} \\quad x \\in \\mathbb{R} \\quad x > 2"
-      ]
+      "question_text": "The function \\( f \\) is defined by\n\\[ f(x) = 3 + \\sqrt{x - 2} \\quad x \\in \\mathbb{R},\\ x > 2 \\]"
     },
     {
       "question_number": "7",
       "level": "sub",
       "label": "(a)",
       "marks": 1,
-      "question_text": "State the range of f",
-      "latex_blocks": []
+      "question_text": "State the range of f"
     },
     {
       "question_number": "7",
       "level": "sub",
       "label": "(b)",
       "marks": 3,
-      "question_text": "Find \\( f^{-1} \\)\nThe function \\( g \\) is defined by\n\\[ g(x) = \\frac{15}{x - 3} \\quad x \\in \\mathbb{R},\\ x \\ne 3 \\]\n",
-      "latex_blocks": [
-        "f^{-1}"
-      ]
+      "question_text": "Find \\( f^{-1} \\)\nThe function \\( g \\) is defined by\n\\[ g(x) = \\frac{15}{x - 3} \\quad x \\in \\mathbb{R},\\ x \\ne 3 \\]\n"
     },
     {
       "question_number": "7",
       "level": "sub",
       "label": "(c)",
       "marks": 2,
-      "question_text": "Find ",
-      "latex_blocks": [
-        "gf(6)"
-      ]
+      "question_text": "Find \\( gf(6) \\)"
     },
     {
       "question_number": "7",
       "level": "sub",
       "label": "(d)",
       "marks": 2,
-      "question_text": "Find the exact value of the constant a for which\n",
-      "latex_blocks": [
-        "f(a^{2} + 2) = g(a)"
-      ]
+      "question_text": "Find the exact value of the constant a for which\n \\( f(a^{2} + 2) = g(a) \\)"
     },
     {
       "question_number": "8",
@@ -254,22 +223,14 @@
     "level": "sub",
     "label": "(a)",
     "marks": 2,
-    "question_text": "Show that \\( k \\) satisfies the equation\n\\[ 3k^2 - 62k + 40 = 0 \\]",
-    "latex_blocks": [
-      "k",
-      "3k^2 - 62k + 40 = 0"
-    ]
+    "question_text": "Show that \\( k \\) satisfies the equation\n\\[ 3k^2 - 62k + 40 = 0 \\]"
   },
   {
     "question_number": "9",
     "level": "sub",
     "label": "(b)",
     "marks": 5,
-    "question_text": "Given that the sequence converges,\n(i) find the value of \\( k \\), giving a reason for your answer,\n(ii) find the value of \\( S_\\infty \\)",
-    "latex_blocks": [
-      "k",
-      "S_\\infty"
-    ]
+    "question_text": "Given that the sequence converges,\n(i) find the value of \\( k \\), giving a reason for your answer,\n(ii) find the value of \\( S_\\infty \\)"
   }
     ,
     {
@@ -277,10 +238,7 @@
       "level": "main",
       "label": "10",
       "marks": null,
-      "question_text": "A circle C has equation\n\\[ x^2 + y^2 + 6kx - 2ky + 7 = 0 \\]\nwhere k is a constant.",
-      "latex_blocks": [
-        "x^2 + y^2 + 6kx - 2ky + 7 = 0"
-      ]
+      "question_text": "A circle C has equation\n\\[ x^2 + y^2 + 6kx - 2ky + 7 = 0 \\]\nwhere k is a constant."
     },
     {
       "question_number": "10",
@@ -310,10 +268,7 @@
       "level": "sub",
       "label": "(b)",
       "marks": 6,
-      "question_text": "The line with equation \\( y = 2x - 1 \\) intersects \\( C \\) at 2 distinct points.\nFind the range of possible values of \\( k \\).",
-      "latex_blocks": [
-        "y = 2x - 1"
-      ]
+      "question_text": "The line with equation \\( y = 2x - 1 \\) intersects \\( C \\) at 2 distinct points.\nFind the range of possible values of \\( k \\)."
     },
     {
       "question_number": "11",
@@ -344,55 +299,46 @@
       "question_text": "Use this information to evaluate the reliability of the model.\nExactly 2 years after it was bought, the value of the phone was £320."
     },
     {
-      "question_number": "12",
-      "level": "main",
-      "label": "12",
-      "marks": 5,
-      "question_text": "where \\( x \\) is measured in radians.\n\nUse differentiation from first principles to show that\n\n\\[ \\frac{dy}{dx} = \\cos x \\]\n\nYou may\n\n• use without proof the formula for \\( \\sin(A \\pm B) \\)\n\n• assume that as \\( h \\to 0 \\), \\( \\frac{\\sin h}{h} \\to 1 \\) and \\( \\frac{\\cos h - 1}{h} \\to 0 \\)"
-    },
+  "question_number": "12",
+  "level": "main",
+  "label": "12",
+  "marks": 5,
+  "question_text": " \\[ y = \\sin x \\] where \\( x \\) is measured in radians.\n\nUse differentiation from first principles to show that\n\\[ \\frac{dy}{dx} = \\cos x \\]\n\nYou may:\n• use without proof the formula for \\( \\sin(A \\pm B) \\)\n• assume that as \\( h \\to 0 \\), \\( \\frac{\\sin h}{h} \\to 1 \\) and \\( \\frac{\\cos h - 1}{h} \\to 0 \\)"
+},
     {
       "question_number": "13",
       "level": "main",
       "label": "13",
       "marks": null,
-      "question_text": "On a roller coaster ride, passengers travel in carriages around a track.\n\nOn the ride, carriages complete multiple circuits of the track such that\n\n• the maximum vertical height of a carriage above the ground is 60 m\n\n• a carriage starts a circuit at a vertical height of 2 m above the ground\n\n• the ground is horizontal\n\nThe vertical height, \\( H \\, \text{m} \\), of a carriage above the ground, \\( t \\) seconds after the carriage starts the first circuit, is modelled by the equation\n\n\\[ H = a - b(t - 20)^2 \\]\n\nwhere \\( a \\) and \\( b \\) are positive constants.",
-      "latex_blocks": [
-        "H = a - b(t - 20)^2"
-      ]
+      "question_text": "On a roller coaster ride, passengers travel in carriages around a track.\n\nOn the ride, carriages complete multiple circuits of the track such that\n\n• the maximum vertical height of a carriage above the ground is 60 m\n\n• a carriage starts a circuit at a vertical height of 2 m above the ground\n\n• the ground is horizontal\n\nThe vertical height, \\( H \\, \text{m} \\), of a carriage above the ground, \\( t \\) seconds after the carriage starts the first circuit, is modelled by the equation\n\n\\[ H = a - b(t - 20)^2 \\]\n\nwhere \\( a \\) and \\( b \\) are positive constants."
     },
     {
       "question_number": "13",
       "level": "sub",
       "label": "(a)",
       "marks": 3,
-      "question_text": "Find a complete equation for the model.",
-      "latex_blocks": []
+      "question_text": "Find a complete equation for the model."
     },
     {
       "question_number": "13",
       "level": "sub",
       "label": "(b)",
       "marks": 1,
-      "question_text": "Use the model to determine the height of the carriage above the ground when \\( t = 40 \\)",
-      "latex_blocks": []
+      "question_text": "Use the model to determine the height of the carriage above the ground when \\( t = 40 \\)"
     },
     {
       "question_number": "13",
       "level": "sub",
       "label": "(c)",
       "marks": 2,
-      "question_text": "Find a complete equation for the alternative model.\n\nIn an alternative model, the vertical height, \\( H \\, \text{m} \\), of a carriage above the ground, \\( t \\) seconds after the carriage starts the first circuit, is given by\n\n\\[ H = 29 \\cos(9t + a^\\circ) + \\beta \\quad \\quad 0 \\leq a < 360^\\circ \\]\n\nwhere \\( a \\) and \\( \\beta \\) are constants.",
-      "latex_blocks": [
-        "H = 29 \\cos(9t + a^\\circ) + \\beta \\quad \\quad 0 \\leq a < 360^\\circ"
-      ]
+      "question_text": "In an alternative model, the vertical height, \\( H \\text{m} \\), of a carriage above the ground, \\( t \\) seconds after the carriage starts the first circuit, is given by\n\\[ H = 29 \\cos(9t + \\alpha)^\\circ + \\beta \\quad\\text{where } 0 \\leq \\alpha < 360^\\circ \\]\n\nFind a complete equation for the alternative model."
     },
     {
       "question_number": "13",
       "level": "sub",
       "label": "(d)",
       "marks": 1,
-      "question_text": "Given that the carriage moves continuously for 2 minutes,\n\ngive a reason why the alternative model would be more appropriate.",
-      "latex_blocks": []
+      "question_text": "Given that the carriage moves continuously for 2 minutes,\n\ngive a reason why the alternative model would be more appropriate."
     },
     {
       "question_number": "14",
@@ -420,23 +366,14 @@
   "level": "sub",
 "label": "(b)",
   "marks": 2,
-  "question_text": "Hence show that the \\( x \\) coordinates of the turning points of the curve are solutions of the equation\n\\[ x = \\frac{2e^{3x} - 4}{e^{3x} + 4} \\]\n\nThe equation \\( x = \\frac{2e^{3x} - 4}{e^{3x} + 4} \\) has two positive roots \\( \\alpha \\) and \\( \\beta \\), where \\( \\beta > \\alpha \\).\n\nA student uses the iteration formula\n\\[ x_{n+1} = \\frac{2e^{3x_n} - 4}{e^{3x_n} + 4} \\]\nin an attempt to find approximations for \\( \\alpha \\) and \\( \\beta \\).\n\nDiagram 1 shows a plot of part of the curve with equation \\( y = \\frac{2e^{3x} - 4}{e^{3x} + 4} \\) and part of the line with equation \\( y = x \\).\n\nUsing Diagram 1 ",
-  "latex_blocks": [
-    "x = \\frac{2e^{3x} - 4}{e^{3x} + 4}",
-    "\\alpha",
-    "\\beta",
-    "\\beta > \\alpha",
-    "x_{n+1} = \\frac{2e^{3x_n} - 4}{e^{3x_n} + 4}",
-    "y = \\frac{2e^{3x} - 4}{e^{3x} + 4}",
-    "y = x"
-  ]
+  "question_text": "Hence show that the \\( x \\) coordinates of the turning points of the curve are solutions of the equation\n\\[ x = \\frac{2e^{3x} - 4}{e^{3x} + 4} \\]\n"
 },
   {
     "question_number": "15",
     "level": "sub",
     "label": "(c)",
     "marks": 1,
-    "question_text": "draw a staircase diagram to show that the iteration formula starting with \\( x_1 = 1 \\) can be used to find an approximation for \\( \\beta \\)."
+    "question_text": "The equation \\( x = \\frac{2e^{3x} - 4}{e^{3x} + 4} \\) has two positive roots \\( \\alpha \\) and \\( \\beta \\), where \\( \\beta > \\alpha \\).\n\nA student uses the iteration formula\n\\[ x_{n+1} = \\frac{2e^{3x_n} - 4}{e^{3x_n} + 4} \\]\nin an attempt to find approximations for \\( \\alpha \\) and \\( \\beta \\).\n\nDiagram 1 shows a plot of part of the curve with equation \\( y = \\frac{2e^{3x} - 4}{e^{3x} + 4} \\) and part of the line with equation \\( y = x \\).\n\nUsing Diagram 1 \ndraw a staircase diagram to show that the iteration formula starting with \\( x_1 = 1 \\) can be used to find an approximation for \\( \\beta \\)."
   },
   {
     "question_number": "15",
