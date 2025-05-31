@@ -3,8 +3,10 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/math/doing": "pages/math/doing.js",
-  "/math/upload": "pages/math/upload.js",
-  "/api/import-qp": "pages/api/import-qp.js",
-  "/api/load-qp": "pages/api/load-qp.js",
-  "/math/preview": "pages/math/preview.js"
+  "/math/dashboard": "pages/math/dashboard.js",
+  "/api/save-and-score": "pages/api/save-and-score.js",
+  "/math/view-mark-scheme": "pages/math/view-mark-scheme.js",
+  "/api/upload-image": "pages/api/upload-image.js",
+  "/api/rewards-history": "pages/api/rewards-history.js",
+  "/api/dashboard": "pages/api/dashboard.js"
 }

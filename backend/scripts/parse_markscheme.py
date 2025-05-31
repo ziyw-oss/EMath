@@ -54,9 +54,9 @@ def main():
             sys.exit(0)
         try:
             parsed = json.loads(raw_content)
-            print(json.dumps({"marks": parsed}))
+            print(json.dumps({"marks": parsed}, ensure_ascii=False))
         except Exception as e:
-            print(json.dumps({"marks": [], "error": str(e)}))
+            print(json.dumps({"marks": [], "error": str(e)}, ensure_ascii=False))
         sys.exit(0)
 
 

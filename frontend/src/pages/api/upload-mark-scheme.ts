@@ -14,8 +14,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   exam_metadata.qualification = "A Level";
   exam_metadata.subject = "Mathematics";
   exam_metadata.paper_code = "9MA0/01"; // 修正 OCR 误识别的 "QMA0O1 01"
-  exam_metadata.paper_name = "Pure Mathematics Paper 1";
-  exam_metadata.exam_session = "2018";
+  exam_metadata.paper_name = "2024 Pure Mathematics Paper 1";
+  exam_metadata.exam_session = "2024";
 
   try {
     const paper_name = exam_metadata.paper_name;
