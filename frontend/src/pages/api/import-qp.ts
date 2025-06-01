@@ -16,9 +16,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     // 1. 查找或插入试卷
     const { board, qualification, subject, paper_code, paper_name, exam_session } = exam_metadata;
+    // 只保留 exam_session 中的年份
+    const sessionYear = exam_session.match(/\d{4}/)?.[0] || exam_session;
+    const updatedPaperName = `${sessionYear} ${paper_name}`;
     const [paperRows] = (await db.query(
       "SELECT id FROM exam_papers WHERE board = ? AND paper_code = ? AND exam_session = ?",
-      [board, paper_code, exam_session]
+      [board, paper_code, sessionYear]
     ) as unknown as [any[], any]);
 
     let exam_paper_id;
@@ -28,7 +31,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       const [result] = (await db.query(
         `INSERT INTO exam_papers (board, qualification, subject, paper_code, paper_name, exam_session)
          VALUES (?, ?, ?, ?, ?, ?)`,
-        [board, qualification, subject, paper_code, paper_name, exam_session]
+        [board, qualification, subject, paper_code, updatedPaperName, sessionYear]
       ) as unknown as [any, any]);
       exam_paper_id = result.insertId;
     }

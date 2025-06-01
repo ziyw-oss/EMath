@@ -33,27 +33,8 @@
       "question_number": "2",
       "level": "sub",
       "label": "(b)",
-      "marks": null,
-      "question_text": "Hence"
-    },
-    {
-      "question_number": "2",
-      "level": "subsub",
-      "label": "(i)",
-      "marks": null,
-      "question_text": "find the value of \\(a\\)",
-      "latex_blocks": [
-        
-      ],
-      "parent_label": "(b)"
-    },
-    {
-      "question_number": "2",
-      "level": "subsub",
-      "label": "(ii)",
       "marks": 4,
-      "question_text": "use algebra to find the exact solutions of the equation \\[ f(x) = 3 \\]",
-      "parent_label": "(b)"
+      "question_text": "Hence\n(i)find the value of \\(a\\)\n(b) use algebra to find the exact solutions of the equation \\[ f(x) = 3 \\]\n"
     },
     {
       "question_number": "3",
@@ -244,24 +225,8 @@
       "question_number": "10",
       "level": "sub",
       "label": "(a)",
-      "marks": null,
-      "question_text": "Find in terms of \\( k \\),"
-    },
-    {
-      "question_number": "10",
-      "level": "subsub",
-      "label": "(i)",
-      "marks": null,
-      "question_text": "the coordinates of the centre of \\( C \\)",
-      "parent_label": "(a)"
-    },
-    {
-      "question_number": "10",
-      "level": "subsub",
-      "label": "(ii)",
       "marks": 3,
-      "question_text": "the radius of \\( C \\)",
-      "parent_label": "(a)"
+      "question_text": "Find in terms of \\( k \\),\n(i) the coordinates of the centre of \\( C \\)\n(ii) the radius of \\( C \\)"
     },
     {
       "question_number": "10",

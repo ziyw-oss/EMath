@@ -33,6 +33,10 @@ export default function ImportMarkScheme() {
     setJsonText(text);
     try {
       const data = JSON.parse(text);
+      if (!data || !Array.isArray(data.marks)) {
+        alert("❌ Invalid JSON: missing 'marks' array.");
+        return;
+      }
       setParsed(data);
     } catch (err) {
       alert("Invalid JSON file");
@@ -60,11 +64,11 @@ export default function ImportMarkScheme() {
     <div className="p-6 max-w-3xl mx-auto">
       <h1 className="text-xl font-bold mb-4">📥 Import Mark Scheme JSON</h1>
       <input type="file" accept="application/json" onChange={handleFileChange} className="mb-4" />
-      {parsed && (
+      {parsed?.marks && parsed.marks.length > 0 && (
         <Card className="mb-4">
           <CardContent>
             {(() => {
-              const grouped = parsed.marks.reduce((acc: Record<string, any[]>, mark: any) => {
+              const grouped = (parsed.marks ?? []).reduce((acc: Record<string, any[]>, mark: any) => {
                 const key = `Q${mark.question_number}`;
                 if (!acc[key]) acc[key] = [];
                 acc[key].push(mark);

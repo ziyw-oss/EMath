@@ -16,7 +16,13 @@ function renderMath(text?: string): JSX.Element[] {
     const matchEnd = regex.lastIndex;
 
     if (matchStart > lastIndex) {
-      result.push(<span key={lastIndex}>{text.slice(lastIndex, matchStart)}</span>);
+      // Replace: result.push(<span key={lastIndex}>{text.slice(lastIndex, matchStart)}</span>);
+      const plainText = text.slice(lastIndex, matchStart);
+      const lines = plainText.split('\n');
+      lines.forEach((line, i) => {
+        result.push(<span key={`${lastIndex}-line-${i}`}>{line}</span>);
+        if (i < lines.length - 1) result.push(<br key={`${lastIndex}-br-${i}`} />);
+      });
     }
 
     const latex = (match[1] || match[2] || match[3] || "").trim();
@@ -31,7 +37,13 @@ function renderMath(text?: string): JSX.Element[] {
   }
 
   if (lastIndex < text.length) {
-    result.push(<span key={lastIndex}>{text.slice(lastIndex)}</span>);
+    // Replace: result.push(<span key={lastIndex}>{text.slice(lastIndex)}</span>);
+    const remaining = text.slice(lastIndex);
+    const remainingLines = remaining.split('\n');
+    remainingLines.forEach((line, i) => {
+      result.push(<span key={`end-line-${i}`}>{line}</span>);
+      if (i < remainingLines.length - 1) result.push(<br key={`end-br-${i}`} />);
+    });
   }
 
   return result;
