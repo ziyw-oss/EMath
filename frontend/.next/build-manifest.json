@@ -27,15 +27,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/math/doing.js"
     ],
-    "/math/setup": [
+    "/math/preview": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/math/setup.js"
+      "static/chunks/pages/math/preview.js"
     ],
-    "/math/view-mark-scheme": [
+    "/math/upload": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/math/view-mark-scheme.js"
+      "static/chunks/pages/math/upload.js"
     ]
   },
   "ampFirstPages": []

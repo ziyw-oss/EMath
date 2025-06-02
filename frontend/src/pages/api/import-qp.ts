@@ -19,15 +19,17 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     // 只保留 exam_session 中的年份
     const sessionYear = exam_session.match(/\d{4}/)?.[0] || exam_session;
     const updatedPaperName = `${sessionYear} ${paper_name}`;
+    console.log("🔎 SQL (select exam_paper): SELECT id FROM exam_papers WHERE board = ? AND paper_code = ? AND exam_session = ? AND paper_name = ?", [board, paper_code, sessionYear, updatedPaperName]);
     const [paperRows] = (await db.query(
-      "SELECT id FROM exam_papers WHERE board = ? AND paper_code = ? AND exam_session = ?",
-      [board, paper_code, sessionYear]
+      "SELECT id FROM exam_papers WHERE board = ? AND paper_code = ? AND exam_session = ? AND paper_name = ?",
+      [board, paper_code, sessionYear, updatedPaperName]
     ) as unknown as [any[], any]);
 
     let exam_paper_id;
     if (paperRows.length > 0) {
       exam_paper_id = paperRows[0].id;
     } else {
+      console.log("📥 SQL (insert exam_paper): INSERT INTO exam_papers (board, qualification, subject, paper_code, paper_name, exam_session) VALUES (?, ?, ?, ?, ?, ?)", [board, qualification, subject, paper_code, updatedPaperName, sessionYear]);
       const [result] = (await db.query(
         `INSERT INTO exam_papers (board, qualification, subject, paper_code, paper_name, exam_session)
          VALUES (?, ?, ?, ?, ?, ?)`,
@@ -52,6 +54,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       console.log("🔍 Checking:", label, level);
 
       try {
+        console.log("📝 SQL (insert question): INSERT INTO question_bank (exam_paper_id, question_number, label, level, marks, question_text, latex_blocks, parent_label) VALUES (?, ?, ?, ?, ?, ?, ?, ?)", [
+          exam_paper_id,
+          q.question_number || null,
+          label,
+          level,
+          q.marks ?? null,
+          q.question_text || null,
+          q.latex_blocks ? JSON.stringify(q.latex_blocks) : null,
+          parent_label
+        ]);
         await db.query(
           `INSERT INTO question_bank
            (exam_paper_id, question_number, label, level, marks, question_text, latex_blocks, parent_label)

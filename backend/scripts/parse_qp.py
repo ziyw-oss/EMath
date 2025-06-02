@@ -35,26 +35,9 @@ def ask_gpt_vision(image_path: str) -> dict:
             {
                 "role": "user",
                 "content": [
-                    {"type": "text", "text": (
-                        "Please extract all math exam questions from this Edexcel A-level question paper page image. For each question, sub-question, sub-sub-questions,or structural heading (even without text or marks), return:\n"
-                        "- question_number (e.g., '2')\n"
-                        "- level: one of 'main', 'sub', or 'subsub'\n"
-                        "- label: e.g., '2', '(a)', '(i)'\n"
-                        "- marks: number or null\n"
-                        "- question_text (preserve line breaks; can be empty if no content)\n"
-                        "- For level 'subsub', include a 'parent_label' field indicating its parent sub-question label, e.g., '(a)'.\n\n"
-                        "Respond in the following JSON format:\n"
-                        "{\n"
-                        "  \"question_number\": \"2\",\n"
-                        "  \"level\": \"subsub\",\n"
-                        "  \"label\": \"(i)\",\n"
-                        "  \"marks\": 3,\n"
-                        "  \"question_text\": \"Given that \\(\\theta\\) is small...\",\n"
-                        "  \"parent_label\": \"(a)\"\n"
-                        "}\n\n"
-                        "Do not skip any question, even if it includes diagrams or graphs. Extract all mathematical instructions, assumptions, and formulas. Treat diagrams as part of the question and extract all visible associated question text.\n"
-                        "Only return a raw JSON array of question objects. Do not include explanations or markdown formatting."
-                    )},
+                    {"type": "text", "text":
+                        "Please extract all math exam questions from this Edexcel A-level question paper page image.\n\nFor each question and sub-question (even without text or marks), return:\n- question_number (e.g., \"2\")\n- level: one of \"main\" or \"sub\"\n- label: e.g., \"2\", \"(a)\"\n- marks: number or null\n- question_text: a string, preserving all original line breaks, containing all relevant text (can be empty if no visible content)\n\n📌 Sub-question rules:\n- If a sub-question (e.g., (a)) contains recognisable sub-parts like (i), (ii), etc., **do not split them** — keep them embedded in the `question_text` field.\n- If there is content between two sub-questions (e.g., between (a) and (b)) that is not labeled as a new part, allocate it contextually to the **most relevant** sub-question based on position and meaning.\n\n📌 Output format:\n[\n  {\n    \"question_number\": \"2\",\n    \"level\": \"sub\",\n    \"label\": \"(a)\",\n    \"marks\": 3,\n    \"question_text\": \"(i) Show that ...\\n(ii) Hence find ...\\n[extra contextual text]\"\n  },\n  {\n    \"question_number\": \"2\",\n    \"level\": \"sub\",\n    \"label\": \"(b)\",\n    \"marks\": 2,\n    \"question_text\": \"...\"\n  }\n]\n\nDo not skip any question, even if it includes diagrams, graphs, or formulas.\nExtract all mathematical instructions, assumptions, and visible mathematical expressions.\nTreat diagrams and associated text as part of the relevant question or sub-question.\nOnly return a raw JSON array of question objects. Do not include any explanation, markdown, or commentary."
+                    },
                     {
                         "type": "image_url",
                         "image_url": {

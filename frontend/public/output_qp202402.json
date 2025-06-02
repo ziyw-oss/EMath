@@ -1,0 +1,341 @@
+{
+  "exam_metadata": {
+    "board": "Edexcel",
+    "qualification": "A Level",
+    "subject": "Mathematics",
+    "paper_name": "Pure Mathematics Paper 2",
+    "paper_code": "9MA0/01",
+    "exam_session": "June 2024"
+  },
+  "questions": [
+    {
+      "question_number": "1",
+      "level": "main",
+      "label": "1",
+      "marks": null,
+      "question_text": "y = 4x^3 - 7x^2 + 5x - 10"
+    },
+    {
+      "question_number": "1",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 3,
+      "question_text": "Find in simplest form\n(i) dy/dx\n(ii) d^2y/dx^2"
+    },
+    {
+      "question_number": "1",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 2,
+      "question_text": "Hence find the exact value of x when d^2y/dx^2 = 0"
+    },
+    {
+      "question_number": "2",
+      "level": "main",
+      "label": "2",
+      "marks": null,
+      "question_text": "Jamie takes out an interest-free loan of £8100\nJamie makes a payment every month to pay back the loan.\nJamie repays £400 in month 1, £390 in month 2, £380 in month 3, and so on, so that the\namounts repaid each month form an arithmetic sequence."
+    },
+    {
+      "question_number": "2",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 1,
+      "question_text": "Show that Jamie repays £290 in month 12"
+    },
+    {
+      "question_number": "2",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 2,
+      "question_text": "After Jamie’s Nth payment, the loan is completely paid back.\nShow that \\( N^2 - 81N + 1620 = 0 \\)"
+    },
+    {
+      "question_number": "2",
+      "level": "sub",
+      "label": "(c)",
+      "marks": 2,
+      "question_text": "Hence find the value of \\( N \\)."
+    },
+    {
+      "question_number": "3",
+      "level": "main",
+      "label": "3",
+      "marks": 4,
+      "question_text": "The point P(3, -2) lies on the curve with equation y = f(x), x ∈ ℝ\n\nFind the coordinates of the point to which P is mapped when the curve with\nequation y = f(x) is transformed to the curve with equation\n\n(i) y = f(x - 2)\n\n(ii) y = f(2x)\n\n(iii) y = 3f(-x) + 5"
+    },
+    {
+      "question_number": "4",
+      "level": "main",
+      "label": "4",
+      "marks": null,
+      "question_text": "A sequence u_1, u_2, u_3, ... is defined by\n\nu_{n+1} = ku_n - 5\nu_1 = 6\n\nwhere k is a positive constant.\n\nGiven that u_3 = -1"
+    },
+    {
+      "question_number": "4",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 2,
+      "question_text": "show that\n\n6k^2 - 5k - 4 = 0"
+    },
+    {
+      "question_number": "4",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 3,
+      "question_text": "Hence\n\n(i) find the value of k,\n\n(ii) find the value of \\sum_{r=1}^{3} u_r."
+    },
+    {
+      "question_number": "5",
+      "level": "main",
+      "label": "5",
+      "marks": 3,
+      "question_text": "Given that θ is small and in radians, use the small angle approximations to find an approximate numerical value of\n\nθ tan 2θ\n———————\n1 − cos 3θ"
+    },
+{
+    "question_number": "6",
+    "level": "main",
+    "label": "6",
+    "marks": null,
+    "question_text": "Figure 1 shows a sketch of the curves with equations  y = f(x) and y = g(x) where\n \\( f(x) = e^{4x^2 - 1}  x > 0 \\)\n \\( g(x) = 8 ln x  x > 0 \\)"
+  },
+    {
+      "question_number": "6",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 2,
+      "question_text": "Find\n(i) \\( f'(x) \\)\n(ii) \\( g'(x) \\)"
+    },
+    {
+      "question_number": "6",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 2,
+      "question_text": "Given that f'(x) = g'(x) at x = α\nshow that α satisfies the equation\n4x² + 2 ln x − 1 = 0"
+    },
+    {
+      "question_number": "6",
+      "level": "sub",
+      "label": "(c)",
+      "marks": 3,
+      "question_text": "The iterative formula\n\n\\( x_{n+1} = \\sqrt{\\frac{1 - 2 \\ln x_n}{4}} \\) \n\nis used with \\( x_1 = 0.6 \\) to find an approximate value for α\nCalculate, giving each answer to 4 decimal places,\n(i) the value of x_2\n(ii) the value of α"
+    },
+    {
+      "question_number": "7",
+      "level": "main",
+      "label": "7",
+      "marks": null,
+      "question_text": "Figure 2\nFigure 2 shows a sketch of the straight line l.\nLine l passes through the points A and B.\nRelative to a fixed origin O\n• the point A has position vector 2i − 3j + 5k\n• the point B has position vector 5i + 6j + 8k"
+    },
+    {
+      "question_number": "7",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 1,
+      "question_text": "Find \\( \\overrightarrow{AB} \\)"
+    },
+    {
+      "question_number": "7",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 4,
+      "question_text": "Given that a point P lies on l such that\n\\( |\\overrightarrow{AP}| = 2|\\overrightarrow{BP}| \\)\nfind the possible position vectors of P."
+    },
+ {
+    "question_number": "8",
+    "level": "main",
+    "label": "8",
+    "marks": null,
+    "question_text": "In this question you must show all stages of your working.\n\nSolutions relying entirely on calculator technology are not acceptable."
+  },    
+{
+      "question_number": "8",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 3,
+      "question_text": "Prove that\n\n\\( \\frac{1}{\\csc \\theta - 1} + \\frac{1}{\\csc \\theta + 1} \\equiv 2 \\tan \\theta \\sec \\theta \\)\n\n\\( \\theta \\neq (90n)^\\circ , \\ n \\in \\mathbb{Z} \\)"
+    },
+    {
+      "question_number": "8",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 4,
+      "question_text": "Hence solve, for \\( 0 < x < 90^\\circ \\), the equation\n\n\\( \\frac{1}{\\csc 2x - 1} + \\frac{1}{\\csc 2x + 1} = \\cot 2x \\sec 2x \\)\n\nGive each answer, in degrees, to one decimal place."
+    },
+    {
+      "question_number": "9",
+      "level": "main",
+      "label": "9",
+      "marks": null,
+      "question_text": "The graph in Figure 3 shows the path of a small ball.\nThe ball travels in a vertical plane above horizontal ground.\nThe ball is thrown from the point represented by A and caught at the point represented by B.\nThe height, H metres, of the ball above the ground has been plotted against the horizontal distance, x metres, measured from the point where the ball was thrown.\nWith respect to a fixed origin O, the point A has coordinates (0, 2) and the point B has\ncoordinates (20, 0.8), as shown in Figure 3.\nThe ball reaches its maximum height when x = 9\nA quadratic function, linking H with x, is used to model the path of the ball."
+    },
+    {
+      "question_number": "9",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 4,
+      "question_text": "Find H in terms of x."
+    },
+    {
+      "question_number": "9",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 1,
+      "question_text": "Give one limitation of the model."
+    },
+    {
+      "question_number": "9",
+      "level": "sub",
+      "label": "(c)",
+      "marks": 2,
+      "question_text": "Chandra is standing directly under the path of the ball at a point 16m horizontally\nfrom O.\nChandra can catch the ball if the ball is less than 2.5 m above the ground.\nUse the model to determine if Chandra can catch the ball."
+    },
+    {
+      "question_number": "10",
+      "level": "main",
+      "label": "10",
+      "marks": null,
+      "question_text": "Figure 4 shows a sketch of the curve C with parametric equations\n\nx = (t + 3)^2    y = 1 - t^3    -2 ≤ t ≤ 1\n\nThe point P with coordinates (4, 2) lies on C."
+    },
+    {
+      "question_number": "10",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 5,
+      "question_text": "Using parametric differentiation, show that the tangent to C at P has equation\n\n3x + 4y = 20"
+    },
+    {
+      "question_number": "10",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 1,
+      "question_text": "The curve C is used to model the profile of a slide at a water park.\nUnits are in metres, with y being the height of the slide above water level.\n\nFind, according to the model, the greatest height of the slide above water level."
+    },
+    {
+      "question_number": "11",
+      "level": "main",
+      "label": "11",
+      "marks": 5,
+      "question_text": "In this question you must show all stages of your working.\nSolutions relying entirely on calculator technology are not acceptable.\n\nFigure 5 shows a sketch of part of the curve C with equation\n\ny = 8x^2 e^{-3x}    x ≥ 0\n\nThe finite region R, shown shaded in Figure 5, is bounded by\n• the curve C\n• the line with equation x = 1\n• the x-axis\n\nFind the exact area of R, giving your answer in the form\n\nA + Be^{-3}\n\nwhere A and B are rational numbers to be found."
+    },
+    {
+      "question_number": "12",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 2,
+      "question_text": "Express \\( \\frac{1}{V(25 - V)} \\) in partial fractions."
+    },
+    {
+      "question_number": "12",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 5,
+      "question_text": "The volume, \\( V \\) microlitres, of a plant cell \\( t \\) hours after the plant is watered is modelled by the differential equation\n\\[ \\frac{dV}{dt} = \\frac{1}{10} V (25 - V) \\]\nThe plant cell has an initial volume of 20 microlitres.\nFind, according to the model, the time taken, in minutes, for the volume of the plant cell to reach 24 microlitres."
+    },
+    {
+      "question_number": "12",
+      "level": "sub",
+      "label": "(c)",
+      "marks": 3,
+      "question_text": "Show that\n \\[ V = \\frac{A}{e^{-kt} + B} \\]\nwhere \\( A, B \\text{ and } k \\) are constants to be found."
+    },
+    {
+      "question_number": "12",
+      "level": "sub",
+      "label": "(d)",
+      "marks": 2,
+      "question_text": "The model predicts that there is an upper limit, \\( L \\) microlitres, on the volume of the plant cell.\nFind the value of \\( L \\), giving a reason for your answer."
+    },
+    {
+      "question_number": "12",
+      "level": "main",
+      "label": "12",
+      "marks": null,
+      "question_text": ""
+    },
+    {
+      "question_number": "13",
+      "level": "main",
+      "label": "13",
+      "marks": null,
+      "question_text": "The world human population, P billions, is modelled by the equation\n\nP = ab^t\n\nwhere a and b are constants and t is the number of years after 2004\n\nUsing the estimated population figures for the years from 2004 to 2007, a graph is plotted of log10 P against t.\n\nThe points lie approximately on a straight line with\n\n• gradient 0.0054\n• intercept 0.81 on the log10 P axis"
+    },
+    {
+      "question_number": "13",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 4,
+      "question_text": "Estimate, to 3 decimal places, the value of a and the value of b."
+    },
+    {
+      "question_number": "13",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 2,
+      "question_text": "(i) interpret the value of the constant a,\n\n(ii) interpret the value of the constant b."
+    },
+    {
+      "question_number": "13",
+      "level": "sub",
+      "label": "(c)",
+      "marks": 2,
+      "question_text": "Use the model to estimate the world human population in 2030"
+    },
+    {
+      "question_number": "13",
+      "level": "sub",
+      "label": "(d)",
+      "marks": 1,
+      "question_text": "Comment on the reliability of the answer to part (c)."
+    },
+    {
+    "question_number": "14",
+    "level": "main",
+    "label": "14",
+    "marks": null,
+    "question_text": "The circle \\( C_1 \\) has equation\n \\( x^2 + y^2 - 6x + 14y + 33 = 0 \\)"
+  },
+  {
+    "question_number": "14",
+    "level": "sub",
+    "label": "(a)",
+    "marks": 3,
+    "question_text": "Find\n(i) the coordinates of the centre of \\( C_1 \\)\n(ii) the radius of \\( C_1 \\)"
+  },
+  {
+    "question_number": "14",
+    "level": "sub",
+    "label": "(b)",
+    "marks": 5,
+    "question_text": "A different circle \\( C_2 \\)\n• has centre with coordinates (−6, −8)\n• has radius \\( k \\), where \\( k \\) is a constant\n\nGiven that \\( C_1 \\) and \\( C_2 \\) intersect at 2 distinct points,\nfind the range of values of \\( k \\), writing your answer in set notation."
+  },
+    {
+      "question_number": "15",
+      "level": "main",
+      "label": "15",
+      "marks": null,
+      "question_text": "The curve C has equation\n\n(x + y)^3 = 3x^2 - 3y - 2"
+    },
+    {
+      "question_number": "15",
+      "level": "sub",
+      "label": "(a)",
+      "marks": 5,
+      "question_text": "Find an expression for \n\\( \\frac{dy}{dx} \\) in terms of x and y."
+    },
+    {
+      "question_number": "15",
+      "level": "sub",
+      "label": "(b)",
+      "marks": 2,
+      "question_text": "The point P(1, 0) lies on C.\nShow that the normal to C at P has equation\n\ny = -2x + 2"
+    },
+    {
+      "question_number": "15",
+      "level": "sub",
+      "label": "(c)",
+      "marks": 5,
+      "question_text": "Prove that the normal to C at P does not meet C again.\n\nYou should use algebra for your proof and make your reasoning clear."
+    }
+  ]
+}
