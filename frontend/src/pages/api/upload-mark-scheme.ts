@@ -5,17 +5,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (req.method !== "POST") return res.status(405).end();
 
   const { marks, exam_metadata } = req.body;
+  console.log("📦 Received exam_metadata:", exam_metadata);
   if (!marks || !Array.isArray(marks)) {
     return res.status(400).json({ error: "Invalid or missing marks[]" });
   }
 
-  // 补充结构化字段
-  exam_metadata.board = "Edexcel";
-  exam_metadata.qualification = "A Level";
-  exam_metadata.subject = "Mathematics";
-  exam_metadata.paper_code = "9MA0/01"; // 修正 OCR 误识别的 "QMA0O1 01"
-  exam_metadata.paper_name = "2023 Pure Mathematics Paper 1";
-  exam_metadata.exam_session = "2023";
 
   try {
     const paper_name = exam_metadata.paper_name;
@@ -91,8 +85,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       }
 
       const insertSql = interpolateSQL(
-        `INSERT INTO mark_scheme (exam_paper_id, question_bank_id, question_number, label, level, mark_code, mark_type, mark_content, ao_code, explanation, created_at)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())`,
+        `INSERT INTO mark_scheme (exam_paper_id, question_bank_id, question_number, label, level, mark_code, mark_type, mark_content, ao_code, explanation,created_at)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())`,
         [
           exam_paper_id,
           question_bank_id,
@@ -109,8 +103,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       console.log("🧠 Full INSERT SQL:", insertSql);
 
       await db.query(
-        `INSERT INTO mark_scheme (exam_paper_id, question_bank_id, question_number, label, level, mark_code, mark_type, mark_content, ao_code, explanation, created_at)
-         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())`,
+        `INSERT INTO mark_scheme (exam_paper_id, question_bank_id, question_number, label, level, mark_code, mark_type, mark_content, ao_code, explanation,created_at)
+         VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, NOW())`,
         [
           exam_paper_id,
           question_bank_id,

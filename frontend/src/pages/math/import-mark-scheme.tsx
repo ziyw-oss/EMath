@@ -19,6 +19,12 @@ export default function ImportMarkScheme() {
     marks: Mark[];
     exam_metadata: {
       exam_paper_id?: string;
+      board?: string;
+      qualification?: string;
+      subject?: string;
+      paper_name?: string;
+      paper_code?: string;
+      exam_session?: string;
     };
   }
 
@@ -67,6 +73,16 @@ export default function ImportMarkScheme() {
       {parsed?.marks && parsed.marks.length > 0 && (
         <Card className="mb-4">
           <CardContent>
+            {parsed?.exam_metadata && (
+              <div className="mb-4 text-sm text-gray-800">
+                <div><strong>Board:</strong> {parsed.exam_metadata.board}</div>
+                <div><strong>Qualification:</strong> {parsed.exam_metadata.qualification}</div>
+                <div><strong>Subject:</strong> {parsed.exam_metadata.subject}</div>
+                <div><strong>Paper Name:</strong> {parsed.exam_metadata.paper_name}</div>
+                <div><strong>Paper Code:</strong> {parsed.exam_metadata.paper_code}</div>
+                <div><strong>Exam Session:</strong> {parsed.exam_metadata.exam_session}</div>
+              </div>
+            )}
             {(() => {
               const grouped = (parsed.marks ?? []).reduce((acc: Record<string, any[]>, mark: any) => {
                 const key = `Q${mark.question_number}`;

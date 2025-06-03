@@ -16,6 +16,7 @@ export const config = {
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   let responded = false;
+  let parsedMetadata: any = null;
 
   // Helper function to parse note text and apply explanations to marks
   function applyNoteChunksToMarks(noteText: string, marks: any[], defaultLabel: string = "") {
@@ -228,12 +229,39 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
             console.log(`📄 Page ${pageIndex}: hash = ${imgHash}`);
 
             if (pageIndex === 1 && !MOCK_MODE) {
-              const titleText = await tesseract.recognize(imgPath);
-              page1Text = titleText;
-              // Removed extraction of paperCode, paperName, examSession and board
-              // 调试输出: 识别出的试卷信息
-              console.log("📘 Extracted Exam Info:");
-              console.log("📄 page1_text:", page1Text.trim());
+              const metadataProcess = spawn("python3", [
+                path.resolve(process.cwd(), "../backend/scripts/parse_metadata.py"),
+                imgPath,
+              ]);
+
+              let stdoutData = "";
+              let stderrData = "";
+
+              metadataProcess.stdout.on("data", (data) => {
+                stdoutData += data.toString();
+              });
+
+              metadataProcess.stderr.on("data", (data) => {
+                stderrData += data.toString();
+              });
+
+              await new Promise<void>((resolve, reject) => {
+                metadataProcess.on("close", (code) => {
+                  if (code !== 0) {
+                    console.error("❌ parse_metadata.py failed:", stderrData);
+                    reject(new Error("Metadata parsing failed"));
+                  } else {
+                    resolve();
+                  }
+                });
+              });
+
+              try {
+                parsedMetadata = JSON.parse(stdoutData);
+                console.log("📘 Parsed metadata from parse_metadata.py:", parsedMetadata);
+              } catch (e) {
+                console.error("❌ Failed to parse metadata JSON:", stdoutData);
+              }
             }
 
             let jsonOutput: any = null;
@@ -483,12 +511,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
         }
         // Write marks to tmp/output_marks.json before returning
         const outputPath = path.resolve(process.cwd(), "tmp/output_marks.json");
-        const outputData = JSON.stringify({ marks: allMarks, exam_metadata: { page1_text: page1Text.trim() } }, null, 2);
+        const outputData = JSON.stringify({ marks: allMarks, exam_metadata: parsedMetadata || {} }, null, 2);
         console.log("📦 Final JSON content preview:\n" + outputData.slice(0, 1000) + "\n---");
         fs.writeFileSync(outputPath, outputData, "utf8");
         console.log(`💾 Final output written to ${outputPath}`);
         responded = true;
-        return res.status(200).json({ marks: allMarks, exam_metadata: { page1_text: page1Text.trim() } });
+        return res.status(200).json({ marks: allMarks, exam_metadata: parsedMetadata || {} });
       } catch (err: unknown) {
         const error = err as Error;
         responded = true;

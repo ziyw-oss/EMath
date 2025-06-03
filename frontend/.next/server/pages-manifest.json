@@ -3,7 +3,11 @@
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
   "/math/upload": "pages/math/upload.js",
-  "/math/doing": "pages/math/doing.js",
-  "/api/load-qp": "pages/api/load-qp.js",
-  "/math/preview": "pages/math/preview.js"
+  "/api/doing": "pages/api/doing.js",
+  "/api/papers": "pages/api/papers.js",
+  "/api/start-exam": "pages/api/start-exam.js",
+  "/api/save-and-score": "pages/api/save-and-score.js",
+  "/math/setup": "pages/math/setup.js",
+  "/math/view-mark-scheme": "pages/math/view-mark-scheme.js",
+  "/math/doing": "pages/math/doing.js"
 }
