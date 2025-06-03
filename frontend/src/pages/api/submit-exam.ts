@@ -41,6 +41,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
   const accuracy = fullScore > 0 ? totalScore / fullScore : 0;
 
+  // 更新 score_rate 字段
+  const [updateResult]: any = await db.query(
+    "UPDATE exam_sessions SET score_rate = ? WHERE id = ? AND user_id = ?",
+    [fullScore > 0 ? totalScore / fullScore : null, sessionId, user.id]
+  );
+  console.log("✅ score_rate updated, affected rows:", updateResult.affectedRows);
+
   let rewardGranted = false;
 
   if (accuracy > 0.5 && durationMinutes <= 150) {

@@ -52,30 +52,14 @@ export default function StudentDashboard() {
             <div>💰 Rewards This Week: {user.weekly_rewards ?? 0} points</div>
 
             <div>
-              📌 Unfinished Exams:
+              📌 Completed Exams:
               <ul className="list-disc list-inside ml-4">
-                {(user.unfinished_exams ?? []).length === 0 && <li>None</li>}
-                {(user.unfinished_exams ?? []).map((exam: any) => (
+                {(user.completed_exams ?? []).length === 0 && <li>None</li>}
+                {(user.completed_exams ?? []).map((exam: any) => (
                   <li key={exam.session_id}>
                     <span className="font-medium">{exam.title}</span> —{" "}
-                    <span className="text-gray-500">Started at: {new Date(exam.started_at).toLocaleString()}</span>{" "}
-                    <button
-                      onClick={() => router.push(`/math/doing?sessionId=${exam.session_id}`)}
-                      className="ml-2 text-blue-600 underline hover:text-blue-800"
-                    >
-                      Resume
-                    </button>
-                    <button
-                      onClick={async () => {
-                        if (confirm("Are you sure you want to delete this unfinished exam?")) {
-                          await fetch(`/api/delete-exam?sessionId=${exam.session_id}`, { method: "DELETE" });
-                          location.reload(); // refresh to reflect changes
-                        }
-                      }}
-                      className="ml-2 text-red-600 underline hover:text-red-800"
-                    >
-                      Delete
-                    </button>
+                    <span className="text-gray-500">Finished at: {new Date(exam.ended_at).toLocaleString()}</span>{" "}
+                    <span className="ml-2">🎯 Score Rate: {(exam.score_rate * 100).toFixed(1)}%</span>
                   </li>
                 ))}
               </ul>

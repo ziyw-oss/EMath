@@ -128,9 +128,13 @@ export default function ExamDoingPage() {
         if (!res.ok) throw new Error(`HTTP ${res.status}`);
         return res.json();
       })
-      .then((data: any[]) => {
-        console.log("📥 全部 fetch 返回数据：", data);
-        console.log("🧪 fetched data[0]:", data[0]);
+      .then((resData: any) => {
+        console.log("📥 全部 fetch 返回数据：", resData);
+        const data = resData.questions;
+        if (!Array.isArray(data)) {
+          console.error("❌ Unexpected response format:", resData);
+          return;
+        }
         if (data.length > 0) {
           const { exam_year, exam_type, question_time } = data[0];
           console.log("✅ setting examInfo:", { year: exam_year, type: exam_type, question_time });
@@ -222,7 +226,9 @@ export default function ExamDoingPage() {
           <div className="flex gap-10">
             <span className="whitespace-nowrap">Year: {examInfo.year || "-"}</span>
             <span className="whitespace-nowrap">Type: {examInfo.type || "-"}</span>
-            <span className="whitespace-nowrap">Question: {currentNumber || "-"}</span>
+            <span className="whitespace-nowrap">
+              Question: {currentNumber || "-"} / {Math.max(...groupedEntries.map(([qnum]) => parseInt(qnum)).filter(n => !isNaN(n)))}
+            </span>
           </div>
         </div>
 
@@ -264,6 +270,31 @@ export default function ExamDoingPage() {
                 <div className="flex justify-center pt-2">
                   {submitted && currentPage === groupedEntries.length - 1 ? (
                     <div className="flex flex-col items-center space-y-3">
+                      <button
+                        className="inline-block mt-2 px-6 py-2 bg-yellow-400 text-black font-semibold rounded hover:bg-yellow-300 transition"
+                        onClick={async () => {
+                          const res = await fetch("/api/submit-exam", {
+                            method: "POST",
+                            headers: {
+                              "Content-Type": "application/json",
+                            },
+                            body: JSON.stringify({
+                              sessionId,
+                              score: finalScoreSummary?.total,
+                              fullScore: finalScoreSummary?.full,
+                            }),
+                          });
+                          const result = await res.json();
+                          if (result.rewardGranted) {
+                            alert(`🎉 You earned a reward of ${result.rewardAmount}元!`);
+                          } else {
+                            alert("No reward granted (must score above 50% within 2.5 hours).");
+                          }
+                          router.push("/math/dashboard");
+                        }}
+                      >
+                        🎁 Check & Claim Reward
+                      </button>
                       <button
                         className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
                         onClick={() => {
@@ -759,7 +790,7 @@ export default function ExamDoingPage() {
                 );
               })}
             </div>
-            <div className="mt-6 text-center">
+            <div className="mt-6 text-center flex flex-col items-center space-y-3">
               <button
                 className="inline-block mt-2 px-6 py-2 bg-yellow-400 text-black font-semibold rounded hover:bg-yellow-300 transition"
                 onClick={async () => {
@@ -784,6 +815,20 @@ export default function ExamDoingPage() {
                 }}
               >
                 🎁 Check & Claim Reward
+              </button>
+              <button
+                className="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                onClick={() => {
+                  setCurrentFeedback(scoreFeedback);
+                }}
+              >
+                View Full Score Details
+              </button>
+              <button
+                className="px-4 py-2 bg-gray-600 text-white rounded hover:bg-gray-700"
+                onClick={() => router.push("/math/dashboard")}
+              >
+                Return to Dashboard
               </button>
             </div>
           </div>

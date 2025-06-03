@@ -20,6 +20,21 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
 
     profile.unfinished_exams = unfinished;
 
+    const [completed]: any[] = await db.query(
+      `SELECT 
+         s.id AS session_id,
+         p.paper_name AS title,
+         s.completed_at AS ended_at,
+         s.score_rate
+       FROM exam_sessions s
+       JOIN exam_papers p ON s.exam_paper_id = p.id
+       WHERE s.user_id = ? AND s.completed_at IS NOT NULL
+       ORDER BY s.completed_at DESC`,
+      [user.id]
+    );
+
+    profile.completed_exams = completed;
+
     res.status(200).json(profile);
   } catch (err: any) {
     console.error("Dashboard error:", err);

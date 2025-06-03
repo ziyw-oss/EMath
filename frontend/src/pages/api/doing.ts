@@ -17,15 +17,18 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       `SELECT 
         q.id, q.question_number, q.label, q.parent_label, q.level, q.marks, q.question_text,
         q.image_path, q.exam_paper_id,
-        e.exam_session AS exam_year, e.paper_name AS exam_type
+        e.exam_session AS exam_year, e.paper_name AS exam_type,
+        s.score, s.matched
        FROM question_bank q
        JOIN exam_papers e ON q.exam_paper_id = e.id
+       LEFT JOIN student_scores s ON s.question_id = q.id AND s.session_id = ?
        WHERE q.exam_paper_id = ?
        ORDER BY q.question_number, FIELD(q.level, 'main', 'sub', 'subsub'), q.label`,
-      [examId]
+      [sessionId, examId]
     );
 
-    res.status(200).json(rows);
+    const totalQuestions = rows.filter((q: any) => q.marks !== null).length;
+    res.status(200).json({ questions: rows, totalQuestions });
   } catch (err: any) {
     console.error("Failed to load questions:", err);
     res.status(500).json({ error: "Internal server error" });
