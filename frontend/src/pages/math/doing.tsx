@@ -227,6 +227,7 @@ export default function ExamDoingPage() {
         </div>
 
         {/* 题目区域 */}
+        
         <div className="flex-grow flex justify-center items-start pt-12 px-4">
           <div className="bg-white shadow-lg rounded-md max-w-4xl w-full p-8 border border-gray-300">
             {showFeedback && currentFeedback && (
